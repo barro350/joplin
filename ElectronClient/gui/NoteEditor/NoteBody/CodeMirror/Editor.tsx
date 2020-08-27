@@ -139,8 +139,6 @@ function Editor(props: EditorProps, ref: any) {
 			'Right': 'goCharRight',
 			'Up': 'goLineUp',
 			'Down': 'goLineDown',
-			// 'End': 'goLineEnd',
-			// 'Home': 'goLineStartSmart',
 			'End': 'goLineRight',
 			'Home': 'goLineLeftSmart',
 			'PageUp': 'goPageUp',
