@@ -1008,6 +1008,7 @@ class NoteScreenComponent extends BaseScreenComponent {
 								}, 50);
 							}, 5);
 						}}
+						customCss={this.props.customCss}
 					/>
 				);
 		} else {
@@ -1202,6 +1203,7 @@ const NoteScreen = connect(state => {
 		sharedData: state.sharedData,
 		showSideMenu: state.showSideMenu,
 		provisionalNoteIds: state.provisionalNoteIds,
+		customCss: state.customCss,
 	};
 })(NoteScreenComponent);
 

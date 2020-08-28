@@ -54,6 +54,7 @@ const { DatabaseDriverReactNative } = require('lib/database-driver-react-native'
 const { reg } = require('lib/registry.js');
 const { setLocale, closestSupportedLocale, defaultLocale } = require('lib/locale.js');
 const RNFetchBlob = require('rn-fetch-blob').default;
+const RNFS = require('react-native-fs');
 const { PoorManIntervals } = require('lib/poor-man-intervals.js');
 const { reducer, defaultState } = require('lib/reducer.js');
 const { FileApiDriverLocal } = require('lib/file-api-driver-local.js');
@@ -354,6 +355,12 @@ const appReducer = (state = appDefaultState, action) => {
 			newState.noteSideMenuOptions = action.options;
 			break;
 
+		case 'LOAD_CUSTOM_CSS':
+
+			newState = Object.assign({}, state);
+			newState.customCss = action.css;
+			break;
+
 		}
 	} catch (error) {
 		error.message = `In reducer: ${error.message} Action: ${JSON.stringify(action)}`;
@@ -590,6 +597,21 @@ async function initialize(dispatch) {
 	// Collect revisions more frequently on mobile because it doesn't auto-save
 	// and it cannot collect anything when the app is not active.
 	RevisionService.instance().runInBackground(1000 * 30);
+
+	// external CSS
+	const filePath = `${RNFS.ExternalDirectoryPath}/userstyle.css`;
+	let cssString = '';
+	try {
+		cssString = await RNFS.readFile(filePath);
+	} catch (error) {
+		let msg = error.message ? error.message : '';
+		msg = `Could not load custom css from ${filePath}\n${msg}`;
+		console.log(msg);
+	}
+	dispatch({
+		type: 'LOAD_CUSTOM_CSS',
+		css: cssString,
+	});
 
 	reg.logger().info('Application initialized');
 }
