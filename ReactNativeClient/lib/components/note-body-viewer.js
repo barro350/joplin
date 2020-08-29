@@ -64,6 +64,7 @@ class NoteBodyViewer extends Component {
 			resources: this.props.noteResources,
 			codeTheme: theme.codeThemeCss,
 			postMessageSyntax: 'window.joplinPostMessage_',
+			userCss: this.props.customCss,
 		};
 
 		const result = await this.markupToHtml_.render(
@@ -117,7 +118,7 @@ class NoteBodyViewer extends Component {
 					<meta name="viewport" content="width=device-width, initial-scale=1">
 					${assetsToHeaders(result.pluginAssets, { asHtml: true })}
 				</head>
-				<body>
+				<body class="mobile ${shim.platformName()}">
 					${html}
 				</body>
 			</html>
