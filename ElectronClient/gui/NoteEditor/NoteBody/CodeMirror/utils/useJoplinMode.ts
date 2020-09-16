@@ -17,6 +17,20 @@ export default function useJoplinMode(CodeMirror: any) {
 		};
 
 		const markdownMode = CodeMirror.getMode(config, markdownConfig);
+
+		// Monkey patch: make any blank line terminate the inner HTML mode (in a hack-ish way)
+		const oldBlankLine = markdownMode.blankLine;
+		const markdownDefaultState = markdownMode.startState();
+
+		markdownMode.blankLine = function(state: any) {
+			if (state.f.name == 'htmlBlock') {
+				state.f = markdownDefaultState.inline;
+				state.block = markdownDefaultState.block;
+				state.htmlState = null;
+			}
+			return oldBlankLine(state);
+		};
+
 		const stex = CodeMirror.getMode(config, { name: 'stex', inMathMode: true });
 
 		const inlineKatexOpenRE = /(?<!\S)\$(?=[^\s$].*?[^\\\s$]\$(?!\S))/;
