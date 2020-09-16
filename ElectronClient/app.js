@@ -665,7 +665,7 @@ class Application extends BaseApplication {
 				visible: shim.isMac() ? false : true,
 				submenu: importItems,
 			}, {
-				label: _('Export'),
+				label: _('Export all'),
 				visible: shim.isMac() ? false : true,
 				submenu: exportItems,
 			}, {
@@ -1212,7 +1212,7 @@ class Application extends BaseApplication {
 		if (Setting.value('env') === 'dev') {
 			AlarmService.updateAllNotifications();
 		} else {
-			reg.scheduleSync().then(() => {
+			reg.scheduleSync(1000).then(() => {
 				// Wait for the first sync before updating the notifications, since synchronisation
 				// might change the notifications.
 				AlarmService.updateAllNotifications();
