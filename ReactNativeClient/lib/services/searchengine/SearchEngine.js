@@ -1,6 +1,6 @@
-const { Logger } = require('lib/logger.js');
+const Logger = require('lib/Logger').default;
 const ItemChange = require('lib/models/ItemChange.js');
-const Setting = require('lib/models/Setting.js');
+const Setting = require('lib/models/Setting').default;
 const Note = require('lib/models/Note.js');
 const BaseModel = require('lib/BaseModel.js');
 const ItemChangeUtils = require('lib/services/ItemChangeUtils');
@@ -9,6 +9,7 @@ const removeDiacritics = require('diacritics').remove;
 const { sprintf } = require('sprintf-js');
 const filterParser = require('./filterParser').default;
 const queryBuilder = require('./queryBuilder').default;
+const shim = require('lib/shim').default;
 
 class SearchEngine {
 
@@ -81,7 +82,7 @@ class SearchEngine {
 				);
 			}
 
-			if (!noteIds.length && (Setting.value('db.fuzzySearchEnabled') == 1)) {
+			if (!noteIds.length && (Setting.value('db.fuzzySearchEnabled') === 1)) {
 				// On the last loop
 				queries.push({ sql: 'INSERT INTO notes_spellfix(word,rank) SELECT term, documents FROM search_aux WHERE col=\'*\'' });
 			}
@@ -95,7 +96,7 @@ class SearchEngine {
 	scheduleSyncTables() {
 		if (this.scheduleSyncTablesIID_) return;
 
-		this.scheduleSyncTablesIID_ = setTimeout(async () => {
+		this.scheduleSyncTablesIID_ = shim.setTimeout(async () => {
 			try {
 				await this.syncTables();
 			} catch (error) {
@@ -327,6 +328,21 @@ class SearchEngine {
 			return idf * (freq * (K1 + 1)) / (freq + K1 * (1 - B + B * (numTokens / avgTokens)));
 		};
 
+		const msSinceEpoch = Math.round(new Date().getTime());
+		const msPerDay = 86400000;
+		const weightForDaysSinceLastUpdate = (row) => {
+			// BM25 weights typically range 0-10, and last updated date should weight similarly, though prioritizing recency logarithmically.
+			// An alpha of 200 ensures matches in the last week will show up front (11.59) and often so for matches within 2 weeks (5.99),
+			// but is much less of a factor at 30 days (2.84) or very little after 90 days (0.95), focusing mostly on content at that point.
+			if (!row.user_updated_time) {
+				return 0;
+			}
+
+			const alpha = 200;
+			const daysSinceLastUpdate = (msSinceEpoch - row.user_updated_time) / msPerDay;
+			return alpha * Math.log(1 + 1 / Math.max(daysSinceLastUpdate, 0.5));
+		};
+
 		for (let i = 0; i < rows.length; i++) {
 			const row = rows[i];
 			row.weight = 0;
@@ -345,6 +361,8 @@ class SearchEngine {
 				});
 				row.wordFound.push(found);
 			}
+
+			row.weight += weightForDaysSinceLastUpdate(row);
 		}
 	}
 
@@ -433,7 +451,9 @@ class SearchEngine {
 		return await Promise.all(fuzzyMatches);
 	}
 
-	async parseQuery(query, fuzzy = false) {
+	async parseQuery(query, fuzzy = null) {
+		if (fuzzy === null) fuzzy = Setting.value('db.fuzzySearchEnabled') === 1;
+
 		const trimQuotes = (str) => str.startsWith('"') ? str.substr(1, str.length - 2) : str;
 
 		let allTerms = [];
@@ -457,6 +477,15 @@ class SearchEngine {
 			const fuzzyText = await this.fuzzifier(textTerms.filter(x => !(x.quoted || x.wildcard)).map(x => trimQuotes(x.value)));
 			const fuzzyTitle = await this.fuzzifier(titleTerms.filter(x => !x.wildcard).map(x => trimQuotes(x.value)));
 			const fuzzyBody = await this.fuzzifier(bodyTerms.filter(x => !x.wildcard).map(x => trimQuotes(x.value)));
+
+			// Floor the fuzzy scores to 0, 1 and 2.
+			const floorFuzzyScore = (matches) => {
+				for (let i = 0; i < matches.length; i++) matches[i].score = i;
+			};
+
+			fuzzyText.forEach(floorFuzzyScore);
+			fuzzyTitle.forEach(floorFuzzyScore);
+			fuzzyBody.forEach(floorFuzzyScore);
 
 			const phraseTextSearch = textTerms.filter(x => x.quoted);
 			const wildCardSearch = textTerms.concat(titleTerms).concat(bodyTerms).filter(x => x.wildcard);
@@ -610,7 +639,7 @@ class SearchEngine {
 
 		if (!Setting.value('db.ftsEnabled') || ['ja', 'zh', 'ko', 'th'].indexOf(st) >= 0) {
 			return SearchEngine.SEARCH_TYPE_BASIC;
-		} else if ((Setting.value('db.fuzzySearchEnabled') === 1) && options.fuzzy) {
+		} else if (options.fuzzy) {
 			return SearchEngine.SEARCH_TYPE_FTS_FUZZY;
 		} else {
 			return SearchEngine.SEARCH_TYPE_FTS;
@@ -621,6 +650,7 @@ class SearchEngine {
 	async search(searchString, options = null) {
 		options = Object.assign({}, {
 			searchType: SearchEngine.SEARCH_TYPE_AUTO,
+			fuzzy: Setting.value('db.fuzzySearchEnabled') === 1,
 		}, options);
 
 		searchString = this.normalizeText_(searchString);
@@ -641,10 +671,10 @@ class SearchEngine {
 			// when searching.
 			// https://github.com/laurent22/joplin/issues/1075#issuecomment-459258856
 
-			const parsedQuery = await this.parseQuery(searchString, options.fuzzy);
+			const parsedQuery = await this.parseQuery(searchString, searchType === SearchEngine.SEARCH_TYPE_FTS_FUZZY);
 
 			try {
-				const { query, params } =  (searchType === SearchEngine.SEARCH_TYPE_FTS_FUZZY) ? queryBuilder(parsedQuery.allTerms, true) : queryBuilder(parsedQuery.allTerms, false);
+				const { query, params } = queryBuilder(parsedQuery.allTerms, searchType === SearchEngine.SEARCH_TYPE_FTS_FUZZY);
 				const rows = await this.db().selectAll(query, params);
 				this.processResults_(rows, parsedQuery);
 				if (searchType === SearchEngine.SEARCH_TYPE_FTS_FUZZY && !parsedQuery.any) {
@@ -660,15 +690,15 @@ class SearchEngine {
 
 	async destroy() {
 		if (this.scheduleSyncTablesIID_) {
-			clearTimeout(this.scheduleSyncTablesIID_);
+			shim.clearTimeout(this.scheduleSyncTablesIID_);
 			this.scheduleSyncTablesIID_ = null;
 		}
 		SearchEngine.instance_ = null;
 
 		return new Promise((resolve) => {
-			const iid = setInterval(() => {
+			const iid = shim.setInterval(() => {
 				if (!this.syncCalls_.length) {
-					clearInterval(iid);
+					shim.clearInterval(iid);
 					this.instance_ = null;
 					resolve();
 				}
