@@ -69,6 +69,9 @@ const commandNames:string[] = [
 	'setTags',
 	'showNoteContentProperties',
 	'copyDevCommand',
+	'textKorean',
+	'textJapanese',
+	'textEnglishUS',
 ];
 
 function menuItemSetChecked(id:string, checked:boolean) {
@@ -473,6 +476,10 @@ function useMenu(props:Props) {
 					menuItemDic.textItalic,
 					menuItemDic.textLink,
 					menuItemDic.textCode,
+					separator(),
+					menuItemDic.textKorean,
+					menuItemDic.textJapanese,
+					menuItemDic.textEnglishUS,
 					separator(),
 					menuItemDic.insertDateTime,
 					menuItemDic.attachFile,
