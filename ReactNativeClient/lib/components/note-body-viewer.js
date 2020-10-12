@@ -2,15 +2,20 @@ import Async from 'react-async';
 
 const React = require('react');
 const Component = React.Component;
-const { Platform, View, Text } = require('react-native');
+const { Platform, View, Text, ToastAndroid } = require('react-native');
 const { WebView } = require('react-native-webview');
 const { themeStyle } = require('lib/components/global-style.js');
-const Setting = require('lib/models/Setting.js');
+const Setting = require('lib/models/Setting').default;
+const { _ } = require('lib/locale.js');
 const { reg } = require('lib/registry.js');
-const { shim } = require('lib/shim');
+const shim = require('lib/shim').default;
 const { assetsToHeaders } = require('lib/joplin-renderer');
 const shared = require('lib/components/shared/note-screen-shared.js');
 const markupLanguageUtils = require('lib/markupLanguageUtils');
+const { dialogs } = require('lib/dialogs.js');
+const BackButtonDialogBox = require('lib/components/BackButtonDialogBox').default;
+const Resource = require('lib/models/Resource.js');
+const Share = require('react-native-share').default;
 
 class NoteBodyViewer extends Component {
 	constructor() {
@@ -44,18 +49,18 @@ class NoteBodyViewer extends Component {
 		this.forceUpdate_ = false;
 
 		const note = this.props.note;
-		const theme = themeStyle(this.props.theme);
+		const theme = themeStyle(this.props.themeId);
 
 		const bodyToRender = note ? note.body : '';
 
 		const mdOptions = {
 			onResourceLoaded: () => {
 				if (this.resourceLoadedTimeoutId_) {
-					clearTimeout(this.resourceLoadedTimeoutId_);
+					shim.clearTimeout(this.resourceLoadedTimeoutId_);
 					this.resourceLoadedTimeoutId_ = null;
 				}
 
-				this.resourceLoadedTimeoutId_ = setTimeout(() => {
+				this.resourceLoadedTimeoutId_ = shim.setTimeout(() => {
 					this.resourceLoadedTimeoutId_ = null;
 					this.forceUpdate();
 				}, 100);
@@ -65,6 +70,8 @@ class NoteBodyViewer extends Component {
 			codeTheme: theme.codeThemeCss,
 			postMessageSyntax: 'window.joplinPostMessage_',
 			userCss: this.props.customCss,
+			enableLongPress: shim.isReactNative(),
+			longPressDelay: 500, // TODO use system value
 		};
 
 		const result = await this.markupToHtml_.render(
@@ -88,16 +95,16 @@ class NoteBodyViewer extends Component {
 		injectedJs.push('window.joplinPostMessage_ = (msg, args) => { return window.ReactNativeWebView.postMessage(msg); };');
 		injectedJs.push('webviewLib.initialize({ postMessage: msg => { return window.ReactNativeWebView.postMessage(msg); } });');
 		injectedJs.push(`
-			const readyStateCheckInterval = setInterval(function() {
+			const readyStateCheckInterval = shim.setInterval(function() {
 			    if (document.readyState === "complete") {
-			    	clearInterval(readyStateCheckInterval);
+			    	shim.clearInterval(readyStateCheckInterval);
 			    	if ("${resourceDownloadMode}" === "manual") webviewLib.setupResourceManualDownload();
 
 			    	const hash = "${this.props.noteHash}";
 			    	// Gives it a bit of time before scrolling to the anchor
 			    	// so that images are loaded.
 			    	if (hash) {
-				    	setTimeout(() => { 
+				    	shim.setTimeout(() => { 
 					    	const e = document.getElementById(hash);
 							if (!e) {
 								console.warn('Cannot find hash', hash);
@@ -153,7 +160,7 @@ class NoteBodyViewer extends Component {
 	}
 
 	onLoadEnd() {
-		setTimeout(() => {
+		shim.setTimeout(() => {
 			if (this.props.onLoadEnd) this.props.onLoadEnd();
 		}, 100);
 
@@ -161,7 +168,7 @@ class NoteBodyViewer extends Component {
 
 		// Need to display after a delay to avoid a white flash before
 		// the content is displayed.
-		setTimeout(() => {
+		shim.setTimeout(() => {
 			if (!this.isMounted_) return;
 			this.setState({ webViewLoaded: true });
 		}, 100);
@@ -202,6 +209,42 @@ class NoteBodyViewer extends Component {
 		// cases. It is used in particular when re-rendering the note when
 		// a resource has been downloaded in auto mode.
 		return this.forceUpdate_;
+	}
+
+	async onResourceLongPress(msg) {
+		try {
+			const resourceId = msg.split(':')[1];
+			const resource = await Resource.load(resourceId);
+			const name = resource.title ? resource.title : resource.file_name;
+
+			const action = await dialogs.pop(this, name, [
+				{ text: _('Open'), id: 'open' },
+				{ text: _('Share'), id: 'share' },
+			]);
+
+			if (action === 'open') {
+				this.props.onJoplinLinkClick(`joplin://${resourceId}`);
+			} else if (action === 'share') {
+				const filename = resource.file_name ?
+					`${resource.file_name}.${resource.file_extension}` :
+					resource.title;
+				const targetPath = `${Setting.value('resourceDir')}/${filename}`;
+
+				await shim.fsDriver().copy(Resource.fullPath(resource), targetPath);
+
+				await Share.open({
+					type: resource.mime,
+					filename: resource.title,
+					url: `file://${targetPath}`,
+					failOnCancel: false,
+				});
+
+				await shim.fsDriver().remove(targetPath);
+			}
+		} catch (e) {
+			reg.logger().error('Could not handle link long press', e);
+			ToastAndroid.show('An error occurred, check log for details', ToastAndroid.SHORT);
+		}
 	}
 
 	render() {
@@ -257,7 +300,9 @@ class NoteBodyViewer extends Component {
 										msg = msg.split(':');
 										const resourceId = msg[1];
 										if (this.props.onMarkForDownload) this.props.onMarkForDownload({ resourceId: resourceId });
-									} else {
+									} else if (msg.startsWith('longclick:')) {
+										this.onResourceLongPress(msg);
+									} else if (msg.startsWith('joplin:')) {
 										this.props.onJoplinLinkClick(msg);
 									}
 								}}
@@ -265,6 +310,11 @@ class NoteBodyViewer extends Component {
 						);
 					}}
 				</Async>
+				<BackButtonDialogBox
+					ref={dialogbox => {
+						this.dialogbox = dialogbox;
+					}}
+				/>
 			</View>
 		);
 	}
