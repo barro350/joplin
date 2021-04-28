@@ -71,7 +71,7 @@
 					</div>
 					<p>Settings are essentially key/value pairs.</p>
 					<p>Note: Currently this API does <strong>not</strong> provide access to Joplin&#39;s built-in settings. This is by design as plugins that modify user settings could give unexpected results</p>
-					<p><a href="https://github.com/laurent22/joplin/tree/dev/CliClient/tests/support/plugins/settings">View the demo plugin</a></p>
+					<p><a href="https://github.com/laurent22/joplin/tree/dev/packages/app-cli/tests/support/plugins/settings">View the demo plugin</a></p>
 				</div>
 			</section>
 			<!--
@@ -95,8 +95,11 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinsettings.html#globalvalue" class="tsd-kind-icon">global<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinsettings.html#onchange" class="tsd-kind-icon">on<wbr>Change</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinsettings.html#registersection" class="tsd-kind-icon">register<wbr>Section</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinsettings.html#registersetting" class="tsd-kind-icon">register<wbr>Setting</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinsettings.html#registersettings" class="tsd-kind-icon">register<wbr>Settings</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinsettings.html#setvalue" class="tsd-kind-icon">set<wbr>Value</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinsettings.html#value" class="tsd-kind-icon">value</a></li>
 							</ul>
@@ -108,6 +111,70 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="globalvalue" class="tsd-anchor"></a>
+					<h3>global<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">global<wbr>Value<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets a global setting value, including app-specific settings and those set by other plugins.</p>
+								</div>
+								<p>The list of available settings is not documented yet, but can be found by looking at the source code:</p>
+								<p><a href="https://github.com/laurent22/joplin/blob/dev/packages/lib/models/Setting.ts#L142">https://github.com/laurent22/joplin/blob/dev/packages/lib/models/Setting.ts#L142</a></p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>key: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+
+
+-->
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="onchange" class="tsd-anchor"></a>
+					<h3>on<wbr>Change</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Change<span class="tsd-signature-symbol">(</span>handler<span class="tsd-signature-symbol">: </span><a href="../globals.html#changehandler" class="tsd-signature-type">ChangeHandler</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called when one or multiple settings of your plugin have been changed.</p>
+									<ul>
+										<li>For performance reasons, this event is triggered with a delay.</li>
+										<li>You will only get events for your own plugin settings.</li>
+									</ul>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>handler: <a href="../globals.html#changehandler" class="tsd-signature-type">ChangeHandler</a></h5>
+								</li>
+							</ul>
+							<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+
+
+-->
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="registersection" class="tsd-anchor"></a>
 					<h3>register<wbr>Section</h3>
@@ -151,12 +218,12 @@
 							<aside class="tsd-sources">
 							</aside>
 							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Registers a new setting. Note that registering a setting item is dynamic and will be gone next time Joplin starts.
-										What it means is that you need to register the setting every time the plugin starts (for example in the onStart event).
-										The setting value however will be preserved from one launch to the next so there is no risk that it will be lost even if for some
-									reason the plugin fails to start at some point.</p>
-								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use joplin.settings.registerSettings()</p>
+										<p>Registers a new setting.</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -165,6 +232,39 @@
 								</li>
 								<li>
 									<h5>settingItem: <a href="../interfaces/settingitem.html" class="tsd-signature-type">SettingItem</a></h5>
+								</li>
+							</ul>
+							<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+
+
+-->
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="registersettings" class="tsd-anchor"></a>
+					<h3>register<wbr>Settings</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Settings<span class="tsd-signature-symbol">(</span>settings<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/settingitem.html" class="tsd-signature-type">SettingItem</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Registers new settings.
+										Note that registering a setting item is dynamic and will be gone next time Joplin starts.
+										What it means is that you need to register the setting every time the plugin starts (for example in the onStart event).
+										The setting value however will be preserved from one launch to the next so there is no risk that it will be lost even if for some
+									reason the plugin fails to start at some point.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>settings: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/settingitem.html" class="tsd-signature-type">SettingItem</a><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<!-- JOPLINCHANGE
@@ -250,36 +350,6 @@
             -->
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum">
-						<a href="../enums/filesystemitem.html" class="tsd-kind-icon">FileSystemItem</a>
-					</li>
-					<li class=" tsd-kind-enum">
-						<a href="../enums/importmoduleoutputformat.html" class="tsd-kind-icon">ImportModuleOutputFormat</a>
-					</li>
-					<li class=" tsd-kind-enum">
-						<a href="../enums/menuitemlocation.html" class="tsd-kind-icon">MenuItemLocation</a>
-					</li>
-					<li class=" tsd-kind-enum">
-						<a href="../enums/settingitemtype.html" class="tsd-kind-icon">SettingItemType</a>
-					</li>
-					<li class=" tsd-kind-enum">
-						<a href="../enums/toolbarbuttonlocation.html" class="tsd-kind-icon">ToolbarButtonLocation</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplin.html" class="tsd-kind-icon">joplin</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplincommands.html" class="tsd-kind-icon">joplin.commands</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplindata.html" class="tsd-kind-icon">joplin.data</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplininterop.html" class="tsd-kind-icon">joplin.interop</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinplugins.html" class="tsd-kind-icon">joplin.plugins</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
@@ -289,10 +359,19 @@
 								<a href="joplinsettings.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="joplinsettings.html#globalvalue" class="tsd-kind-icon">global<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="joplinsettings.html#onchange" class="tsd-kind-icon">on<wbr>Change</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="joplinsettings.html#registersection" class="tsd-kind-icon">register<wbr>Section</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="joplinsettings.html#registersetting" class="tsd-kind-icon">register<wbr>Setting</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="joplinsettings.html#registersettings" class="tsd-kind-icon">register<wbr>Settings</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="joplinsettings.html#setvalue" class="tsd-kind-icon">set<wbr>Value</a>
@@ -304,69 +383,6 @@
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class">
-						<a href="joplinviews.html" class="tsd-kind-icon">joplin.views</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinviewsdialogs.html" class="tsd-kind-icon">joplin.views.dialogs</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinviewsmenuitems.html" class="tsd-kind-icon">joplin.views.menuItems</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinviewspanels.html" class="tsd-kind-icon">joplin.views.panels</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinviewstoolbarbuttons.html" class="tsd-kind-icon">joplin.views.toolbarButtons</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinworkspace.html" class="tsd-kind-icon">joplin.workspace</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/buttonspec.html" class="tsd-kind-icon">ButtonSpec</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/command.html" class="tsd-kind-icon">Command</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/createmenuitemoptions.html" class="tsd-kind-icon">CreateMenuItemOptions</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/editorcommand.html" class="tsd-kind-icon">EditorCommand</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/exportcontext.html" class="tsd-kind-icon">ExportContext</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/exportmodule.html" class="tsd-kind-icon">ExportModule</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/exportoptions.html" class="tsd-kind-icon">ExportOptions</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/importcontext.html" class="tsd-kind-icon">ImportContext</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/importmodule.html" class="tsd-kind-icon">ImportModule</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/script.html" class="tsd-kind-icon">Script</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/settingitem.html" class="tsd-kind-icon">SettingItem</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/settingsection.html" class="tsd-kind-icon">SettingSection</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#buttonid" class="tsd-kind-icon">ButtonId</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#path" class="tsd-kind-icon">Path</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#viewhandle" class="tsd-kind-icon">ViewHandle</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

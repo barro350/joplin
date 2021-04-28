@@ -8,9 +8,9 @@ Through this tutorial you will learn about several aspect of the Joplin API, inc
 - How to create a webview
 - How to listen to changes in the user interface
 
-## Setting up your environment
+## Setting up your environment
 
-Before getting any further, make sure your environment is setup correctly as described in the [Get Started guide](https://github.com/laurent22/joplin/blob/dev/readme/api/get_started/plugins/).
+Before getting any further, make sure your environment is setup correctly as described in the [Get Started guide](https://github.com/laurent22/joplin/blob/dev/readme/api/get_started/plugins.md).
 
 ## Registering the plugin
 
@@ -66,7 +66,7 @@ joplin.plugins.register({
 
 		// This event will be triggered when the content of the note changes
 		// as you also want to update the TOC in this case.
-		await joplin.workspace.onNoteContentChange(() => {
+		await joplin.workspace.onNoteChange(() => {
 			updateTocView();
 		});
 
@@ -125,17 +125,17 @@ joplin.plugins.register({
 });
 ```
 
-Later you will also need a way to generate the slug for each header. A slug is an identifier which is used to link to a particular header. Essentially a header text like "My Header" is converted to "my-header". And if there's already a slug with that name, a number is appended to it. Without going into too much details, you will need the "slug" package to generate this for you, so install it using `npm i -s slug` from the root of your plugin directory.
+Later you will also need a way to generate the slug for each header. A slug is an identifier which is used to link to a particular header. Essentially a header text like "My Header" is converted to "my-header". And if there's already a slug with that name, a number is appended to it. Without going into too much details, you will need the "slug" package to generate this for you, so install it using `npm i -s 'git+https://github.com/laurent22/uslug.git#emoji-support'` from the root of your plugin directory (Note: you can also install the "uslug" package on its own, but it won't have emoji support).
 
 Then this is the function you will need for Joplin, so copy it somewhere in your file:
 
 ```typescript
-const nodeSlug = require('slug');
+const uslug = require('uslug');
 
 let slugs = {};
 
 function headerSlug(headerText) {
-	const s = nodeSlug(headerText);
+	const s = uslug(headerText);
 	let num = slugs[s] ? slugs[s] : 1;
 	const output = [s];
 	if (num > 1) output.push(num);
@@ -171,7 +171,7 @@ joplin.plugins.register({
 
 	onStart: async function() {
 		// Create the panel object
-		const panel = await joplin.views.panels.create();
+		const panel = await joplin.views.panels.create('panel_1');
 
 		// Set some initial content while the TOC is being created
 		await joplin.views.panels.setHtml(panel, 'Loading...');
@@ -228,7 +228,7 @@ Now run the plugin again and you should see the TOC dynamically updating as you 
 In order to better integrate the TOC to Joplin, you might want to style it using CSS. To do so, first add a `webview.css` file next to `index.ts`, then you will need to let Joplin know about this file. This is done using the `addScript()` function (which is also used to add JavaScript files as we'll see later), like so:
 
 ```typescript
-const panel = await joplin.views.panels.create();
+const panel = await joplin.views.panels.create('panel_1');
  // Add the CSS file to the view, right after it has been created:
 await joplin.views.panels.addScript(panel, './webview.css');
 ```
@@ -261,8 +261,7 @@ The next step is to make the TOC interactive so that when the user clicks on a l
 
 ```typescript
 // In index.ts
-
-const panel = joplin.views.createWebviewPanel();
+const panel = await joplin.views.panels.create('panel_1');
 await joplin.views.panels.addScript(panel, './webview.css');
 await joplin.views.panels.addScript(panel, './webview.js'); // Add the JS file
 ```
@@ -314,7 +313,7 @@ Then from the plugin, in `src/index.ts`, you can listen to this message using th
 ```typescript
 joplin.plugins.register({
 	onStart: async function() {
-		const panel = await joplin.views.panels.create();
+		const panel = await joplin.views.panels.create('panel_1');
 
 		// ...
 
@@ -322,9 +321,7 @@ joplin.plugins.register({
 			if (message.name === 'scrollToHash') {
 				// As the name says, the scrollToHash command makes the note scroll
 				// to the provided hash.
-				joplin.commands.execute('scrollToHash', {
-					hash: message.hash,
-				})
+				joplin.commands.execute('scrollToHash', message.hash)
 			}
 		});
 
@@ -336,6 +333,6 @@ joplin.plugins.register({
 
 And that's it! If you run this code you should now have a fully functional TOC. The full source code is available there:
 
-https://github.com/laurent22/joplin/tree/dev/CliClient/tests/support/plugins/toc/
+https://github.com/laurent22/joplin/tree/dev/packages/app-cli/tests/support/plugins/toc/
 
 Various improvements can be made such as improving the styling, making the header collapsible, etc. but that tutorial should provide the basic building blocks to do so. You might also want to check the [plugin API](https://joplinapp.org/api/references/plugin_api/classes/joplin.html) for further information or head to the [development forum](https://discourse.joplinapp.org/c/development/6) for support.

@@ -67,19 +67,25 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>This class allows executing or registering new Joplin commands. Commands can be executed or associated with
-						<a href="joplinviewstoolbarbuttons.html">toolbar buttons</a> or <a href="joplinviewsmenuitems.html">menu items</a>.</p>
+						<p>This class allows executing or registering new Joplin commands. Commands
+							can be executed or associated with
+							<a href="joplinviewstoolbarbuttons.html">toolbar buttons</a> or
+						<a href="joplinviewsmenuitems.html">menu items</a>.</p>
 					</div>
-					<p><a href="https://github.com/laurent22/joplin/tree/dev/CliClient/tests/support/plugins/register_command">View the demo plugin</a></p>
+					<p><a href="https://github.com/laurent22/joplin/tree/dev/packages/app-cli/tests/support/plugins/register_command">View the demo plugin</a></p>
 					<a href="#executing-joplin39s-internal-commands" id="executing-joplin39s-internal-commands" style="color: inherit; text-decoration: none;">
 						<h2>Executing Joplin&#39;s internal commands</h2>
 					</a>
-					<p>It is also possible to execute internal Joplin&#39;s commands which, as of now, are not well documented.
-					You can find the list directly on GitHub though at the following locations:</p>
-					<p><a href="https://github.com/laurent22/joplin/tree/dev/ElectronClient/gui/MainScreen/commands">https://github.com/laurent22/joplin/tree/dev/ElectronClient/gui/MainScreen/commands</a>
-						<a href="https://github.com/laurent22/joplin/tree/dev/ElectronClient/commands">https://github.com/laurent22/joplin/tree/dev/ElectronClient/commands</a>
-					<a href="https://github.com/laurent22/joplin/tree/dev/ElectronClient/gui/NoteEditor/commands/editorCommandDeclarations.ts">https://github.com/laurent22/joplin/tree/dev/ElectronClient/gui/NoteEditor/commands/editorCommandDeclarations.ts</a></p>
-					<p>To view what arguments are supported, you can open any of these files and look at the <code>execute()</code> command.</p>
+					<p>It is also possible to execute internal Joplin&#39;s commands which, as of
+						now, are not well documented. You can find the list directly on GitHub
+					though at the following locations:</p>
+					<ul>
+						<li><a href="https://github.com/laurent22/joplin/tree/dev/packages/app-desktop/gui/MainScreen/commands">Main screen commands</a></li>
+						<li><a href="https://github.com/laurent22/joplin/tree/dev/packages/app-desktop/commands">Global commands</a></li>
+						<li><a href="https://github.com/laurent22/joplin/tree/dev/packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.ts">Editor commands</a></li>
+					</ul>
+					<p>To view what arguments are supported, you can open any of these files
+					and look at the <code>execute()</code> command.</p>
 				</div>
 			</section>
 			<!--
@@ -114,7 +120,7 @@
 					<a name="execute" class="tsd-anchor"></a>
 					<h3>execute</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">execute<span class="tsd-signature-symbol">(</span>commandName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, props<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">execute<span class="tsd-signature-symbol">(</span>commandName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -122,15 +128,20 @@
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p><span class="platform-desktop">desktop</span> Executes the given command.
-									The <code>props</code> are the arguments passed to the command, and they vary based on the command</p>
+									<p><span class="platform-desktop">desktop</span> Executes the given
+									command.</p>
 								</div>
+								<p>The command can take any number of arguments, and the supported
+									arguments will vary based on the command. For custom commands, this
+									is the <code>args</code> passed to the <code>execute()</code> function. For built-in
+									commands, you can find the supported arguments by checking the links
+								above.</p>
 								<pre><code class="language-typescript"><span class="hljs-comment">// Create a new note in the current notebook:</span>
 <span class="hljs-keyword">await</span> joplin.commands.execute(<span class="hljs-string">&#x27;newNote&#x27;</span>);
 
 <span class="hljs-comment">// Create a new sub-notebook under the provided notebook</span>
 <span class="hljs-comment">// Note: internally, notebooks are called &quot;folders&quot;.</span>
-<span class="hljs-keyword">await</span> joplin.commands.execute(<span class="hljs-string">&#x27;newFolder&#x27;</span>, { parent_id: <span class="hljs-string">&quot;SOME_FOLDER_ID&quot;</span> });</code></pre>
+<span class="hljs-keyword">await</span> joplin.commands.execute(<span class="hljs-string">&#x27;newFolder&#x27;</span>, <span class="hljs-string">&quot;SOME_FOLDER_ID&quot;</span>);</code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -138,11 +149,11 @@
 									<h5>commandName: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> props: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = null</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
 							<!-- JOPLINCHANGE
-    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 
 
 -->
@@ -166,10 +177,10 @@
 								<pre><code class="language-typescript"><span class="hljs-comment">// Register a new commmand called &quot;testCommand1&quot;</span>
 
 <span class="hljs-keyword">await</span> joplin.commands.register({
-    name: <span class="hljs-string">&#x27;testCommand1&#x27;</span>,
-    label: <span class="hljs-string">&#x27;My Test Command 1&#x27;</span>,
-    iconName: <span class="hljs-string">&#x27;fas fa-music&#x27;</span>,
-    execute: <span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;testCommand1&#x27;</span>,
+    <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;My Test Command 1&#x27;</span>,
+    <span class="hljs-attr">iconName</span>: <span class="hljs-string">&#x27;fas fa-music&#x27;</span>,
+    <span class="hljs-attr">execute</span>: <span class="hljs-function">() =&gt;</span> {
         alert(<span class="hljs-string">&#x27;Testing plugin command 1&#x27;</span>);
     },
 });</code></pre>
@@ -202,24 +213,6 @@
             -->
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum">
-						<a href="../enums/filesystemitem.html" class="tsd-kind-icon">FileSystemItem</a>
-					</li>
-					<li class=" tsd-kind-enum">
-						<a href="../enums/importmoduleoutputformat.html" class="tsd-kind-icon">ImportModuleOutputFormat</a>
-					</li>
-					<li class=" tsd-kind-enum">
-						<a href="../enums/menuitemlocation.html" class="tsd-kind-icon">MenuItemLocation</a>
-					</li>
-					<li class=" tsd-kind-enum">
-						<a href="../enums/settingitemtype.html" class="tsd-kind-icon">SettingItemType</a>
-					</li>
-					<li class=" tsd-kind-enum">
-						<a href="../enums/toolbarbuttonlocation.html" class="tsd-kind-icon">ToolbarButtonLocation</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplin.html" class="tsd-kind-icon">joplin</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
@@ -235,81 +228,6 @@
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class">
-						<a href="joplindata.html" class="tsd-kind-icon">joplin.data</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplininterop.html" class="tsd-kind-icon">joplin.interop</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinplugins.html" class="tsd-kind-icon">joplin.plugins</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinsettings.html" class="tsd-kind-icon">joplin.settings</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinviews.html" class="tsd-kind-icon">joplin.views</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinviewsdialogs.html" class="tsd-kind-icon">joplin.views.dialogs</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinviewsmenuitems.html" class="tsd-kind-icon">joplin.views.menuItems</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinviewspanels.html" class="tsd-kind-icon">joplin.views.panels</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinviewstoolbarbuttons.html" class="tsd-kind-icon">joplin.views.toolbarButtons</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinworkspace.html" class="tsd-kind-icon">joplin.workspace</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/buttonspec.html" class="tsd-kind-icon">ButtonSpec</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/command.html" class="tsd-kind-icon">Command</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/createmenuitemoptions.html" class="tsd-kind-icon">CreateMenuItemOptions</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/editorcommand.html" class="tsd-kind-icon">EditorCommand</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/exportcontext.html" class="tsd-kind-icon">ExportContext</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/exportmodule.html" class="tsd-kind-icon">ExportModule</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/exportoptions.html" class="tsd-kind-icon">ExportOptions</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/importcontext.html" class="tsd-kind-icon">ImportContext</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/importmodule.html" class="tsd-kind-icon">ImportModule</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/script.html" class="tsd-kind-icon">Script</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/settingitem.html" class="tsd-kind-icon">SettingItem</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/settingsection.html" class="tsd-kind-icon">SettingSection</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#buttonid" class="tsd-kind-icon">ButtonId</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#path" class="tsd-kind-icon">Path</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#viewhandle" class="tsd-kind-icon">ViewHandle</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

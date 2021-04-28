@@ -1,4 +1,6 @@
-[![Donate](https://joplinapp.org/images/badges/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=E8JMYD2LQ8MMA&lc=GB&item_name=Joplin+Development&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted) [![Sponsor on GitHub](https://joplinapp.org/images/badges/GitHub-Badge.svg)](https://github.com/sponsors/laurent22/) [![Become a patron](https://joplinapp.org/images/badges/Patreon-Badge.svg)](https://www.patreon.com/joplin)
+<!-- DONATELINKS -->
+[![Donate using PayPal](https://joplinapp.org/images/badges/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=E8JMYD2LQ8MMA&lc=GB&item_name=Joplin+Development&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted) [![Sponsor on GitHub](https://joplinapp.org/images/badges/GitHub-Badge.svg)](https://github.com/sponsors/laurent22/) [![Become a patron](https://joplinapp.org/images/badges/Patreon-Badge.svg)](https://www.patreon.com/joplin) [![Donate using IBAN](https://joplinapp.org/images/badges/Donate-IBAN.svg)](https://joplinapp.org/donate/#donations)
+<!-- DONATELINKS -->
 
 * * *
 
@@ -18,24 +20,30 @@ Three types of applications are available: for the **desktop** (Windows, macOS a
 
 ## Desktop applications
 
-Operating System | Download | Alternative
------------------|--------|-------------------
-Windows (32 and 64-bit)         | <a href='https://github.com/laurent22/joplin/releases/download/v1.2.6/Joplin-Setup-1.2.6.exe'><img alt='Get it on Windows' width="134px" src='https://joplinapp.org/images/BadgeWindows.png'/></a> | Or get the <a href='https://github.com/laurent22/joplin/releases/download/v1.2.6/JoplinPortable.exe'>Portable version</a><br><br>The [portable application](https://en.wikipedia.org/wiki/Portable_application) allows installing the software on a portable device such as a USB key. Simply copy the file JoplinPortable.exe in any directory on that USB key ; the application will then create a directory called "JoplinProfile" next to the executable file.
-macOS          | <a href='https://github.com/laurent22/joplin/releases/download/v1.2.6/Joplin-1.2.6.dmg'><img alt='Get it on macOS' width="134px" src='https://joplinapp.org/images/BadgeMacOS.png'/></a> | You can also use Homebrew (unsupported): `brew cask install joplin`
-Linux          | <a href='https://github.com/laurent22/joplin/releases/download/v1.2.6/Joplin-1.2.6.AppImage'><img alt='Get it on Linux' width="134px" src='https://joplinapp.org/images/BadgeLinux.png'/></a> | An Arch Linux package (unsupported) [is also available](#terminal-application).<br><br>If it works with your distribution (it has been tested on Ubuntu, Fedora, and Mint; the desktop environments supported are GNOME, KDE, Xfce, MATE, LXQT, LXDE, Unity, Cinnamon, Deepin and Pantheon), the recommended way is to use this script as it will handle the desktop icon too:<br><br> `wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh \| bash`
+Operating System | Download
+---|---
+Windows (32 and 64-bit) | <a href='https://github.com/laurent22/joplin/releases/download/v1.7.11/Joplin-Setup-1.7.11.exe'><img alt='Get it on Windows' width="134px" src='https://joplinapp.org/images/BadgeWindows.png'/></a>
+macOS | <a href='https://github.com/laurent22/joplin/releases/download/v1.7.11/Joplin-1.7.11.dmg'><img alt='Get it on macOS' width="134px" src='https://joplinapp.org/images/BadgeMacOS.png'/></a>
+Linux | <a href='https://github.com/laurent22/joplin/releases/download/v1.7.11/Joplin-1.7.11.AppImage'><img alt='Get it on Linux' width="134px" src='https://joplinapp.org/images/BadgeLinux.png'/></a>
+
+**On Windows**, you may also use the <a href='https://github.com/laurent22/joplin/releases/download/v1.7.11/JoplinPortable.exe'>Portable version</a>. The [portable application](https://en.wikipedia.org/wiki/Portable_application) allows installing the software on a portable device such as a USB key. Simply copy the file JoplinPortable.exe in any directory on that USB key ; the application will then create a directory called "JoplinProfile" next to the executable file.
+
+**On Linux**, the recommended way is to use the following installation script as it will handle the desktop icon too:
+
+<pre><code style="word-break: break-all">wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash</code></pre>
 
 ## Mobile applications
 
 Operating System | Download | Alt. Download
------------------|----------|----------------
-Android          | <a href='https://play.google.com/store/apps/details?id=net.cozic.joplin&utm_source=GitHub&utm_campaign=README&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' height="40px" src='https://joplinapp.org/images/BadgeAndroid.png'/></a> | or download the APK file: [64-bit](https://github.com/laurent22/joplin-android/releases/download/android-v1.2.6/joplin-v1.2.6.apk) [32-bit](https://github.com/laurent22/joplin-android/releases/download/android-v1.2.6/joplin-v1.2.6-32bit.apk)
-iOS              | <a href='https://itunes.apple.com/us/app/joplin/id1315599797'><img alt='Get it on the App Store' height="40px" src='https://joplinapp.org/images/BadgeIOS.png'/></a> | -
+---|---|---
+Android | <a href='https://play.google.com/store/apps/details?id=net.cozic.joplin&utm_source=GitHub&utm_campaign=README&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' height="40px" src='https://joplinapp.org/images/BadgeAndroid.png'/></a> | or download the APK file: [64-bit](https://github.com/laurent22/joplin-android/releases/download/android-v1.7.5/joplin-v1.7.5.apk) [32-bit](https://github.com/laurent22/joplin-android/releases/download/android-v1.7.5/joplin-v1.7.5-32bit.apk)
+iOS | <a href='https://itunes.apple.com/us/app/joplin/id1315599797'><img alt='Get it on the App Store' height="40px" src='https://joplinapp.org/images/BadgeIOS.png'/></a> | -
 
 ## Terminal application
 
 Operating system | Method
 -----------------|----------------
-macOS, Linux, or Windows (via [WSL](https://msdn.microsoft.com/en-us/commandline/wsl/faq?f=255&MSPPError=-2147217396)) | **Important:** First, [install Node 10+](https://nodejs.org/en/download/package-manager/).<br/><br/>`NPM_CONFIG_PREFIX=~/.joplin-bin npm install -g joplin`<br/>`sudo ln -s ~/.joplin-bin/bin/joplin /usr/bin/joplin`<br><br>By default, the application binary will be installed under `~/.joplin-bin`. You may change this directory if needed. Alternatively, if your npm permissions are setup as described [here](https://docs.npmjs.com/getting-started/fixing-npm-permissions#option-2-change-npms-default-directory-to-another-directory) (Option 2) then simply running `npm -g install joplin` would work.
+macOS, Linux, or Windows (via [WSL](https://msdn.microsoft.com/en-us/commandline/wsl/faq?f=255&MSPPError=-2147217396)) | **Important:** First, [install Node 12+](https://nodejs.org/en/download/package-manager/).<br/><br/>`NPM_CONFIG_PREFIX=~/.joplin-bin npm install -g joplin`<br/>`sudo ln -s ~/.joplin-bin/bin/joplin /usr/bin/joplin`<br><br>By default, the application binary will be installed under `~/.joplin-bin`. You may change this directory if needed. Alternatively, if your npm permissions are setup as described [here](https://docs.npmjs.com/getting-started/fixing-npm-permissions#option-2-change-npms-default-directory-to-another-directory) (Option 2) then simply running `npm -g install joplin` would work.
 
 To start it, type `joplin`.
 
@@ -48,7 +56,7 @@ There are other ways to install the terminal application. However, they are not 
 Operating system | Method
 -----------------|----------------
 macOS            | `brew install joplin`
-Arch Linux       | An Arch Linux package is available [here](https://aur.archlinux.org/packages/joplin/). To install it, use an AUR wrapper such as yay: `yay -S joplin`. Both the CLI tool (type `joplin`) and desktop app (type `joplin-desktop`) are packaged. You can also install a compiled version with the [chaotic-aur](https://wiki.archlinux.org/index.php/Unofficial_user_repositories#chaotic-aur) repository. For support, please go to the [GitHub repo](https://github.com/masterkorp/joplin-pkgbuild).
+Arch Linux       | An Arch Linux package is available [here](https://aur.archlinux.org/packages/joplin/). To install it, use an AUR wrapper such as yay: `yay -S joplin`. Both the CLI tool (type `joplin`) and desktop app (type `joplin-desktop`) are packaged. You can also install a compiled version with the [chaotic-aur](https://wiki.archlinux.org/index.php/Unofficial_user_repositories#chaotic-aur) repository. For support, please go to the [GitHub repo](https://github.com/masterkorp/joplin-pkgbuild). If you are interested in [pre-release](https://joplinapp.org/prereleases/) you have [joplin-beta](https://aur.archlinux.org/packages/joplin-beta).
 
 ## Web Clipper
 
@@ -64,7 +72,9 @@ The Web Clipper is a browser extension that allows you to save web pages and scr
 | :---: | :---: | :---: |
 | <img width="50" src="https://avatars0.githubusercontent.com/u/6979755?s=96&v=4"/></br>[Devon Zuegel](https://github.com/devonzuegel) | <img width="50" src="https://avatars2.githubusercontent.com/u/24908652?s=96&v=4"/></br>[小西　孝宗](https://github.com/konishi-t) | <img width="50" src="https://avatars2.githubusercontent.com/u/215668?s=96&v=4"/></br>[Alexander van der Berg](https://github.com/avanderberg)
 | <img width="50" src="https://avatars0.githubusercontent.com/u/1168659?s=96&v=4"/></br>[Nicholas Head](https://github.com/nicholashead) | <img width="50" src="https://avatars2.githubusercontent.com/u/1439535?s=96&v=4"/></br>[Frank Bloise](https://github.com/fbloise) | <img width="50" src="https://avatars2.githubusercontent.com/u/15859362?s=96&v=4"/></br>[Thomas Broussard](https://github.com/thomasbroussard)
-| <img width="50" src="https://avatars2.githubusercontent.com/u/1307332?s=96&v=4"/></br>[Brandon Johnson](https://github.com/dbrandonjohnson) |   |
+| <img width="50" src="https://avatars2.githubusercontent.com/u/1307332?s=96&v=4"/></br>[Brandon Johnson](https://github.com/dbrandonjohnson) | <img width="50" src="https://avatars1.githubusercontent.com/u/3061769?s=96&v=4"/></br>[@cnagy](https://github.com/c-nagy) | <img width="50" src="https://avatars3.githubusercontent.com/u/53228972?s=96&v=4"/></br>[clmntsl](https://github.com/clmntsl)
+| <img width="50" src="https://avatars1.githubusercontent.com/u/29300939?s=96&v=4"/></br>[mcejp](https://github.com/mcejp) | <img width="50" src="https://avatars.githubusercontent.com/u/1248504?s=96&v=4"/></br>[joesfer](https://github.com/joesfer) | <img width="50" src="https://avatars.githubusercontent.com/u/67130?s=96&v=4"/></br>[chr15m](https://github.com/chr15m)
+| <img width="50" src="https://avatars.githubusercontent.com/u/5782817?s=96&v=4"/></br>[piccobit](https://github.com/piccobit) |  <img width="50" src="https://avatars3.githubusercontent.com/u/37297218?s=96&v=4"/></br>[Jess Sullivan](https://github.com/jesssullivan)
 
 <!-- TOC -->
 # Table of contents
@@ -83,15 +93,23 @@ The Web Clipper is a browser extension that allows you to save web pages and scr
 	- [How to enable end-to-end encryption](https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md)
 	- [What is a conflict?](https://github.com/laurent22/joplin/blob/dev/readme/conflict.md)
 	- [How to enable debug mode](https://github.com/laurent22/joplin/blob/dev/readme/debugging.md)
+	- [About the Rich Text editor limitations](https://github.com/laurent22/joplin/blob/dev/readme/rich_text_editor.md)
 	- [FAQ](https://github.com/laurent22/joplin/blob/dev/readme/faq.md)
 
-- Joplin API
+- Joplin API - Get Started
 
 	- [Joplin API Overview](https://github.com/laurent22/joplin/blob/dev/readme/api/overview.md)
 	- [Plugin development](https://github.com/laurent22/joplin/blob/dev/readme/api/get_started/plugins.md)
 	- [Plugin tutorial](https://github.com/laurent22/joplin/blob/dev/readme/api/tutorials/toc_plugin.md)
+
+
+- Joplin API - References
+
 	- [Plugin API](https://joplinapp.org/api/references/plugin_api/classes/joplin.html)
-	- [Data API documentation](https://github.com/laurent22/joplin/blob/dev/readme/api/references/rest_api.md)
+	- [Data API](https://github.com/laurent22/joplin/blob/dev/readme/api/references/rest_api.md)
+	- [Plugin manifest](https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_manifest.md)
+	- [Plugin loading rules](https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_loading_rules.md)
+	- [Plugin theming](https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_theming.md)
 
 - Development
 
@@ -100,17 +118,22 @@ The Web Clipper is a browser extension that allows you to save web pages and scr
 	- [Note History spec](https://github.com/laurent22/joplin/blob/dev/readme/spec/history.md)
 	- [Sync Lock spec](https://github.com/laurent22/joplin/blob/dev/readme/spec/sync_lock.md)
 	- [Plugin Architecture spec](https://github.com/laurent22/joplin/blob/dev/readme/spec/plugins.md)
-  - [Search Sorting spec](https://github.com/laurent22/joplin/blob/dev/readme/spec/search_sorting.md)
+	- [Search Sorting spec](https://github.com/laurent22/joplin/blob/dev/readme/spec/search_sorting.md)
+	- [Server: File URL Format](https://github.com/laurent22/joplin/blob/dev/readme/spec/server_file_url_format.md)
+	- [Server: Delta Sync](https://github.com/laurent22/joplin/blob/dev/readme/spec/server_delta_sync.md)
+	- [Server: Sharing](https://github.com/laurent22/joplin/blob/dev/readme/spec/server_sharing.md)
 
-- Google Summer of Code 2020
+- Google Summer of Code 2021
 
-	- [Google Summer of Code 2020](https://github.com/laurent22/joplin/blob/dev/readme/gsoc2020/index.md)
-	- [Project Ideas](https://github.com/laurent22/joplin/blob/dev/readme/gsoc2020/ideas.md)
+	- [Google Summer of Code 2021](https://github.com/laurent22/joplin/blob/dev/readme/gsoc2021/index.md)
+	- [How to submit a GSoC pull request](https://github.com/laurent22/joplin/blob/dev/readme/gsoc2021/pull_request_guidelines.md)
+	- [Project Ideas](https://github.com/laurent22/joplin/blob/dev/readme/gsoc2021/ideas.md)
 
 - About
 
 	- [Changelog (Desktop App)](https://github.com/laurent22/joplin/blob/dev/readme/changelog.md)
 	- [Changelog (CLI App)](https://github.com/laurent22/joplin/blob/dev/readme/changelog_cli.md)
+	- [Changelog (Server)](https://github.com/laurent22/joplin/blob/dev/readme/changelog_server.md)
 	- [Stats](https://github.com/laurent22/joplin/blob/dev/readme/stats.md)
 	- [Donate](https://github.com/laurent22/joplin/blob/dev/readme/donate.md)
 <!-- TOC -->
@@ -119,22 +142,29 @@ The Web Clipper is a browser extension that allows you to save web pages and scr
 
 - Desktop, mobile and terminal applications.
 - [Web Clipper](https://github.com/laurent22/joplin/blob/dev/readme/clipper.md) for Firefox and Chrome.
-- End To End Encryption (E2EE)
-- Note history (revisions)
+- End To End Encryption (E2EE).
+- Note history (revisions).
 - Synchronisation with various services, including Nextcloud, Dropbox, WebDAV and OneDrive.
+- Offline first, so the entire data is always available on the device even without an internet connection.
 - Import Enex files (Evernote export format) and Markdown files.
 - Export JEX files (Joplin Export format) and raw files.
 - Support notes, to-dos, tags and notebooks.
-- Goto Anything feature.
 - Sort notes by multiple criteria - title, updated time, etc.
 - Support for alarms (notifications) in mobile and desktop applications.
-- Offline first, so the entire data is always available on the device even without an internet connection.
 - Markdown notes, which are rendered with images and formatting in the desktop and mobile applications. Support for extra features such as math notation and checkboxes.
-- File attachment support - images are displayed, and other files are linked and can be opened in the relevant application.
+- Choice of both Markdown and Rich Text (WYSIWYG) editors.
+- File attachment support - images are displayed, other files are linked and can be opened in the relevant application.
+- Inline display of PDF, video and audio files.
+- Goto Anything feature.
 - Search functionality.
 - Geo-location support.
-- Supports multiple languages
+- Supports multiple languages.
 - External editor support - open notes in your favorite external editor with one click in Joplin.
+- Extensible functionality through plugin and data APIs.
+- Template support with data variables for auto creation of time & dates.
+- Custom CSS support for customisation of both the rendered markdown and overall user interface.
+- Customisable layout allows toggling, movement and sizing of various elements.
+- Keyboard shortcuts are editable and allow binding of most Joplin commands with export/import functionality.
 
 # Importing
 
@@ -144,7 +174,7 @@ Joplin was designed as a replacement for Evernote and so can import complete Eve
 
 - Recognition data - Evernote images, in particular scanned (or photographed) documents have [recognition data](https://en.wikipedia.org/wiki/Optical_character_recognition) associated with them. It is the text that Evernote has been able to recognise in the document. This data is not preserved when the note are imported into Joplin. However, should it become supported in the search tool or other parts of Joplin, it should be possible to regenerate this recognition data since the actual image would still be available.
 
-- Colour, font sizes and faces - Evernote text is stored as HTML and this is converted to Markdown during the import process. For notes that are mostly plain text or with basic formatting (bold, italic, bullet points, links, etc.) this is a lossless conversion, and the note, once rendered back to HTML should be very similar. Tables are also imported and converted to Markdown tables. For very complex notes, some formatting data might be lost - in particular colours, font sizes and font faces will not be imported. The text itself however is always imported in full regardless of formatting.
+- Colour, font sizes and faces - Evernote text is stored as HTML and this is converted to Markdown during the import process. For notes that are mostly plain text or with basic formatting (bold, italic, bullet points, links, etc.) this is a lossless conversion, and the note, once rendered back to HTML should be very similar. Tables are also imported and converted to Markdown tables. For very complex notes, some formatting data might be lost - in particular colours, font sizes and font faces will not be imported. The text itself however is always imported in full regardless of formatting. If it is essential that this extra data is preserved then Joplin also allows import of ENEX files as HTML.
 
 To import Evernote data, first export your Evernote notebooks to ENEX files as described [here](https://help.evernote.com/hc/en-us/articles/209005557-How-to-back-up-export-and-restore-import-notes-and-notebooks). Then follow these steps:
 
@@ -156,7 +186,9 @@ In the **terminal application**, in [command-line mode](https://github.com/laure
 
 Joplin can import notes from plain Markdown file. You can either import a complete directory of Markdown files or individual files.
 
-In the **desktop application**, open File > Import > MD and select your Markdown file or directory.
+In the **desktop application**:
+* **File import**: Go to File > Import > MD - Markdown (file) and select the Markdown file. This file will then be imported to the currently selected Notebook.
+* **Directory import**: Go to File > Import > MD - Markdown (directory) and select the top level of the directory that is being imported. Directory (folder) structure will be preserved in the Notebook > Subnotebook > Note structure within Joplin.
 
 In the **terminal application**, in [command-line mode](https://github.com/laurent22/joplin/blob/dev/readme/terminal.md#command-line-mode), type `import --format md /path/to/file.md` or `import --format md /path/to/directory/`.
 
@@ -172,18 +204,23 @@ In general the way to import notes from any application into Joplin is to conver
 # Exporting
 
 Joplin can export to the JEX format (Joplin Export file), which is a tar file that can contain multiple notes, notebooks, etc. This is a lossless format in that all the notes, but also metadata such as geo-location, updated time, tags, etc. are preserved. This format is convenient for backup purposes and can be re-imported into Joplin. A "raw" format is also available. This is the same as the JEX format except that the data is saved to a directory and each item represented by a single file.
+Joplin is also capable of exporting to a number of other formats including HTML and PDF which can be done for single notes, notebooks or everything.
 
 # Synchronisation
 
 One of the goals of Joplin was to avoid being tied to any particular company or service, whether it is Evernote, Google or Microsoft. As such the synchronisation is designed without any hard dependency to any particular service. Most of the synchronisation process is done at an abstract level and access to external services, such as Nextcloud or Dropbox, is done via lightweight drivers. It is easy to support new services by creating simple drivers that provide a filesystem-like interface, i.e. the ability to read, write, delete and list items. It is also simple to switch from one service to another or to even sync to multiple services at once. Each note, notebook, tags, as well as the relation between items is transmitted as plain text files during synchronisation, which means the data can also be moved to a different application, can be easily backed up, inspected, etc.
 
-Currently, synchronisation is possible with Nextcloud, Dropbox, OneDrive or the local filesystem. To enable synchronisation please follow the instructions below. After that, the application will synchronise in the background whenever it is running, or you can click on "Synchronise" to start a synchronisation manually.
+Currently, synchronisation is possible with Nextcloud, WebDAV, Dropbox, OneDrive or the local filesystem. To enable synchronisation please follow the instructions below. After that, the application will synchronise in the background whenever it is running, or you can click on "Synchronise" to start a synchronisation manually. Joplin will background sync automatically after any content change is made on the local application.
+
+If the **terminal client** has been installed, it is possible to also synchronise outside of the user interface by typing `joplin sync` from the terminal. This can be used to setup a cron script to synchronise at a regular interval. For example, this would do it every 30 minutes:
+
+` */30 * * * * /path/to/joplin sync`
 
 ## Nextcloud synchronisation
 
 <img src="https://joplinapp.org/images/nextcloud-logo-background.png" width="100" align="left"> <a href="https://nextcloud.com/">Nextcloud</a> is a self-hosted, private cloud solution. It can store documents, images and videos but also calendars, passwords and countless other things and can sync them to your laptop or phone. As you can host your own Nextcloud server, you own both the data on your device and infrastructure used for synchronisation. As such it is a good fit for Joplin. The platform is also well supported and with a strong community, so it is likely to be around for a while - since it's open source anyway, it is not a service that can be closed, it can exist on a server for as long as one chooses.
 
-In the **desktop application** or **mobile application**, go to the config screen and select Nextcloud as the synchronisation target. Then input the WebDAV URL (to get it, click on Settings in the bottom left corner of the page, in Nextcloud), this is normally `https://example.com/nextcloud/remote.php/webdav/Joplin` (**make sure to create the "Joplin" directory in Nextcloud**), and set the username and password. If it does not work, please [see this explanation](https://github.com/laurent22/joplin/issues/61#issuecomment-373282608) for more details.
+In the **desktop application** or **mobile application**, go to the Configuration screen and select Nextcloud as the synchronisation target. Then input the WebDAV URL (to get it, click on Settings in the bottom left corner of the page, in Nextcloud), this is normally `https://example.com/nextcloud/remote.php/webdav/Joplin` (**make sure to create the "Joplin" directory in Nextcloud**), and set the username and password. If it does not work, please [see this explanation](https://github.com/laurent22/joplin/issues/61#issuecomment-373282608) for more details.
 
 In the **terminal application**, you will need to set the `sync.target` config variable and all the `sync.5.path`, `sync.5.username` and `sync.5.password` config variables to, respectively the Nextcloud WebDAV URL, your username and your password. This can be done from the command line mode using:
 
@@ -194,19 +231,9 @@ In the **terminal application**, you will need to set the `sync.target` config v
 
 If synchronisation does not work, please consult the logs in the app profile directory - it is often due to a misconfigured URL or password. The log should indicate what the exact issue is.
 
-## Dropbox synchronisation
-
-When syncing with Dropbox, Joplin creates a sub-directory in Dropbox, in `/Apps/Joplin` and read/write the notes and notebooks from it. The application does not have access to anything outside this directory.
-
-In the **desktop application** or **mobile application**, select "Dropbox" as the synchronisation target in the config screen (it is selected by default). Then, to initiate the synchronisation process, click on the "Synchronise" button in the sidebar and follow the instructions.
-
-In the **terminal application**, to initiate the synchronisation process, type `:sync`. You will be asked to follow a link to authorise the application. It is possible to also synchronise outside of the user interface by typing `joplin sync` from the terminal. This can be used to setup a cron script to synchronise at regular interval. For example, this would do it every 30 minutes:
-
-	*/30 * * * * /path/to/joplin sync
-
 ## WebDAV synchronisation
 
-Select the "WebDAV" synchronisation target and follow the same instructions as for Nextcloud above.
+Select the "WebDAV" synchronisation target and follow the same instructions as for Nextcloud above (for the **terminal application** you will need to select sync target 6 rather than 5)
 
 WebDAV-compatible services that are known to work with Joplin:
 
@@ -219,16 +246,63 @@ WebDAV-compatible services that are known to work with Joplin:
 - [OwnCloud](https://owncloud.org/)
 - [Seafile](https://www.seafile.com/)
 - [Stack](https://www.transip.nl/stack/)
+- [Synology WebDAV Server](https://www.synology.com/en-us/dsm/packages/WebDAVServer)
 - [WebDAV Nav](https://www.schimera.com/products/webdav-nav-server/), a macOS server.
 - [Zimbra](https://www.zimbra.com/)
+
+## Dropbox synchronisation
+
+When syncing with Dropbox, Joplin creates a sub-directory in Dropbox, in `/Apps/Joplin` and read/write the notes and notebooks from it. The application does not have access to anything outside this directory.
+
+In the **desktop application** or **mobile application**, select "Dropbox" as the synchronisation target in the Configuration screen (it is selected by default). Then, to initiate the synchronisation process, click on the "Synchronise" button in the sidebar and follow the instructions.
+
+In the **terminal application**, to initiate the synchronisation process, type `:sync`. You will be asked to follow a link to authorise the application.
 
 ## OneDrive synchronisation
 
 When syncing with OneDrive, Joplin creates a sub-directory in OneDrive, in /Apps/Joplin and read/write the notes and notebooks from it. The application does not have access to anything outside this directory.
 
-In the **desktop application** or **mobile application**, select "OneDrive" as the synchronisation target in the config screen. Then, to initiate the synchronisation process, click on the "Synchronise" button in the sidebar and follow the instructions.
+In the **desktop application** or **mobile application**, select "OneDrive" as the synchronisation target in the Configuration screen. Then, to initiate the synchronisation process, click on the "Synchronise" button in the sidebar and follow the instructions.
 
 In the **terminal application**, to initiate the synchronisation process, type `:sync`. You will be asked to follow a link to authorise the application (simply input your Microsoft credentials - you do not need to register with OneDrive).
+
+## AWS S3 synchronisation
+
+In the **desktop application** or **mobile application**, select "AWS S3 (Beta)" as the synchronisation target in the Configuration screen.
+
+- **AWS S3 Bucket:** The name of your Bucket, such as `joplin-bucket`
+- **AWS S3 URL:** Fully qualified URL; By default this should be `https://s3.amazonaws.com/`
+- **AWS key & AWS secret:**  IAM user's programmatic access key.  To create a new key & secret, visit [IAM Security Credentials](https://console.aws.amazon.com/iam/home#/security_credentials).
+
+
+While creating a new Bucket for Joplin, disable **Bucket Versioning**, enable **Block all public access** and enable **Default encryption** with `Amazon S3 key (SSE-S3)`.  
+
+To add a **Bucket Policy** from the AWS S3 Web Console, navigate to the **Permissions** tab. Temporarily disable **Block all public access**  to edit the Bucket policy, something along the lines of:
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                  "s3:ListBucket",
+                  "s3:GetBucketLocation",
+                  "s3:DeleteObject",
+                  "s3:DeleteObjectVersion",
+                  "s3:PutObject"
+            ]
+            "Resource": [
+                "arn:aws:s3:::joplin-bucket",
+                "arn:aws:s3:::joplin-bucket/*"
+            ]
+        }
+    ]
+}
+```
+
+
 
 # Encryption
 
@@ -240,9 +314,9 @@ For a more technical description, mostly relevant for development or to review t
 
 The Joplin applications automatically save previous versions of your notes at regular intervals. These versions are synced across devices and can be viewed from the desktop application. To do so, click on the "Information" button on a note, then click on "Previous version of this note". From this screen you can view the previous versions of the note as well as restore any of them.
 
-This feature can be disabled from the "Note history" section in the settings, and it is also possible to change for how long the history of a note is saved.
+This feature can be disabled from the "Note history" section in the Configuration screen, and it is also possible to change for how long the history of a note is saved.
 
-More information about this feature in the [announcement post](https://www.patreon.com/posts/note-history-now-27083082).
+More information please see the [Note History page](https://github.com/laurent22/joplin/blob/dev/readme/note_history.md).
 
 # External text editor
 
@@ -250,7 +324,7 @@ Joplin notes can be opened and edited using an external editor of your choice. I
 
 # Attachments
 
-Any kind of file can be attached to a note. In Markdown, links to these files are represented as a simple ID to the attachment. In the note viewer, these files, if they are images, will be displayed or, if they are other files (PDF, text files, etc.) they will be displayed as links. Clicking on this link will open the file in the default application.
+Any kind of file can be attached to a note. In Markdown, links to these files are represented as a simple ID to the attachment, clicking on this link will open the file in the default application. In the case of audio, video and pdf files, these will be displayed inline with the note and so can be viewed or played within Joplin.
 
 In the **desktop application**, files can be attached either by clicking the "Attach file" icon in the editor or via drag and drop. If you prefer to create a link to a local file instead, hold the ALT key while performing the drag and drop operation. You can also copy and paste images directly in the editor via Ctrl+V.
 
@@ -292,7 +366,7 @@ Joplin uses and renders a Github-flavoured Markdown with a few variations and ad
 
 # Custom CSS
 
-Rendered markdown can be customized by placing a userstyle file in the profile directory `~/.config/joplin-desktop/userstyle.css` (This path might be different on your device - check at the top of the Config screen for the exact path). This file supports standard CSS syntax. Joplin ***must*** be restarted for the new css to be applied, please ensure that Joplin is not closing to the tray, but is actually exiting. Note that this file is used for both displaying the notes and printing the notes. Be aware how the CSS may look printed (for example, printing white text over a black background is usually not wanted).
+Rendered markdown can be customized by placing a userstyle file in the profile directory `~/.config/joplin-desktop/userstyle.css` (This path might be different on your device - check at the top of the `General` page of the Configuration menu for the exact path). This file supports standard CSS syntax. Joplin ***must*** be restarted for the new css to be applied, please ensure that Joplin is not closing to the tray, but is actually exiting. Note that this file is used for both displaying the notes and printing the notes. Be aware how the CSS may look printed (for example, printing white text over a black background is usually not wanted).
 
 The whole UI can be customized by placing a custom editor style file in the profile directory `~/.config/joplin-desktop/userchrome.css`.
 
@@ -300,7 +374,7 @@ Important: userstyle.css and userchrome.css are provided for your convenience, b
 
 # Note templates
 
-In the **desktop app**, templates can be used to create new notes or to insert into existing ones by creating a `templates` folder in Joplin's config folder and placing Markdown template files into it. For example creating the file `hours.md` in the `templates` directory with the contents:
+In the **desktop app**, templates can be used to create new notes or to insert into existing ones by adding a template file to the `templates` directory (File > Templates). For example creating the file `hours.md` in the `templates` directory with the contents:
 
 ```markdown
 Date: {{date}}
@@ -318,10 +392,23 @@ The currently supported template variables are:
 | `{{time}}` | Current time formatted based on the settings format | 13:00 |
 | `{{datetime}}` | Current date and time formatted based on the settings format | 01/01/19 1:00 PM |
 | `{{#custom_datetime}}` | Current date and/or time formatted based on a supplied string (using [moment.js](https://momentjs.com/) formatting) | `{{#custom_datetime}}M d{{/custom_datetime}}` |
+| `{{bowm}}` | Date of the beginning of the week (when week starts on Monday) based on the settings format | |
+| `{{bows}}` | Date of the beginning of the week (when week starts on Sunday) based on the settings format | |
+
+# Plugins
+
+The **desktop app** has the ability to extend beyond its standard functionality by the way of plugins. These plugins adhere to the Joplin plugin API and can be installed & configured within the application via the `Plugins` page in the Configuration screen. This menu allows the manual installation of the plugin using the single 'Joplin Plugin Archive' (*.jpl) file. Once the application is reloaded the plugins will appear within the plugins menu where they can be toggled on/off or removed entirely.
+
+Plugins are currently maintained by the community in the [Joplin Discourse 'plugins' category](https://discourse.joplinapp.org/c/plugins/18).
+
+For more information see [Plugins](https://github.com/laurent22/joplin/blob/dev/readme/plugins.md)
 
 # Searching
 
 Joplin implements the SQLite Full Text Search (FTS4) extension. It means the content of all the notes is indexed in real time and search queries return results very fast. Both [Simple FTS Queries](https://www.sqlite.org/fts3.html#simple_fts_queries) and [Full-Text Index Queries](https://www.sqlite.org/fts3.html#full_text_index_queries) are supported. See below for the list of supported queries:
+
+## Supported queries
+
 Search type | Description | Example
 ------------|-------------|---------
 Single word | Returns all the notes that contain this term. | For example, searching for `cat` will return all the notes that contain this exact word. Note: it will not return the notes that contain the substring - thus, for "cat", notes that contain "cataclysmic" or "prevaricate" will **not** be returned.
@@ -330,15 +417,17 @@ Phrase | Add double quotes to return the notes that contain exactly this phrase.
 Prefix | Add a wildcard to return all the notes that contain a term with a specified prefix. | `swim*` - will return all the notes that contain eg. "swim", but also "swimming", "swimsuit", etc. IMPORTANT: The wildcard **can only be at the end** - it will be ignored at the beginning of a word (eg. `*swim`) and will be treated as a literal asterisk in the middle of a word (eg. `ast*rix`)
 Switch to basic search | One drawback of Full Text Search is that it ignores most non-alphabetical characters. However in some cases you might want to search for this too. To do that, you can use basic search. You switch to this mode by prefixing your search with a slash `/`. This won't provide the benefits of FTS but it will allow searching exactly for what you need. Note that it can also be much slower, even extremely slow, depending on your query. | `/"- [ ]"` - will return all the notes that contain unchecked checkboxes.
 
+## Search filters
 
 You can also use search filters to further restrict the search.
+
 | Operator | Description | Example |
 | --- | --- | --- |
 |**-**|If placed before a text term, it excludes the notes that contain that term. You can also place it before a filter to negate it. |`-spam` searches for all notes without the word `spam`.<br>`office -trash` searches for all notes with the word`office` and without the word `trash`.|
 |**any:**|Return notes that satisfy any/all of the required conditions. `any:0` is the default, which means all conditions must be satisfied.|`any:1 cat dog` will return notes that have the word `cat` or `dog`.<br>`any:0 cat dog` will return notes with both the words `cat` and `dog`. |
 | **title:** <br> **body:**|Restrict your search to just the title or the body field.|`title:"hello world"` searches for notes whose title contains `hello` and `world`.<br>`title:hello -body:world` searches for notes whose title contains `hello` and body does not contain `world`.
 | **tag:** |Restrict the search to the notes with the specified tags.|`tag:office` searches for all notes having tag office.<br>`tag:office tag:important` searches for all notes having both office and important tags.<br>`tag:office -tag:spam` searches for notes having tag `office` which do not have tag `spam`.<br>`any:1 tag:office tag:spam` searches for notes having tag `office` or tag `spam`.<br>`tag:be*ful` does a search with wildcards.<br>`tag:*` returns all notes with tags.<br>`-tag:*` returns all notes without tags.|
-| **notebook:** | Restrict the search to the specified notebook(s). It cannot be negated. |`notebook:books` limits the search scope within `books` and all its subnotebooks.<br>`notebook:wheel*time` does a wildcard search.|
+| **notebook:** | Restrict the search to the specified notebook(s). |`notebook:books` limits the search scope within `books` and all its subnotebooks.<br>`notebook:wheel*time` does a wildcard search.|
 | **created:** <br> **updated:** | Searches for notes created/updated on dates specified using YYYYMMDD format. You can also search relative to the current day, week, month, or year. | `created:20201218` will return notes created on or after December 18, 2020.<br>`-updated:20201218` will return notes updated before December 18, 2020.<br>`created:20200118 -created:20201215` will return notes created between January 18, 2020, and before December 15, 2020.<br>`created:202001 -created:202003` will return notes created on or after January and before March 2020.<br>`updated:1997 -updated:2020` will return all notes updated between the years 1997 and 2019.<br>`created:day-2` searches for all notes created in the past two days.<br>`updated:year-0` searches all notes updated in the current year.
 | **type:** |Restrict the search to either notes or todos. | `type:note` to return all notes<br>`type:todo` to return all todos |
 | **iscompleted:** | Restrict the search to either completed or uncompleted todos. | `iscompleted:1` to return all completed todos<br>`iscompleted:0` to return all uncompleted todos|
@@ -346,14 +435,22 @@ You can also use search filters to further restrict the search.
 |**resource:**|Filter by attachment MIME type|`resource:image/jpeg` to return notes with a jpeg attachment.<br>`-resource:application/pdf` to return notes without a pdf attachment.<br>`resource:image/*` to return notes with any images.|
 |**sourceurl:**|Filter by source URL|`sourceurl:https://www.google.com`<br>`sourceurl:*joplinapp.org` to perform a wildcard search.|
 
-Note: In CliClient you have to escape the query using `--` when using negated filters.
+Note: In the CLI client you have to escape the query using `--` when using negated filters.
 Eg. `:search -- "-tag:tag1"`.
+
+The filters are implicitly connected by and/or connectives depending on the following rules:
+
+- By default, all filters are connected by "AND".
+- To override this default behaviour, use the `any` filter, in which case the search terms will be connected by "OR" instead.
+- There's an exception for the `notebook` filters which are connected by "OR". The reason being that no note can be in multiple notebooks at once.
+
+## Search order
 
 Notes are sorted by "relevance". Currently it means the notes that contain the requested terms the most times are on top. For queries with multiple terms, it also matters how close to each other the terms are. This is a bit experimental so if you notice a search query that returns unexpected results, please report it in the forum, providing as many details as possible to replicate the issue.
 
 # Goto Anything
 
-In the desktop application, press <kbd>Ctrl+G</kbd> or <kbd>Cmd+G</kbd> and type a note title or part of its content to jump to it. Or type <kbd>#</kbd> followed by a tag name, or <kbd>@</kbd> followed by a notebook name.
+In the desktop application, press <kbd>Ctrl+P</kbd> or <kbd>Cmd+P</kbd> and type a note title or part of its content to jump to it. Or type <kbd>#</kbd> followed by a tag name, or <kbd>@</kbd> followed by a notebook name.
 
 # Privacy
 
@@ -381,24 +478,25 @@ Please see the [donation page](https://github.com/laurent22/joplin/blob/dev/read
 
 # Community
 
-- For general discussion about Joplin, user support, software development questions, and to discuss new features, go to the [Joplin Forum](https://discourse.joplinapp.org/). It is possible to login with your GitHub account.
-- Also see here for information about [the latest releases and general news](https://discourse.joplinapp.org/c/news).
-- For bug reports go to the [GitHub Issue Tracker](https://github.com/laurent22/joplin/issues). Please follow the template accordingly.
-- Feature requests must not be opened on GitHub unless they have been discussed and accepted on the forum.
-- The latest news are posted [on the Patreon page](https://www.patreon.com/joplin).
-- You can also follow us on <a rel="me" href="https://mastodon.social/@joplinapp">the Mastodon feed</a> or [the Twitter feed](https://twitter.com/joplinapp).
-- You can join the live community on [the JoplinApp discord server](https://discordapp.com/invite/d2HMPwE) to get help with Joplin or to discuss anything Joplin related.
+Name | Description
+--- | ---
+[Support Forum](https://discourse.joplinapp.org/) | This is the main place for general discussion about Joplin, user support, software development questions, and to discuss new features. Also where the latest beta versions are released and discussed.
+[Sub-reddit](https://www.reddit.com/r/joplinapp/) | Also a good place to get help
+[Discord server](https://discordapp.com/invite/d2HMPwE) | Our chat server
+[Patreon page](https://www.patreon.com/joplin) |The latest news are often posted there
+[Mastodon feed](https://mastodon.social/@joplinapp) | Follow us on Mastodon
+[Twitter feed](https://twitter.com/joplinapp) | Follow us on Twitter
 
 # Contributing
 
-Please see the guide for information on how to contribute to the development of Joplin: https://github.com/laurent22/joplin/blob/master/CONTRIBUTING.md
+Please see the guide for information on how to contribute to the development of Joplin: https://github.com/laurent22/joplin/blob/dev/CONTRIBUTING.md
 
 # Localisation
 
 Joplin is currently available in the languages below. If you would like to contribute a **new translation**, it is quite straightforward, please follow these steps:
 
 - [Download Poedit](https://poedit.net/), the translation editor, and install it.
-- [Download the file to be translated](https://raw.githubusercontent.com/laurent22/joplin/dev/CliClient/locales/joplin.pot).
+- [Download the file to be translated](https://raw.githubusercontent.com/laurent22/joplin/dev/packages/tools/locales/joplin.pot).
 - In Poedit, open this .pot file, go into the Catalog menu and click Configuration. Change "Country" and "Language" to your own country and language.
 - From then you can translate the file.
 - Once it is done, please [open a pull request](https://github.com/laurent22/joplin/pulls) and add the file to it.
@@ -412,44 +510,47 @@ Current translations:
 <!-- LOCALE-TABLE-AUTO-GENERATED -->
 &nbsp;  |  Language  |  Po File  |  Last translator  |  Percent done
 ---|---|---|---|---
-![](https://joplinapp.org/images/flags/country-4x3/arableague.png)  |  Arabic  |  [ar](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/ar.po)  |  أحمد باشا إبراهيم (fi_ahmed_bacha@esi.dz)  |  80%
-![](https://joplinapp.org/images/flags/es/basque_country.png)  |  Basque  |  [eu](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/eu.po)  |  juan.abasolo@ehu.eus  |  34%
-![](https://joplinapp.org/images/flags/country-4x3/ba.png)  |  Bosnian  |  [bs_BA](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/bs_BA.po)  |  Derviš T. (dervis.t@pm.me)  |  83%
-![](https://joplinapp.org/images/flags/country-4x3/bg.png)  |  Bulgarian  |  [bg_BG](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/bg_BG.po)  |    |  66%
-![](https://joplinapp.org/images/flags/es/catalonia.png)  |  Catalan  |  [ca](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/ca.po)  |  jmontane, 2019  |  96%
-![](https://joplinapp.org/images/flags/country-4x3/hr.png)  |  Croatian  |  [hr_HR](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/hr_HR.po)  |  Hrvoje Mandić (trbuhom@net.hr)  |  27%
-![](https://joplinapp.org/images/flags/country-4x3/cz.png)  |  Czech  |  [cs_CZ](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/cs_CZ.po)  |  Lukas Helebrandt (lukas@aiya.cz)  |  82%
-![](https://joplinapp.org/images/flags/country-4x3/dk.png)  |  Dansk  |  [da_DK](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/da_DK.po)  |  Morten Juhl-Johansen Zölde-Fejér (mjjzf@syntaktisk.  |  74%
-![](https://joplinapp.org/images/flags/country-4x3/de.png)  |  Deutsch  |  [de_DE](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/de_DE.po)  |  Ettore Atalan (atalanttore@users.noreply.github.com)  |  98%
-![](https://joplinapp.org/images/flags/country-4x3/ee.png)  |  Eesti Keel  |  [et_EE](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/et_EE.po)  |    |  66%
-![](https://joplinapp.org/images/flags/country-4x3/gb.png)  |  English (UK)  |  [en_GB](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/en_GB.po)  |    |  100%
-![](https://joplinapp.org/images/flags/country-4x3/us.png)  |  English (US)  |  [en_US](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/en_US.po)  |    |  100%
-![](https://joplinapp.org/images/flags/country-4x3/es.png)  |  Español  |  [es_ES](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/es_ES.po)  |  Fernando Pindado (fpindado@gmail.com)  |  95%
-![](https://joplinapp.org/images/flags/esperanto.png)  |  Esperanto  |  [eo](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/eo.po)  |  Marton Paulo  |  38%
-![](https://joplinapp.org/images/flags/country-4x3/fr.png)  |  Français  |  [fr_FR](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/fr_FR.po)  |  Laurent Cozic  |  99%
-![](https://joplinapp.org/images/flags/es/galicia.png)  |  Galician  |  [gl_ES](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/gl_ES.po)  |  Marcos Lans (marcoslansgarza@gmail.com)  |  43%
-![](https://joplinapp.org/images/flags/country-4x3/id.png)  |  Indonesian  |  [id_ID](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/id_ID.po)  |  Fathy AR (16875937+fathyar@users.noreply.github.com)  |  93%
-![](https://joplinapp.org/images/flags/country-4x3/it.png)  |  Italiano  |  [it_IT](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/it_IT.po)  |  StarFang208  |  90%
-![](https://joplinapp.org/images/flags/country-4x3/be.png)  |  Nederlands  |  [nl_BE](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/nl_BE.po)  |    |  34%
-![](https://joplinapp.org/images/flags/country-4x3/nl.png)  |  Nederlands  |  [nl_NL](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/nl_NL.po)  |  MetBril (metbril@users.noreply.github.com)  |  95%
-![](https://joplinapp.org/images/flags/country-4x3/no.png)  |  Norwegian  |  [nb_NO](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/nb_NO.po)  |  Mats Estensen (code@mxe.no)  |  88%
-![](https://joplinapp.org/images/flags/country-4x3/ir.png)  |  Persian  |  [fa](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/fa.po)  |  Kourosh Firoozbakht (kourox@protonmail.com)  |  83%
-![](https://joplinapp.org/images/flags/country-4x3/pl.png)  |  Polski  |  [pl_PL](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/pl_PL.po)  |    |  98%
-![](https://joplinapp.org/images/flags/country-4x3/pt.png)  |  Português  |  [pt_PT](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/pt_PT.po)  |  Diogo Caveiro   |  88%
-![](https://joplinapp.org/images/flags/country-4x3/br.png)  |  Português (Brasil)  |  [pt_BR](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/pt_BR.po)  |  Renato Nunes Bastos (rnbastos@gmail.com)  |  96%
-![](https://joplinapp.org/images/flags/country-4x3/ro.png)  |  Română  |  [ro](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/ro.po)  |  Cristi Duluta (cristi.duluta@gmail.com)  |  77%
-![](https://joplinapp.org/images/flags/country-4x3/si.png)  |  Slovenian  |  [sl_SI](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/sl_SI.po)  |    |  42%
-![](https://joplinapp.org/images/flags/country-4x3/se.png)  |  Svenska  |  [sv](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/sv.po)  |  Jonatan Nyberg (jonatan@autistici.org)  |  70%
-![](https://joplinapp.org/images/flags/country-4x3/th.png)  |  Thai  |  [th_TH](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/th_TH.po)  |    |  52%
-![](https://joplinapp.org/images/flags/country-4x3/vi.png)  |  Tiếng Việt  |  [vi](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/vi.po)  |    |  85%
-![](https://joplinapp.org/images/flags/country-4x3/tr.png)  |  Türkçe  |  [tr_TR](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/tr_TR.po)  |  Arda Kılıçdağı (arda@kilicdagi.com)  |  98%
-![](https://joplinapp.org/images/flags/country-4x3/gr.png)  |  Ελληνικά  |  [el_GR](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/el_GR.po)  |  Harris Arvanitis (xaris@tuta.io)  |  96%
-![](https://joplinapp.org/images/flags/country-4x3/ru.png)  |  Русский  |  [ru_RU](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/ru_RU.po)  |  Sergey Segeda (thesermanarm@gmail.com)  |  95%
-![](https://joplinapp.org/images/flags/country-4x3/rs.png)  |  српски језик  |  [sr_RS](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/sr_RS.po)  |    |  71%
-![](https://joplinapp.org/images/flags/country-4x3/cn.png)  |  中文 (简体)  |  [zh_CN](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/zh_CN.po)  |  WhiredPlanck (fungdaat31@outlook.com)  |  96%
-![](https://joplinapp.org/images/flags/country-4x3/tw.png)  |  中文 (繁體)  |  [zh_TW](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/zh_TW.po)  |  Yaoze Ye (yaozeye@yahoo.co.jp)  |  95%
-![](https://joplinapp.org/images/flags/country-4x3/jp.png)  |  日本語  |  [ja_JP](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/ja_JP.po)  |  genneko (genneko217@gmail.com)  |  98%
-![](https://joplinapp.org/images/flags/country-4x3/kr.png)  |  한국어  |  [ko](https://github.com/laurent22/joplin/blob/dev/CliClient/locales/ko.po)  |  Ji-Hyeon Gim (potatogim@potatogim.net)  |  98%
+![](https://joplinapp.org/images/flags/country-4x3/arableague.png)  |  Arabic  |  [ar](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/ar.po)  |  [Whaell O](mailto:Whaell@protonmail.com)  |  99%
+![](https://joplinapp.org/images/flags/es/basque_country.png)  |  Basque  |  [eu](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/eu.po)  |  juan.abasolo@ehu.eus  |  31%
+![](https://joplinapp.org/images/flags/country-4x3/ba.png)  |  Bosnian (Bosna i Hercegovina)  |  [bs_BA](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/bs_BA.po)  |  [Derviš T.](mailto:dervis.t@pm.me)  |  74%
+![](https://joplinapp.org/images/flags/country-4x3/bg.png)  |  Bulgarian (България)  |  [bg_BG](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/bg_BG.po)  |    |  60%
+![](https://joplinapp.org/images/flags/es/catalonia.png)  |  Catalan  |  [ca](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/ca.po)  |  jmontane, 2019  |  85%
+![](https://joplinapp.org/images/flags/country-4x3/hr.png)  |  Croatian (Hrvatska)  |  [hr_HR](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/hr_HR.po)  |  [Milo Ivir](mailto:mail@milotype.de)  |  99%
+![](https://joplinapp.org/images/flags/country-4x3/cz.png)  |  Czech (Česká republika)  |  [cs_CZ](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/cs_CZ.po)  |  [Lukas Helebrandt](mailto:lukas@aiya.cz)  |  89%
+![](https://joplinapp.org/images/flags/country-4x3/dk.png)  |  Dansk (Danmark)  |  [da_DK](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/da_DK.po)  |  Mustafa Al-Dailemi (dailemi@hotmail.com)Language-Team:  |  96%
+![](https://joplinapp.org/images/flags/country-4x3/de.png)  |  Deutsch (Deutschland)  |  [de_DE](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/de_DE.po)  |  [Atalanttore](mailto:atalanttore@googlemail.com)  |  98%
+![](https://joplinapp.org/images/flags/country-4x3/ee.png)  |  Eesti Keel (Eesti)  |  [et_EE](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/et_EE.po)  |    |  58%
+![](https://joplinapp.org/images/flags/country-4x3/gb.png)  |  English (United Kingdom)  |  [en_GB](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/en_GB.po)  |    |  100%
+![](https://joplinapp.org/images/flags/country-4x3/us.png)  |  English (United States of America)  |  [en_US](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/en_US.po)  |    |  100%
+![](https://joplinapp.org/images/flags/country-4x3/es.png)  |  Español (España)  |  [es_ES](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/es_ES.po)  |  [Mario Campo](mailto:mario.campo@gmail.com)  |  97%
+![](https://joplinapp.org/images/flags/esperanto.png)  |  Esperanto  |  [eo](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/eo.po)  |  Marton Paulo  |  34%
+![](https://joplinapp.org/images/flags/country-4x3/fi.png)  |  Finnish (Suomi)  |  [fi_FI](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/fi_FI.po)  |  mrkaato  |  97%
+![](https://joplinapp.org/images/flags/country-4x3/fr.png)  |  Français (France)  |  [fr_FR](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/fr_FR.po)  |  Laurent Cozic  |  95%
+![](https://joplinapp.org/images/flags/es/galicia.png)  |  Galician (España)  |  [gl_ES](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/gl_ES.po)  |  [Marcos Lans](mailto:marcoslansgarza@gmail.com)  |  39%
+![](https://joplinapp.org/images/flags/country-4x3/id.png)  |  Indonesian (Indonesia)  |  [id_ID](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/id_ID.po)  |  [eresytter](mailto:42007357+eresytter@users.noreply.github.com)  |  96%
+![](https://joplinapp.org/images/flags/country-4x3/it.png)  |  Italiano (Italia)  |  [it_IT](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/it_IT.po)  |  [Alessandro Bernardello](mailto:mailfilledwithspam@gmail.com)  |  97%
+![](https://joplinapp.org/images/flags/country-4x3/hu.png)  |  Magyar (Magyarország)  |  [hu_HU](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/hu_HU.po)  |  [Szőke Sándor](mailto:mail@szokesandor.hu)  |  91%
+![](https://joplinapp.org/images/flags/country-4x3/be.png)  |  Nederlands (België, Belgique, Belgien)  |  [nl_BE](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/nl_BE.po)  |    |  95%
+![](https://joplinapp.org/images/flags/country-4x3/nl.png)  |  Nederlands (Nederland)  |  [nl_NL](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/nl_NL.po)  |  [MetBril](mailto:metbril@users.noreply.github.com)  |  98%
+![](https://joplinapp.org/images/flags/country-4x3/no.png)  |  Norwegian (Norge, Noreg)  |  [nb_NO](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/nb_NO.po)  |  [Mats Estensen](mailto:code@mxe.no)  |  78%
+![](https://joplinapp.org/images/flags/country-4x3/ir.png)  |  Persian  |  [fa](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/fa.po)  |  [Kourosh Firoozbakht](mailto:kourox@protonmail.com)  |  74%
+![](https://joplinapp.org/images/flags/country-4x3/pl.png)  |  Polski (Polska)  |  [pl_PL](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/pl_PL.po)  |  [konhi](mailto:hello.konhi@gmail.com)  |  97%
+![](https://joplinapp.org/images/flags/country-4x3/br.png)  |  Português (Brasil)  |  [pt_BR](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/pt_BR.po)  |  [Nicolas Suzuki](mailto:nicolas.suzuki@pm.me)  |  97%
+![](https://joplinapp.org/images/flags/country-4x3/pt.png)  |  Português (Portugal)  |  [pt_PT](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/pt_PT.po)  |  [Diogo Caveiro](mailto:dcaveiro@yahoo.com)  |  97%
+![](https://joplinapp.org/images/flags/country-4x3/ro.png)  |  Română  |  [ro](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/ro.po)  |  [Cristi Duluta](mailto:cristi.duluta@gmail.com)  |  68%
+![](https://joplinapp.org/images/flags/country-4x3/si.png)  |  Slovenian (Slovenija)  |  [sl_SI](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/sl_SI.po)  |  [Martin Korelič](mailto:martin.korelic@protonmail.com)  |  99%
+![](https://joplinapp.org/images/flags/country-4x3/se.png)  |  Svenska  |  [sv](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/sv.po)  |  [Jonatan Nyberg](mailto:jonatan@autistici.org)  |  63%
+![](https://joplinapp.org/images/flags/country-4x3/th.png)  |  Thai (ประเทศไทย)  |  [th_TH](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/th_TH.po)  |    |  47%
+![](https://joplinapp.org/images/flags/country-4x3/vi.png)  |  Tiếng Việt  |  [vi](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/vi.po)  |    |  75%
+![](https://joplinapp.org/images/flags/country-4x3/tr.png)  |  Türkçe (Türkiye)  |  [tr_TR](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/tr_TR.po)  |  [Arda Kılıçdağı](mailto:arda@kilicdagi.com)  |  97%
+![](https://joplinapp.org/images/flags/country-4x3/ua.png)  |  Ukrainian (Україна)  |  [uk_UA](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/uk_UA.po)  |  [Vyacheslav Andreykiv](mailto:vandreykiv@gmail.com)  |  97%
+![](https://joplinapp.org/images/flags/country-4x3/gr.png)  |  Ελληνικά (Ελλάδα)  |  [el_GR](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/el_GR.po)  |  [Harris Arvanitis](mailto:xaris@tuta.io)  |  85%
+![](https://joplinapp.org/images/flags/country-4x3/ru.png)  |  Русский (Россия)  |  [ru_RU](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/ru_RU.po)  |  [Sergey Segeda](mailto:thesermanarm@gmail.com)  |  97%
+![](https://joplinapp.org/images/flags/country-4x3/rs.png)  |  српски језик (Србија)  |  [sr_RS](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/sr_RS.po)  |    |  73%
+![](https://joplinapp.org/images/flags/country-4x3/cn.png)  |  中文 (简体)  |  [zh_CN](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/zh_CN.po)  |  [Yang Zhang](mailto:zyangmath@gmail.com)  |  97%
+![](https://joplinapp.org/images/flags/country-4x3/tw.png)  |  中文 (繁體)  |  [zh_TW](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/zh_TW.po)  |  [Yaoze Ye](mailto:yaozeye@yahoo.co.jp)  |  95%
+![](https://joplinapp.org/images/flags/country-4x3/jp.png)  |  日本語 (日本)  |  [ja_JP](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/ja_JP.po)  |  [genneko](mailto:genneko217@gmail.com)  |  98%
+![](https://joplinapp.org/images/flags/country-4x3/kr.png)  |  한국어  |  [ko](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/ko.po)  |  [Ji-Hyeon Gim](mailto:potatogim@potatogim.net)  |  97%
 <!-- LOCALE-TABLE-AUTO-GENERATED -->
 
 # Contributors

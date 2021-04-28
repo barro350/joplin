@@ -92,7 +92,11 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinplugins.html#datadir" class="tsd-kind-icon">data<wbr>Dir</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinplugins.html#installationdir" class="tsd-kind-icon">installation<wbr>Dir</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinplugins.html#register" class="tsd-kind-icon">register</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinplugins.html#registercontentscript" class="tsd-kind-icon">register<wbr>Content<wbr>Script</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="joplinplugins.html#require" class="tsd-kind-icon">require</a></li>
 							</ul>
 						</section>
 					</div>
@@ -102,6 +106,57 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="datadir" class="tsd-anchor"></a>
+					<h3>data<wbr>Dir</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">data<wbr>Dir<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the plugin own data directory path. Use this to store any
+										plugin-related data. Unlike <a href="joplinplugins.html#installationdir">installationDir</a>, any data stored here
+									will be persisted.</p>
+								</div>
+							</div>
+							<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+
+
+-->
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="installationdir" class="tsd-anchor"></a>
+					<h3>installation<wbr>Dir</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">installation<wbr>Dir<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the plugin installation directory. This can be used to access any
+										asset that was packaged with the plugin. This directory should be
+										considered read-only because any data you store here might be deleted or
+									re-created at any time. To store new persistent data, use <a href="joplinplugins.html#datadir">dataDir</a>.</p>
+								</div>
+							</div>
+							<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+
+
+-->
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="register" class="tsd-anchor"></a>
 					<h3>register</h3>
@@ -118,7 +173,7 @@
 									That <code>onStart</code> method will be executed as soon as the plugin is loaded.</p>
 								</div>
 								<pre><code class="language-typescript">joplin.plugins.register({
-    onStart: <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-attr">onStart</span>: <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
         <span class="hljs-comment">// Run your plugin code here</span>
     }
 });</code></pre>
@@ -131,6 +186,74 @@
 							</ul>
 							<!-- JOPLINCHANGE
     <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+
+
+-->
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="registercontentscript" class="tsd-anchor"></a>
+					<h3>register<wbr>Content<wbr>Script</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Content<wbr>Script<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="../enums/contentscripttype.html" class="tsd-signature-type">ContentScriptType</a>, id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, scriptPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use joplin.contentScripts.register()</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <a href="../enums/contentscripttype.html" class="tsd-signature-type">ContentScriptType</a></h5>
+								</li>
+								<li>
+									<h5>id: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>scriptPath: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+
+
+-->
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="require" class="tsd-anchor"></a>
+					<h3>require</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">require<span class="tsd-signature-symbol">(</span>_path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>Use joplin.require()</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>_path: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<!-- JOPLINCHANGE
+    <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 
 
 -->
@@ -151,33 +274,6 @@
             -->
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum">
-						<a href="../enums/filesystemitem.html" class="tsd-kind-icon">FileSystemItem</a>
-					</li>
-					<li class=" tsd-kind-enum">
-						<a href="../enums/importmoduleoutputformat.html" class="tsd-kind-icon">ImportModuleOutputFormat</a>
-					</li>
-					<li class=" tsd-kind-enum">
-						<a href="../enums/menuitemlocation.html" class="tsd-kind-icon">MenuItemLocation</a>
-					</li>
-					<li class=" tsd-kind-enum">
-						<a href="../enums/settingitemtype.html" class="tsd-kind-icon">SettingItemType</a>
-					</li>
-					<li class=" tsd-kind-enum">
-						<a href="../enums/toolbarbuttonlocation.html" class="tsd-kind-icon">ToolbarButtonLocation</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplin.html" class="tsd-kind-icon">joplin</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplincommands.html" class="tsd-kind-icon">joplin.commands</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplindata.html" class="tsd-kind-icon">joplin.data</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplininterop.html" class="tsd-kind-icon">joplin.interop</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
@@ -187,78 +283,24 @@
 								<a href="joplinplugins.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="joplinplugins.html#datadir" class="tsd-kind-icon">data<wbr>Dir</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="joplinplugins.html#installationdir" class="tsd-kind-icon">installation<wbr>Dir</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="joplinplugins.html#register" class="tsd-kind-icon">register</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="joplinplugins.html#registercontentscript" class="tsd-kind-icon">register<wbr>Content<wbr>Script</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="joplinplugins.html#require" class="tsd-kind-icon">require</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class">
-						<a href="joplinsettings.html" class="tsd-kind-icon">joplin.settings</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinviews.html" class="tsd-kind-icon">joplin.views</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinviewsdialogs.html" class="tsd-kind-icon">joplin.views.dialogs</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinviewsmenuitems.html" class="tsd-kind-icon">joplin.views.menuItems</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinviewspanels.html" class="tsd-kind-icon">joplin.views.panels</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinviewstoolbarbuttons.html" class="tsd-kind-icon">joplin.views.toolbarButtons</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="joplinworkspace.html" class="tsd-kind-icon">joplin.workspace</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/buttonspec.html" class="tsd-kind-icon">ButtonSpec</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/command.html" class="tsd-kind-icon">Command</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/createmenuitemoptions.html" class="tsd-kind-icon">CreateMenuItemOptions</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/editorcommand.html" class="tsd-kind-icon">EditorCommand</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/exportcontext.html" class="tsd-kind-icon">ExportContext</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/exportmodule.html" class="tsd-kind-icon">ExportModule</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/exportoptions.html" class="tsd-kind-icon">ExportOptions</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/importcontext.html" class="tsd-kind-icon">ImportContext</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/importmodule.html" class="tsd-kind-icon">ImportModule</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/script.html" class="tsd-kind-icon">Script</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/settingitem.html" class="tsd-kind-icon">SettingItem</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/settingsection.html" class="tsd-kind-icon">SettingSection</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#buttonid" class="tsd-kind-icon">ButtonId</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#path" class="tsd-kind-icon">Path</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../globals.html#viewhandle" class="tsd-kind-icon">ViewHandle</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
