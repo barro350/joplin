@@ -8,7 +8,7 @@ The Web Clipper is a browser extension that allows you to save web pages and scr
 
 The web clipper extension and the Joplin application communicates via a service, which is started by the Joplin desktop app.
 
-However certain things can interfer with this service and prevent it from being accessible or from starting. If something does not work, check the following:
+However certain things can interfere with this service and prevent it from being accessible or from starting. If something does not work, check the following:
 
 - Check that the service is started. You can check this in the Web clipper options in the desktop app.
 - Check that the port used by the service is not blocked by a firewall. You can find the port number in the Web clipper options in the desktop Joplin application.
@@ -43,4 +43,4 @@ Copy and paste the content of both the debugging window and the Firefox console,
 
 # Using the Web Clipper service
 
-The Web Clipper service can be used to create, modify or delete notes, notebooks, tags, etc. from any other application. It exposes an API with a number of methods to manage Joplin's data. For more information about this API and how to use it, please check the [Joplin API documentation](https://joplinapp.org/api/).
+The Web Clipper service can be used to create, modify or delete notes, notebooks, tags, etc. from any other application. It exposes an API with a number of methods to manage Joplin's data. For more information about this API and how to use it, please check the [Joplin API documentation](https://joplinapp.org/api/references/rest_api/).

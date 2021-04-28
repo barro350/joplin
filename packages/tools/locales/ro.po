@@ -1,0 +1,4208 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Laurent Cozic
+# This file is distributed under the same license as the Joplin-CLI package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Joplin-CLI 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Cristi Duluta <cristi.duluta@gmail.com>\n"
+"Language-Team: \n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n==0 || (n!=1 && n%100>=1 && n"
+"%100<=19) ? 1 : 2);\n"
+
+#: packages/app-desktop/bridge.js:106 packages/app-desktop/bridge.js:110
+#: packages/app-desktop/bridge.js:126 packages/app-desktop/bridge.js:134
+#: packages/app-desktop/checkForUpdates.js:139
+#: packages/app-desktop/gui/DialogButtonRow.min.js:30
+#: packages/app-desktop/gui/MenuBar.js:373
+#: packages/app-desktop/gui/ConfigScreen/ButtonBar.js:22
+#: packages/app-desktop/gui/PromptDialog.min.js:235
+#: packages/app-desktop/services/plugins/UserWebviewDialogButtonBar.js:20
+#: packages/app-mobile/components/ModalDialog.js:67
+#: packages/app-mobile/components/CameraView.js:160
+#: packages/app-mobile/components/side-menu-content.js:150
+#: packages/app-mobile/components/screens/config.js:163
+msgid "OK"
+msgstr "OK"
+
+#: packages/app-desktop/bridge.js:110 packages/app-desktop/bridge.js:126
+#: packages/app-desktop/checkForUpdates.js:154
+#: packages/app-desktop/gui/DialogButtonRow.min.js:38
+#: packages/app-desktop/gui/Sidebar/Sidebar.js:201
+#: packages/app-desktop/gui/Sidebar/Sidebar.js:430
+#: packages/app-desktop/gui/KeymapConfig/ShortcutRecorder.js:52
+#: packages/app-desktop/gui/utils/NoteListUtils.js:169
+#: packages/app-desktop/gui/ConfigScreen/ConfigScreen.js:535
+#: packages/app-desktop/gui/PromptDialog.min.js:242
+#: packages/app-desktop/gui/NoteList/NoteList.js:163
+#: packages/app-desktop/gui/ResourceScreen.js:96
+#: packages/app-desktop/services/plugins/UserWebviewDialogButtonBar.js:21
+#: packages/app-mobile/components/ModalDialog.js:70
+#: packages/app-mobile/components/SelectDateTimeDialog.js:82
+#: packages/app-mobile/components/CameraView.js:161
+#: packages/app-mobile/components/side-menu-content.js:156
+#: packages/app-mobile/components/side-menu-content.js:165
+#: packages/app-mobile/components/side-menu-content.js:338
+#: packages/app-mobile/components/screens/encryption-config.js:185
+#: packages/app-mobile/components/screens/Note.js:98
+#: packages/app-mobile/components/screens/Note.js:506
+#: packages/lib/shim-init-node.js:148
+msgid "Cancel"
+msgstr "Anulați"
+
+#: packages/app-desktop/bridge.js:188
+msgid ""
+"The app is now going to close. Please relaunch it to complete the process."
+msgstr ""
+
+#: packages/app-desktop/plugins/GotoAnything.js:432
+#, fuzzy
+msgid ""
+"Type a note title or part of its content to jump to it. Or type # followed "
+"by a tag name, or @ followed by a notebook name. Or type : to search for "
+"commands."
+msgstr ""
+"Tastați un titlu de notă sau o parte din conținutul acesteia pentru a trece "
+"la ea. Sau tastați # urmat de un nume de etichetă sau @ urmat de un nume de "
+"agendă."
+
+#: packages/app-desktop/plugins/GotoAnything.js:457
+#: packages/app-desktop/gui/KeymapConfig/utils/getLabel.js:20
+msgid "Goto Anything..."
+msgstr "Mergeți la..."
+
+#: packages/app-desktop/plugins/GotoAnything.js:464
+#: packages/app-desktop/gui/KeymapConfig/utils/getLabel.js:28
+msgid "Command palette"
+msgstr ""
+
+#: packages/app-desktop/InteropServiceHelper.js:154
+#, javascript-format
+msgid "Exporting to \"%s\" as \"%s\" format. Please wait..."
+msgstr "Se exportă către \"%s\" în format \"%s\". Vă rugăm să așteptați..."
+
+#: packages/app-desktop/InteropServiceHelper.js:174
+#, javascript-format
+msgid "Could not export notes: %s"
+msgstr "Nu s-au putut exporta notițele:% s"
+
+#: packages/app-desktop/checkForUpdates.js:138
+msgid "Current version is up-to-date."
+msgstr "Versiunea curentă este actualizată."
+
+#: packages/app-desktop/checkForUpdates.js:148
+#, javascript-format
+msgid "%s (pre-release)"
+msgstr "%s (pre-lansare)"
+
+#: packages/app-desktop/checkForUpdates.js:152
+msgid "An update is available, do you want to download it now?"
+msgstr "Este disponibilă o nouă actualizare, doriți să o descărcați acum?"
+
+#: packages/app-desktop/checkForUpdates.js:153
+#, javascript-format
+msgid "Your version: %s"
+msgstr "Versiunea dvs.:% s"
+
+#: packages/app-desktop/checkForUpdates.js:153
+#, javascript-format
+msgid "New version: %s"
+msgstr "Versiune nouă:% s"
+
+#: packages/app-desktop/checkForUpdates.js:154
+msgid "Download"
+msgstr ""
+
+#: packages/app-desktop/checkForUpdates.js:154
+msgid "Full Release Notes"
+msgstr "Descrierea versiunii instalate"
+
+#: packages/app-desktop/gui/NoteRevisionViewer.min.js:75
+#, javascript-format
+msgid "The note \"%s\" has been successfully restored to the notebook \"%s\"."
+msgstr "Nota \"%s\" a fost restabilită cu succes în agenda \"%s\"."
+
+#: packages/app-desktop/gui/NoteRevisionViewer.min.js:100
+msgid "This note has no history"
+msgstr "Această notă nu are istoric"
+
+#: packages/app-desktop/gui/NoteRevisionViewer.min.js:142
+#: packages/app-desktop/gui/NoteEditor/utils/useMessageHandler.js:122
+#, javascript-format
+msgid "Unsupported link or message: %s"
+msgstr "Link sau mesaj neacceptat:% s"
+
+#: packages/app-desktop/gui/NoteRevisionViewer.min.js:177
+#: packages/app-desktop/gui/KeymapConfig/ShortcutRecorder.js:51
+msgid "Restore"
+msgstr "Restabilire"
+
+#: packages/app-desktop/gui/NoteRevisionViewer.min.js:178
+#, javascript-format
+msgid ""
+"Click \"%s\" to restore the note. It will be copied in the notebook named "
+"\"%s\". The current version of the note will not be replaced or modified."
+msgstr ""
+"Faceți clic pe \"%s\" pentru a restabili nota. Va fi copiat în agenda numită "
+"\"% s\". Versiunea actuală a notei nu va fi înlocuită sau modificată."
+
+#: packages/app-desktop/gui/NoteRevisionViewer.min.js:187
+#: packages/app-desktop/gui/ConfigScreen/ConfigScreen.js:535
+#: packages/app-desktop/gui/ConfigScreen/ButtonBar.js:30
+#: packages/lib/commands/historyBackward.js:17
+msgid "Back"
+msgstr "Înapoi"
+
+#: packages/app-desktop/gui/Sidebar/Sidebar.js:176
+msgid "Remove"
+msgstr "Ștergeți"
+
+#: packages/app-desktop/gui/Sidebar/Sidebar.js:179
+#: packages/app-mobile/components/side-menu-content.js:148
+#, javascript-format
+msgid ""
+"Delete notebook \"%s\"?\n"
+"\n"
+"All notes and sub-notebooks within this notebook will also be deleted."
+msgstr ""
+"Ștergeți agenda \"%s\"?\n"
+"\n"
+"Toate notițele și sub-notițele în această agendă vor fi șterse."
+
+#: packages/app-desktop/gui/Sidebar/Sidebar.js:180
+#: packages/app-desktop/gui/utils/NoteListUtils.js:140
+#: packages/app-desktop/gui/utils/NoteListUtils.js:169
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/PluginBox.js:125
+#: packages/app-desktop/gui/ResourceScreen.js:47
+#: packages/app-desktop/gui/ResourceScreen.js:96
+#: packages/app-mobile/components/side-menu-content.js:146
+#: packages/app-mobile/components/screens/Note.js:830
+msgid "Delete"
+msgstr "Ștergeți"
+
+#: packages/app-desktop/gui/Sidebar/Sidebar.js:184
+#, javascript-format
+msgid "Remove tag \"%s\" from all notes?"
+msgstr "Eliminați eticheta \"% s\" din toate notițele?"
+
+#: packages/app-desktop/gui/Sidebar/Sidebar.js:187
+msgid "Remove this search from the sidebar?"
+msgstr "Eliminați această căutare din bara laterală?"
+
+#: packages/app-desktop/gui/Sidebar/Sidebar.js:238
+#: packages/app-desktop/gui/KeymapConfig/KeymapConfigScreen.js:122
+#: packages/app-desktop/gui/utils/NoteListUtils.js:136
+msgid "Export"
+msgstr "Exportați"
+
+#: packages/app-desktop/gui/Sidebar/Sidebar.js:301
+#: packages/app-mobile/components/side-menu-content.js:368
+#: packages/app-mobile/components/screens/notes.js:188
+msgid "All notes"
+msgstr "Toate notițele"
+
+#: packages/app-desktop/gui/Sidebar/Sidebar.js:430
+#: packages/app-mobile/components/side-menu-content.js:338
+#: packages/lib/commands/synchronize.js:18
+msgid "Synchronise"
+msgstr "Sincronizați"
+
+#: packages/app-desktop/gui/Sidebar/Sidebar.js:455
+#: packages/app-mobile/components/side-menu-content.js:372
+msgid "Notebooks"
+msgstr "Caiete de notițe"
+
+#: packages/app-desktop/gui/Sidebar/Sidebar.js:467
+#: packages/app-desktop/gui/MainScreen/commands/setTags.js:17
+#: packages/app-mobile/components/side-menu-content.js:314
+#: packages/app-mobile/components/screens/tags.js:101
+#: packages/app-mobile/components/screens/Note.js:803
+msgid "Tags"
+msgstr "Etichete"
+
+#: packages/app-desktop/gui/Sidebar/Sidebar.js:478
+#: packages/app-mobile/components/side-menu-content.js:325
+#, javascript-format
+msgid "Decrypting items: %d/%d"
+msgstr "Se decriptează itemi: %d/%d"
+
+#: packages/app-desktop/gui/Sidebar/Sidebar.js:482
+#: packages/app-mobile/components/side-menu-content.js:330
+#, javascript-format
+msgid "Fetching resources: %d/%d"
+msgstr "Încărcarea resurselor: %d/%d"
+
+#: packages/app-desktop/gui/Sidebar/commands/focusElementSideBar.js:17
+msgid "Sidebar"
+msgstr "Bara laterală"
+
+#: packages/app-desktop/gui/Sidebar/commands/focusElementSideBar.js:18
+#: packages/app-desktop/gui/NoteEditor/commands/focusElementNoteTitle.js:17
+#: packages/app-desktop/gui/NoteEditor/commands/focusElementNoteBody.js:17
+#: packages/app-desktop/gui/MenuBar.js:615
+#: packages/app-desktop/gui/NoteList/commands/focusElementNoteList.js:18
+msgid "Focus"
+msgstr "Focus"
+
+#: packages/app-desktop/gui/StatusScreen/StatusScreen.js:26
+msgid "Please select where the sync status should be exported to"
+msgstr "Vă rugăm să selectați unde trebuie exportată starea de sincronizare"
+
+#: packages/app-desktop/gui/StatusScreen/StatusScreen.js:61
+#: packages/app-mobile/components/screens/status.js:112
+msgid "Retry All"
+msgstr "Încercați din nou toate"
+
+#: packages/app-desktop/gui/StatusScreen/StatusScreen.js:78
+#: packages/app-mobile/components/screens/status.js:118
+msgid "Retry"
+msgstr "Încercați din nou"
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/CodeMirror/CodeMirror.js:183
+msgid "strong text"
+msgstr "text strong"
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/CodeMirror/CodeMirror.js:184
+msgid "emphasised text"
+msgstr "text accentuat"
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/CodeMirror/CodeMirror.js:186
+msgid "Insert Hyperlink"
+msgstr "Introduceți hyperlink"
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/CodeMirror/CodeMirror.js:220
+#: packages/app-desktop/gui/NoteEditor/NoteBody/CodeMirror/CodeMirror.js:222
+#: packages/app-desktop/gui/NoteEditor/NoteBody/CodeMirror/CodeMirror.js:223
+msgid "List item"
+msgstr "Listați item"
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/CodeMirror/CodeMirror.js:510
+msgid "Layout"
+msgstr "Layout"
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/CodeMirror/CodeMirror.js:510
+#, javascript-format
+msgid ""
+"This note has no content. Click on \"%s\" to toggle the editor and edit the "
+"note."
+msgstr ""
+"Această notiță nu are conținut. Faceți clic pe \"% s\" pentru a comuta "
+"editorul și a edita nota."
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/CodeMirror/CodeMirror.js:619
+#: packages/app-desktop/gui/NoteEditor/utils/contextMenu.js:91
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:18
+msgid "Cut"
+msgstr "Tăiați"
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/CodeMirror/CodeMirror.js:626
+#: packages/app-desktop/gui/NoteEditor/utils/contextMenu.js:99
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:13
+#: packages/app-desktop/gui/MenuBar.js:373
+msgid "Copy"
+msgstr "Copiați"
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/CodeMirror/CodeMirror.js:633
+#: packages/app-desktop/gui/NoteEditor/utils/contextMenu.js:106
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:23
+msgid "Paste"
+msgstr "Lipește"
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/TinyMCE/plugins/lists.js:2151
+msgid "Checkbox list"
+msgstr "Lista casetelor de selectare"
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/TinyMCE/utils/setupToolbarButtons.js:17
+msgid "Highlight"
+msgstr ""
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/TinyMCE/utils/setupToolbarButtons.js:22
+msgid "Strikethrough"
+msgstr ""
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/TinyMCE/utils/setupToolbarButtons.js:27
+msgid "Insert"
+msgstr ""
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/TinyMCE/utils/setupToolbarButtons.js:33
+msgid "Superscript"
+msgstr ""
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/TinyMCE/utils/setupToolbarButtons.js:39
+msgid "Subscript"
+msgstr ""
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/TinyMCE/TinyMCE.js:544
+#: packages/app-desktop/gui/ConfigScreen/ConfigScreen.js:452
+#: packages/app-mobile/components/screens/Note.js:1016
+msgid "Edit"
+msgstr "Editați"
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/TinyMCE/TinyMCE.js:600
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:53
+#: packages/app-mobile/components/screens/Note.js:771
+msgid "Attach file"
+msgstr "Atașați fișier"
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/TinyMCE/TinyMCE.js:610
+msgid "Code Block"
+msgstr "Bloc de cod"
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/TinyMCE/TinyMCE.js:619
+msgid "Inline Code"
+msgstr "Inline Cod"
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/TinyMCE/TinyMCE.js:634
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:83
+msgid "Insert Date Time"
+msgstr "Introduceți data și ora"
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/TinyMCE/TinyMCE.js:1046
+msgid "Drop notes or files here"
+msgstr "Plasați notițe sau fișiere aici"
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/TinyMCE/TinyMCE.js:1046
+msgid "Code View"
+msgstr "Vizualizare code"
+
+#: packages/app-desktop/gui/NoteEditor/NoteBody/TinyMCE/TinyMCE.js:1046
+#, javascript-format
+msgid ""
+"Please wait for all attachments to be downloaded and decrypted. You may also "
+"switch to %s to edit the note."
+msgstr ""
+"Vă rugăm să așteptați descărcarea și decriptarea tuturor atașamentelor. De "
+"asemenea, puteți comuta la %s pentru a edita notița."
+
+#: packages/app-desktop/gui/NoteEditor/utils/useMessageHandler.js:74
+msgid "There was an error downloading this attachment:"
+msgstr "A apărut o eroare la descărcarea acestui atașament:"
+
+#: packages/app-desktop/gui/NoteEditor/utils/useMessageHandler.js:77
+#: packages/lib/services/ResourceEditWatcher/index.js:196
+msgid "This attachment is not downloaded or not decrypted yet"
+msgstr "Acest atașament nu este descărcat sau nu este încă decriptat"
+
+#: packages/app-desktop/gui/NoteEditor/utils/contextMenu.js:49
+msgid "Open..."
+msgstr "Deschideți..."
+
+#: packages/app-desktop/gui/NoteEditor/utils/contextMenu.js:62
+msgid "Save as..."
+msgstr "Salvați ca..."
+
+#: packages/app-desktop/gui/NoteEditor/utils/contextMenu.js:75
+msgid "Reveal file in folder"
+msgstr "Afișează fișierul în folder"
+
+#: packages/app-desktop/gui/NoteEditor/utils/contextMenu.js:83
+msgid "Copy path to clipboard"
+msgstr "Copiați locația în clipboard"
+
+#: packages/app-desktop/gui/NoteEditor/utils/contextMenu.js:114
+msgid "Copy Link Address"
+msgstr "Copați adresa link-ului"
+
+#: packages/app-desktop/gui/NoteEditor/NoteTitle/NoteTitleBar.js:79
+msgid "to-do"
+msgstr "to-do"
+
+#: packages/app-desktop/gui/NoteEditor/NoteTitle/NoteTitleBar.js:79
+msgid "note"
+msgstr "notiță"
+
+#: packages/app-desktop/gui/NoteEditor/NoteTitle/NoteTitleBar.js:79
+#, javascript-format
+msgid "Creating new %s..."
+msgstr "Se crează un %s..."
+
+#: packages/app-desktop/gui/NoteEditor/NoteEditor.js:284
+#, fuzzy
+msgid "Click to add tags..."
+msgstr "Verificați actualizările..."
+
+#: packages/app-desktop/gui/NoteEditor/NoteEditor.js:337
+msgid ""
+"This Rich Text editor has a number of limitations and it is recommended to "
+"be aware of them before using it."
+msgstr ""
+
+#: packages/app-desktop/gui/NoteEditor/NoteEditor.js:341
+msgid "Read more about it"
+msgstr ""
+
+#: packages/app-desktop/gui/NoteEditor/NoteEditor.js:346
+msgid "Dismiss"
+msgstr ""
+
+#: packages/app-desktop/gui/NoteEditor/NoteEditor.js:382
+msgid "The following attachments are being watched for changes:"
+msgstr ""
+
+#: packages/app-desktop/gui/NoteEditor/NoteEditor.js:385
+msgid ""
+"The attachments will no longer be watched when you switch to a different "
+"note."
+msgstr ""
+
+#: packages/app-desktop/gui/NoteEditor/NoteEditor.js:391
+#, javascript-format
+msgid "In: %s"
+msgstr "În: %s"
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:28
+msgid "Select all"
+msgstr "Selectează tot"
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:33
+msgid "Bold"
+msgstr "Bold"
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:38
+msgid "Italic"
+msgstr "Italic"
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:43
+msgid "Hyperlink"
+msgstr "Hyperlink"
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:48
+msgid "Code"
+msgstr "Cod"
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:58
+msgid "Numbered List"
+msgstr "Listă numerotată"
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:63
+msgid "Bulleted List"
+msgstr "Listă cu puncte"
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:68
+msgid "Checkbox"
+msgstr "Căsuță"
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:73
+msgid "Heading"
+msgstr "Titlu"
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:78
+msgid "Horizontal Rule"
+msgstr "Linie orizontală"
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:88
+#, fuzzy
+msgid "Delete line"
+msgstr "Ștergeți notița?"
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:92
+#, fuzzy
+msgid "Duplicate line"
+msgstr "Duplicați"
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:96
+msgid "Undo"
+msgstr ""
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:100
+msgid "Redo"
+msgstr ""
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:104
+msgid "Indent less"
+msgstr ""
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:108
+msgid "Indent more"
+msgstr ""
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:112
+#, fuzzy
+msgid "Toggle comment"
+msgstr "Comutați lista de notă"
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:116
+msgid "Sort selected lines"
+msgstr ""
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:120
+msgid "Swap line up"
+msgstr ""
+
+#: packages/app-desktop/gui/NoteEditor/commands/editorCommandDeclarations.js:124
+msgid "Swap line down"
+msgstr ""
+
+#: packages/app-desktop/gui/NoteEditor/commands/focusElementNoteTitle.js:16
+msgid "Note title"
+msgstr "Titlul caietului de notițe"
+
+#: packages/app-desktop/gui/NoteEditor/commands/showLocalSearch.js:16
+msgid "Search in current note"
+msgstr "Căutați în notița curentă"
+
+#: packages/app-desktop/gui/NoteEditor/commands/focusElementNoteBody.js:16
+msgid "Note body"
+msgstr ""
+
+#: packages/app-desktop/gui/NotePropertiesDialog.min.js:28
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:164
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:309
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:390
+#: packages/app-desktop/gui/ResourceScreen.js:39
+msgid "ID"
+msgstr "ID"
+
+#: packages/app-desktop/gui/NotePropertiesDialog.min.js:29
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:319
+msgid "Created"
+msgstr "Creat"
+
+#: packages/app-desktop/gui/NotePropertiesDialog.min.js:30
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:324
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/PluginBox.js:144
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/PluginBox.js:146
+msgid "Updated"
+msgstr "Actualizat"
+
+#: packages/app-desktop/gui/NotePropertiesDialog.min.js:31
+msgid "Completed"
+msgstr "Completat"
+
+#: packages/app-desktop/gui/NotePropertiesDialog.min.js:32
+msgid "Location"
+msgstr "Locație"
+
+#: packages/app-desktop/gui/NotePropertiesDialog.min.js:33
+msgid "URL"
+msgstr "URL"
+
+#: packages/app-desktop/gui/NotePropertiesDialog.min.js:34
+#: packages/lib/models/Setting.js:1556
+msgid "Note History"
+msgstr "Istoric notiță"
+
+#: packages/app-desktop/gui/NotePropertiesDialog.min.js:35
+msgid "Markup"
+msgstr "Markup"
+
+#: packages/app-desktop/gui/NotePropertiesDialog.min.js:307
+msgid "Previous versions of this note"
+msgstr "Versiunile anterioare ale acestei notițe"
+
+#: packages/app-desktop/gui/NotePropertiesDialog.min.js:390
+#: packages/app-desktop/gui/MainScreen/commands/showNoteProperties.js:18
+msgid "Note properties"
+msgstr "Titlul caietului de notițe"
+
+#: packages/app-desktop/gui/KeymapConfig/KeymapConfigScreen.js:63
+#: packages/lib/services/KeymapService.js:178
+#, fuzzy, javascript-format
+msgid "Error: %s"
+msgstr "Eroare"
+
+#: packages/app-desktop/gui/KeymapConfig/KeymapConfigScreen.js:110
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:443
+#: packages/app-mobile/components/screens/encryption-config.js:280
+#: packages/lib/models/Setting.js:759 packages/app-cli/app/command-e2ee.js:110
+msgid "Disabled"
+msgstr "Dezactivat"
+
+#: packages/app-desktop/gui/KeymapConfig/KeymapConfigScreen.js:120
+#: packages/app-desktop/gui/NoteSearchBar.min.js:168
+#: packages/app-desktop/gui/lib/SearchInput/SearchInput.js:38
+msgid "Search..."
+msgstr "Caută..."
+
+#: packages/app-desktop/gui/KeymapConfig/KeymapConfigScreen.js:121
+#: packages/app-desktop/gui/MenuBar.js:429
+#: packages/app-desktop/gui/MenuBar.js:476 packages/app-desktop/gui/Root.js:99
+msgid "Import"
+msgstr "Importați"
+
+#: packages/app-desktop/gui/KeymapConfig/KeymapConfigScreen.js:126
+msgid "Command"
+msgstr ""
+
+#: packages/app-desktop/gui/KeymapConfig/KeymapConfigScreen.js:127
+#, fuzzy
+msgid "Keyboard Shortcut"
+msgstr "Keyboard Mode"
+
+#: packages/app-desktop/gui/KeymapConfig/utils/getLabel.js:14
+#: packages/app-desktop/gui/MenuBar.js:212 packages/app-desktop/app.js:368
+msgid "Quit"
+msgstr "Ieșiți"
+
+#: packages/app-desktop/gui/KeymapConfig/utils/getLabel.js:16
+#: packages/app-desktop/gui/MenuBar.js:316
+msgid "Insert template"
+msgstr "Inserați șablonul"
+
+#: packages/app-desktop/gui/KeymapConfig/utils/getLabel.js:18
+#: packages/app-desktop/gui/MenuBar.js:576
+msgid "Actual Size"
+msgstr "Dimensiunea actuală"
+
+#: packages/app-desktop/gui/KeymapConfig/utils/getLabel.js:22
+#: packages/app-desktop/gui/MenuBar.js:637
+msgid "Website and documentation"
+msgstr "Website și documentație"
+
+#: packages/app-desktop/gui/KeymapConfig/utils/getLabel.js:24
+#, fuzzy
+msgid "Hide Joplin"
+msgstr "Despre Joplin"
+
+#: packages/app-desktop/gui/KeymapConfig/utils/getLabel.js:26
+#: packages/app-desktop/gui/MenuBar.js:464
+msgid "Close Window"
+msgstr "Închide fereastra"
+
+#: packages/app-desktop/gui/KeymapConfig/utils/getLabel.js:30
+#, fuzzy
+msgid "Preferences"
+msgstr "Preferințe..."
+
+#: packages/app-desktop/gui/KeymapConfig/utils/getLabel.js:30
+#: packages/app-desktop/gui/MenuBar.js:340 packages/app-desktop/gui/Root.js:100
+msgid "Options"
+msgstr "Opțiuni"
+
+#: packages/app-desktop/gui/KeymapConfig/utils/getLabel.js:37
+#, fuzzy
+msgid "Invalid"
+msgstr "Răspuns invalid: %s"
+
+#: packages/app-desktop/gui/KeymapConfig/ShortcutRecorder.js:49
+msgid "Press the shortcut"
+msgstr ""
+
+#: packages/app-desktop/gui/KeymapConfig/ShortcutRecorder.js:49
+msgid ""
+"Press the shortcut and then press ENTER. Or, press BACKSPACE to clear the "
+"shortcut."
+msgstr ""
+
+#: packages/app-desktop/gui/KeymapConfig/ShortcutRecorder.js:50
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:96
+#: packages/app-mobile/components/screens/encryption-config.js:125
+msgid "Save"
+msgstr "Salvați"
+
+#: packages/app-desktop/gui/MainScreen/MainScreen.js:410
+msgid ""
+"Safe mode is currently active. Note rendering and all plugins are "
+"temporarily disabled."
+msgstr ""
+
+#: packages/app-desktop/gui/MainScreen/MainScreen.js:412
+msgid "Disable safe mode and restart"
+msgstr ""
+
+#: packages/app-desktop/gui/MainScreen/MainScreen.js:416
+msgid ""
+"The sync target needs to be upgraded before Joplin can sync. The operation "
+"may take a few minutes to complete and the app needs to be restarted. To "
+"proceed please click on the link."
+msgstr ""
+
+#: packages/app-desktop/gui/MainScreen/MainScreen.js:418
+#, fuzzy
+msgid "Restart and upgrade"
+msgstr "Chei master care necesită actualizare"
+
+#: packages/app-desktop/gui/MainScreen/MainScreen.js:422
+msgid "Some items cannot be synchronised."
+msgstr "Câțiva itemi nu pot fi sincronizați."
+
+#: packages/app-desktop/gui/MainScreen/MainScreen.js:424
+#: packages/app-desktop/gui/MainScreen/MainScreen.js:430
+#: packages/app-desktop/gui/MainScreen/MainScreen.js:442
+msgid "View them now"
+msgstr "Vizualizați-le acum"
+
+#: packages/app-desktop/gui/MainScreen/MainScreen.js:428
+msgid "Some items cannot be decrypted."
+msgstr "Câțiva itemi nu pot fi descriptați."
+
+#: packages/app-desktop/gui/MainScreen/MainScreen.js:434
+msgid "One or more master keys need a password."
+msgstr "Una sau mai multe chei master au nevoie de o parolă."
+
+#: packages/app-desktop/gui/MainScreen/MainScreen.js:436
+msgid "Set the password"
+msgstr "Setați parola"
+
+#: packages/app-desktop/gui/MainScreen/MainScreen.js:440
+msgid "One of your master keys use an obsolete encryption method."
+msgstr ""
+"Una dintre cheile dvs. master utilizează o metodă de criptare învechită."
+
+#: packages/app-desktop/gui/MainScreen/MainScreen.js:446
+msgid ""
+"The default encryption method has been changed, you should re-encrypt your "
+"data."
+msgstr ""
+"Metoda implicită de criptare a fost modificată, ar trebui să vă criptați din "
+"nou datele."
+
+#: packages/app-desktop/gui/MainScreen/MainScreen.js:448
+msgid "More info"
+msgstr "Informații suplimentare"
+
+#: packages/app-desktop/gui/MainScreen/MainScreen.js:570
+msgid "Use the arrows to move the layout items. Press \"Escape\" to exit."
+msgstr ""
+
+#: packages/app-desktop/gui/MainScreen/commands/showNoteContentProperties.js:18
+msgid "Statistics..."
+msgstr "Statistică..."
+
+#: packages/app-desktop/gui/MainScreen/commands/renameFolder.js:18
+#: packages/app-desktop/gui/MainScreen/commands/renameTag.js:18
+#: packages/app-mobile/components/side-menu-content.js:129
+msgid "Rename"
+msgstr "Redenumiți"
+
+#: packages/app-desktop/gui/MainScreen/commands/renameFolder.js:28
+msgid "Rename notebook:"
+msgstr "Redenumiți caietul de notițe:"
+
+#: packages/app-desktop/gui/MainScreen/commands/newTodo.js:17
+#: packages/app-mobile/components/action-button.js:77
+#: packages/app-mobile/setUpQuickActions.js:15
+msgid "New to-do"
+msgstr "Adăugați o nouă sarcină"
+
+#: packages/app-desktop/gui/MainScreen/commands/toggleNoteList.js:18
+msgid "Toggle note list"
+msgstr "Comutați lista de notă"
+
+#: packages/app-desktop/gui/MainScreen/commands/toggleSideBar.js:18
+msgid "Toggle sidebar"
+msgstr "Comutați bara laterală"
+
+#: packages/app-desktop/gui/MainScreen/commands/editAlarm.js:20
+#: packages/app-mobile/components/SelectDateTimeDialog.js:84
+#: packages/app-mobile/components/screens/Note.js:789
+msgid "Set alarm"
+msgstr "Setați alarma"
+
+#: packages/app-desktop/gui/MainScreen/commands/editAlarm.js:33
+msgid "Set alarm:"
+msgstr "Setați alarma:"
+
+#: packages/app-desktop/gui/MainScreen/commands/exportPdf.js:20
+#: packages/app-desktop/gui/MainScreen/commands/exportPdf.js:32
+msgid "PDF File"
+msgstr "Fișier PDF"
+
+#: packages/app-desktop/gui/MainScreen/commands/newNote.js:20
+#: packages/app-mobile/components/action-button.js:86
+#: packages/app-mobile/setUpQuickActions.js:14
+msgid "New note"
+msgstr "Adăugați o nouă notiță"
+
+#: packages/app-desktop/gui/MainScreen/commands/moveToFolder.js:18
+msgid "Move to notebook"
+msgstr "Mutați în agendă"
+
+#: packages/app-desktop/gui/MainScreen/commands/moveToFolder.js:38
+msgid "Move to notebook:"
+msgstr "Mutați în agendă:"
+
+#: packages/app-desktop/gui/MainScreen/commands/toggleVisiblePanes.js:16
+msgid "Toggle editor layout"
+msgstr "Comutați editorul"
+
+#: packages/app-desktop/gui/MainScreen/commands/toggleEditors.js:18
+#, fuzzy
+msgid "Toggle editors"
+msgstr "Comutați editorul"
+
+#: packages/app-desktop/gui/MainScreen/commands/toggleLayoutMoveMode.js:16
+msgid "Change application layout"
+msgstr ""
+
+#: packages/app-desktop/gui/MainScreen/commands/renameTag.js:30
+msgid "Rename tag:"
+msgstr "Redenumiți eticheta:"
+
+#: packages/app-desktop/gui/MainScreen/commands/newFolder.js:18
+msgid "New notebook"
+msgstr "Adăugați o agendă nouă"
+
+#: packages/app-desktop/gui/MainScreen/commands/newFolder.js:26
+msgid "Notebook title:"
+msgstr "Titlul agendei:"
+
+#: packages/app-desktop/gui/MainScreen/commands/showSpellCheckerMenu.js:19
+#: packages/lib/services/spellChecker/SpellCheckerService.js:180
+msgid "Spell checker"
+msgstr ""
+
+#: packages/app-desktop/gui/MainScreen/commands/showShareNoteDialog.js:16
+msgid "Share note..."
+msgstr "Distribuie notiță.."
+
+#: packages/app-desktop/gui/MainScreen/commands/newSubFolder.js:17
+msgid "New sub-notebook"
+msgstr "Nou sub-notiță"
+
+#: packages/app-desktop/gui/MainScreen/commands/selectTemplate.js:24
+msgid "Template file:"
+msgstr "Fișier template:"
+
+#: packages/app-desktop/gui/MainScreen/commands/setTags.js:45
+msgid "Add or remove tags:"
+msgstr "Adăugați ori eliminați etichete:"
+
+#: packages/app-desktop/gui/MainScreen/commands/print.js:17
+msgid "Print"
+msgstr "Printați"
+
+#: packages/app-desktop/gui/MainScreen/commands/print.js:26
+msgid "Only one note can be printed at a time."
+msgstr "Doar o singură notiță se poate imprima."
+
+#: packages/app-desktop/gui/DropboxLoginScreen.js:29
+#: packages/app-mobile/components/screens/dropbox-login.js:58
+#: packages/app-cli/app/command-sync.js:90
+msgid ""
+"To allow Joplin to synchronise with Dropbox, please follow the steps below:"
+msgstr ""
+"Pentru a permite Joplin să se sincronizeze cu Dropbox, urmați pașii de mai "
+"jos:"
+
+#: packages/app-desktop/gui/DropboxLoginScreen.js:30
+#: packages/app-mobile/components/screens/dropbox-login.js:59
+#: packages/app-cli/app/command-sync.js:91
+msgid "Step 1: Open this URL in your browser to authorise the application:"
+msgstr ""
+"Pasul 1: Deschideți adresa URL în navigatorul dumneavoastră web pentru a "
+"autoriza aplicația:"
+
+#: packages/app-desktop/gui/DropboxLoginScreen.js:32
+#: packages/app-mobile/components/screens/dropbox-login.js:65
+#: packages/app-cli/app/command-sync.js:93
+msgid "Step 2: Enter the code provided by Dropbox:"
+msgstr "Pasul 2: Introduceți codul oferit de Dropbox:"
+
+#: packages/app-desktop/gui/DropboxLoginScreen.js:35
+#: packages/app-mobile/components/screens/dropbox-login.js:68
+msgid "Submit"
+msgstr "Trimite"
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:40
+msgid "Token has been copied to the clipboard!"
+msgstr "Token-ul a fost copiat în clipboard!"
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:44
+msgid "Are you sure you want to renew the authorisation token?"
+msgstr ""
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:84
+msgid "The web clipper service is enabled and set to auto-start."
+msgstr "Serviciul web clipper este activat și setat la pornire automată."
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:91
+#, javascript-format
+msgid "Status: Started on port %d"
+msgstr "Stare: Portul %d"
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:97
+#, javascript-format
+msgid "Status: %s"
+msgstr "Status: %s"
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:103
+msgid "Disable Web Clipper Service"
+msgstr "Dezactivați Web Clipper Service"
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:109
+msgid "The web clipper service is not enabled."
+msgstr "Serviciul web clipper nu este activat."
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:114
+msgid "Enable Web Clipper Service"
+msgstr "Activați Web Clipper Service"
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:137
+msgid ""
+"Joplin Web Clipper allows saving web pages and screenshots from your browser "
+"to Joplin."
+msgstr ""
+"Joplin Web Clipper permite salvarea paginilor web și a capturilor de ecran "
+"din browser-ul dumnevoastră în Joplin."
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:142
+msgid "In order to use the web clipper, you need to do the following:"
+msgstr "Pentru a utiliza web clipper, trebuie să faceți următoarele:"
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:150
+msgid "Step 1: Enable the clipper service"
+msgstr "Pasul 1: Activați clipper service"
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:155
+msgid ""
+"This service allows the browser extension to communicate with Joplin. When "
+"enabling it your firewall may ask you to give permission to Joplin to listen "
+"to a particular port."
+msgstr ""
+"Acest serviciu permite extensia browserul-ui pentru a comunica cu Joplin. "
+"Atunci când se permite firewall poate cere să dea permisiunea Joplin pentru "
+"a asculta un anumit port."
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:169
+msgid "Step 2: Install the extension"
+msgstr "Pasul 2: Instalați extensia"
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:174
+msgid "Download and install the relevant extension for your browser:"
+msgstr ""
+"Descărcați și instalați extensia relevantă pentru browser-ul dumnevoastră.:"
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:189
+msgid "Advanced options"
+msgstr "Afișați opțiunile avansate"
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:194
+msgid "Authorisation token:"
+msgstr "Token autorizare:"
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:208
+msgid "Copy token"
+msgstr "Copie token"
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:214
+msgid ""
+"This authorisation token is only needed to allow third-party applications to "
+"access Joplin."
+msgstr ""
+"Acest token de autorizare este necesar doar pentru a permite aplicațiilor "
+"terțe părți să acceseze Joplin."
+
+#: packages/app-desktop/gui/ClipperConfigScreen.min.js:222
+msgid "Renew token"
+msgstr ""
+
+#: packages/app-desktop/gui/MenuBar.js:166
+#, javascript-format
+msgid "Importing from \"%s\" as \"%s\" format. Please wait..."
+msgstr "Se exportă către \"%s\" în format \"%s\". Vă rugăm să așteptați..."
+
+#: packages/app-desktop/gui/MenuBar.js:287 packages/app-desktop/gui/Root.js:102
+msgid "Synchronisation Status"
+msgstr "Statutul sincronizării"
+
+#: packages/app-desktop/gui/MenuBar.js:306
+msgid "Create note from template"
+msgstr "Creați o notă din șablon"
+
+#: packages/app-desktop/gui/MenuBar.js:311
+msgid "Create to-do from template"
+msgstr "Creați to-do din șablon"
+
+#: packages/app-desktop/gui/MenuBar.js:322
+msgid "Open template directory"
+msgstr "Deschideți directorul șablonului"
+
+#: packages/app-desktop/gui/MenuBar.js:327
+msgid "Refresh templates"
+msgstr "Actualizați șabloanele"
+
+#: packages/app-desktop/gui/MenuBar.js:353
+msgid "Note attachments..."
+msgstr "Atașați fișier..."
+
+#: packages/app-desktop/gui/MenuBar.js:384
+#: packages/app-desktop/gui/MenuBar.js:456
+#: packages/app-desktop/gui/MenuBar.js:748
+#, fuzzy
+msgid "&File"
+msgstr "Fișier"
+
+#: packages/app-desktop/gui/MenuBar.js:390
+#: packages/app-desktop/gui/MenuBar.js:670
+msgid "About Joplin"
+msgstr "Despre Joplin"
+
+#: packages/app-desktop/gui/MenuBar.js:397
+msgid "Preferences..."
+msgstr "Preferințe..."
+
+#: packages/app-desktop/gui/MenuBar.js:407
+#: packages/app-desktop/gui/MenuBar.js:647
+msgid "Check for updates..."
+msgstr "Verificați actualizările..."
+
+#: packages/app-desktop/gui/MenuBar.js:422
+#: packages/app-desktop/gui/MenuBar.js:471
+msgid "Templates"
+msgstr "Șabloane"
+
+#: packages/app-desktop/gui/MenuBar.js:433
+#: packages/app-desktop/gui/MenuBar.js:479
+#, fuzzy
+msgid "Export all"
+msgstr "Exportați"
+
+#: packages/app-desktop/gui/MenuBar.js:445
+#, javascript-format
+msgid "Hide %s"
+msgstr "Ascundeți %s"
+
+#: packages/app-desktop/gui/MenuBar.js:502
+#: packages/app-desktop/gui/MenuBar.js:752
+msgid "&Edit"
+msgstr "Editați"
+
+#: packages/app-desktop/gui/MenuBar.js:534
+msgid "&View"
+msgstr "Vizualizați"
+
+#: packages/app-desktop/gui/MenuBar.js:542
+msgid "Layout button sequence"
+msgstr "Secvența butoanelor de aspect"
+
+#: packages/app-desktop/gui/MenuBar.js:587
+#: packages/app-desktop/gui/MenuBar.js:593
+msgid "Zoom In"
+msgstr "Măriți"
+
+#: packages/app-desktop/gui/MenuBar.js:600
+msgid "Zoom Out"
+msgstr "Micșorați"
+
+#: packages/app-desktop/gui/MenuBar.js:609
+msgid "&Go"
+msgstr ""
+
+#: packages/app-desktop/gui/MenuBar.js:621
+msgid "&Note"
+msgstr "&Caiete de notițe"
+
+#: packages/app-desktop/gui/MenuBar.js:630
+msgid "&Tools"
+msgstr "&Unelte"
+
+#: packages/app-desktop/gui/MenuBar.js:634
+msgid "&Help"
+msgstr "&Ajutor"
+
+#: packages/app-desktop/gui/MenuBar.js:641
+msgid "Joplin Forum"
+msgstr "Joplin Forum"
+
+#: packages/app-desktop/gui/MenuBar.js:644
+#: packages/app-mobile/components/screens/config.js:510
+msgid "Make a donation"
+msgstr "Faceți o donație"
+
+#: packages/app-desktop/gui/MenuBar.js:656
+msgid "Toggle development tools"
+msgstr "Comutați instrumentele de dezvoltare"
+
+#: packages/app-desktop/gui/ExtensionBadge.min.js:10
+msgid "Firefox Extension"
+msgstr "Extensie Firefox"
+
+#: packages/app-desktop/gui/ExtensionBadge.min.js:17
+msgid "Chrome Web Store"
+msgstr "Chrome Web Store"
+
+#: packages/app-desktop/gui/ExtensionBadge.min.js:44
+msgid "Get it now:"
+msgstr "Obține acum:"
+
+#: packages/app-desktop/gui/ImportScreen.min.js:61
+#, javascript-format
+msgid ""
+"New notebook \"%s\" will be created and file \"%s\" will be imported into it"
+msgstr ""
+"Noua agendă \"%s\" va fi creată și fișierul \"%s\" va fi importat in ea"
+
+#: packages/app-desktop/gui/ImportScreen.min.js:68
+#: packages/app-cli/app/command-import.js:47
+#, javascript-format
+msgid "Found: %d."
+msgstr "Găsit: %d."
+
+#: packages/app-desktop/gui/ImportScreen.min.js:69
+#: packages/app-cli/app/command-import.js:48
+#, javascript-format
+msgid "Created: %d."
+msgstr "Creat: %d."
+
+#: packages/app-desktop/gui/ImportScreen.min.js:70
+#: packages/app-cli/app/command-import.js:49
+#, javascript-format
+msgid "Updated: %d."
+msgstr "Actualizat: %d."
+
+#: packages/app-desktop/gui/ImportScreen.min.js:71
+#: packages/app-cli/app/command-import.js:50
+#, javascript-format
+msgid "Skipped: %d."
+msgstr "Omise: %d."
+
+#: packages/app-desktop/gui/ImportScreen.min.js:72
+#: packages/app-cli/app/command-import.js:51
+#, javascript-format
+msgid "Resources: %d."
+msgstr "Resurse: %d."
+
+#: packages/app-desktop/gui/ImportScreen.min.js:73
+#: packages/app-cli/app/command-import.js:52
+#, javascript-format
+msgid "Tagged: %d."
+msgstr "Etichetate: %d."
+
+#: packages/app-desktop/gui/ImportScreen.min.js:88
+#: packages/app-cli/app/command-import.js:70
+#, javascript-format
+msgid "The notes have been imported: %s"
+msgstr "Notițele au fost importante: %s"
+
+#: packages/app-desktop/gui/utils/NoteListUtils.js:44
+msgid "Duplicate"
+msgstr "Duplicați"
+
+#: packages/app-desktop/gui/utils/NoteListUtils.js:49
+#, javascript-format
+msgid "%s - Copy"
+msgstr "%s - Copiați"
+
+#: packages/app-desktop/gui/utils/NoteListUtils.js:60
+msgid "Switch between note and to-do type"
+msgstr "Schimbați între notiță și sarcină"
+
+#: packages/app-desktop/gui/utils/NoteListUtils.js:88
+#, fuzzy
+msgid "Switch to note type"
+msgstr "Schimbați între notiță și sarcină"
+
+#: packages/app-desktop/gui/utils/NoteListUtils.js:94
+#, fuzzy
+msgid "Switch to to-do type"
+msgstr "Schimbați între notiță și sarcină"
+
+#: packages/app-desktop/gui/utils/NoteListUtils.js:101
+#: packages/app-mobile/components/screens/Note.js:817
+msgid "Copy Markdown link"
+msgstr "Copiați link-ul Markdown"
+
+#: packages/app-desktop/gui/utils/NoteListUtils.js:163
+#, javascript-format
+msgid "Delete note \"%s\"?"
+msgstr "Ștergeți notițele \"%s\"?"
+
+#: packages/app-desktop/gui/utils/NoteListUtils.js:166
+#, javascript-format
+msgid "Delete these %d notes?"
+msgstr "Ștergeți aceste %d notițe?"
+
+#: packages/app-desktop/gui/OneDriveLoginScreen.js:46
+#: packages/app-cli/app/command-sync.js:81
+#: packages/app-cli/app/command-sync.js:95
+msgid ""
+"Authentication was not completed (did not receive an authentication token)."
+msgstr ""
+"Autentificarea nu a fost finalizată (nu a primit un token de autentificare)."
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:145
+msgid "Master keys that need upgrading"
+msgstr "Chei master care necesită actualizare"
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:150
+msgid ""
+"The following master keys use an out-dated encryption algorithm and it is "
+"recommended to upgrade them. The upgraded master key will still be able to "
+"decrypt and encrypt your data as usual."
+msgstr ""
+"Următoarele chei master utilizează un algoritm de criptare învechit și se "
+"recomandă actualizarea acestora. Cheia principală actualizată va putea în "
+"continuare să decripteze și să cripteze datele dumnevoastră ca de obicei."
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:169
+msgid "Upgrade"
+msgstr "Actualizare"
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:182
+msgid "Re-encrypt data"
+msgstr "Re-criptați datele"
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:184
+msgid ""
+"The default encryption method has been changed to a more secure one and it "
+"is recommended that you apply it to your data."
+msgstr ""
+"Metoda implicită de criptare a fost schimbată într-una mai sigură și se "
+"recomandă să o aplicați datelor dumnevoastră."
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:184
+msgid ""
+"You may use the tool below to re-encrypt your data, for example if you know "
+"that some of your notes are encrypted with an obsolete encryption method."
+msgstr ""
+"Puteți utiliza instrumentul de mai jos pentru a vă cripta din nou datele, de "
+"exemplu, dacă știți că unele note sunt criptate cu o metodă de criptare "
+"învechită."
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:186
+#, javascript-format
+msgid ""
+"In order to do so, your entire data set will have to be encrypted and "
+"synchronised, so it is best to run it overnight.\n"
+"\n"
+"To start, please follow these instructions:\n"
+"\n"
+"1. Synchronise all your devices.\n"
+"2. Click \"%s\".\n"
+"3. Let it run to completion. While it runs, avoid changing any note on your "
+"other devices, to avoid conflicts.\n"
+"4. Once sync is done on this device, sync all your other devices and let it "
+"run to completion.\n"
+"\n"
+"Important: you only need to run this ONCE on one device."
+msgstr ""
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:198
+#, fuzzy
+msgid "Re-encryption"
+msgstr "Criptare"
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:213
+msgid "Ignore"
+msgstr ""
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:244
+#: packages/app-mobile/components/screens/encryption-config.js:215
+msgid ""
+"Disabling encryption means *all* your notes and attachments are going to be "
+"re-synchronised and sent unencrypted to the sync target. Do you wish to "
+"continue?"
+msgstr ""
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:246
+#: packages/app-mobile/components/screens/encryption-config.js:150
+msgid ""
+"Enabling encryption means *all* your notes and attachments are going to be "
+"re-synchronised and sent encrypted to the sync target. Do not lose the "
+"password as, for security purposes, this will be the *only* way to decrypt "
+"the data! To enable encryption, please enter your password below."
+msgstr ""
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:275
+#: packages/app-mobile/components/screens/encryption-config.js:258
+msgid "Disable encryption"
+msgstr "Dezactivați criptarea"
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:275
+#: packages/app-mobile/components/screens/encryption-config.js:258
+msgid "Enable encryption"
+msgstr "Activați criptarea"
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:290
+#, fuzzy
+msgid "Master Keys"
+msgstr "Cheia master %s"
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:304
+msgid "Active"
+msgstr "Activ"
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:314
+msgid "Source"
+msgstr "Sursă"
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:329
+msgid "Password"
+msgstr "Parolă"
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:334
+msgid "Password OK"
+msgstr "Parolă OK"
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:343
+msgid ""
+"Note: Only one master key is going to be used for encryption (the one marked "
+"as \"active\"). Any of the keys might be used for decryption, depending on "
+"how the notes or notebooks were originally encrypted."
+msgstr ""
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:371
+#: packages/app-mobile/components/screens/encryption-config.js:248
+msgid "Missing Master Keys"
+msgstr "Cheile master lipsă"
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:376
+#: packages/app-mobile/components/screens/encryption-config.js:249
+msgid ""
+"The master keys with these IDs are used to encrypt some of your items, "
+"however the application does not currently have access to them. It is likely "
+"they will eventually be downloaded via synchronisation."
+msgstr ""
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:414
+#: packages/app-mobile/components/screens/encryption-config.js:268
+msgid ""
+"For more information about End-To-End Encryption (E2EE) and advice on how to "
+"enable it please check the documentation:"
+msgstr ""
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:433
+#: packages/app-mobile/components/screens/encryption-config.js:279
+#: packages/app-mobile/components/screens/status.js:142
+msgid "Status"
+msgstr "Status"
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:438
+msgid "Encryption is:"
+msgstr "Criptarea este:"
+
+#: packages/app-desktop/gui/EncryptionConfigScreen.min.js:443
+#: packages/app-mobile/components/screens/encryption-config.js:280
+#: packages/app-cli/app/command-e2ee.js:110
+msgid "Enabled"
+msgstr "Activat"
+
+#: packages/app-desktop/gui/Root.js:97
+msgid "OneDrive Login"
+msgstr "Autentificare OneDrive"
+
+#: packages/app-desktop/gui/Root.js:98
+msgid "Dropbox Login"
+msgstr "Autentificare Dropbox"
+
+#: packages/app-desktop/gui/Root.js:101
+msgid "Note attachments"
+msgstr "Atașați fișierele"
+
+#: packages/app-desktop/gui/ConfigScreen/ConfigScreen.js:105
+msgid "This will open a new screen. Save your current changes?"
+msgstr ""
+"Se va deschide un nou ecran. Doriți să salvați modificările dumnevoastră "
+"actuale?"
+
+#: packages/app-desktop/gui/ConfigScreen/ConfigScreen.js:171
+#: packages/app-mobile/components/screens/config.js:322
+msgid "Check synchronisation configuration"
+msgstr "Verificați configurația de sincronizare"
+
+#: packages/app-desktop/gui/ConfigScreen/ConfigScreen.js:217
+msgid "Show Advanced Settings"
+msgstr "Afișați opțiunile avansate"
+
+#: packages/app-desktop/gui/ConfigScreen/ConfigScreen.js:406
+msgid "Path:"
+msgstr ""
+
+#: packages/app-desktop/gui/ConfigScreen/ConfigScreen.js:411
+msgid "Browse..."
+msgstr "Căutare..."
+
+#: packages/app-desktop/gui/ConfigScreen/ConfigScreen.js:413
+msgid "Arguments:"
+msgstr ""
+
+#: packages/app-desktop/gui/ConfigScreen/ConfigScreen.js:461
+msgid "The application must be restarted for these changes to take effect."
+msgstr ""
+
+#: packages/app-desktop/gui/ConfigScreen/ConfigScreen.js:473
+#: packages/app-desktop/gui/NoteList/NoteList.js:163
+msgid "Do it now"
+msgstr ""
+
+#: packages/app-desktop/gui/ConfigScreen/ConfigScreen.js:473
+msgid "Later"
+msgstr ""
+
+#: packages/app-desktop/gui/ConfigScreen/ConfigScreen.js:526
+#, fuzzy
+msgid "Restart now"
+msgstr "Obține acum:"
+
+#: packages/app-desktop/gui/ConfigScreen/Sidebar.js:89
+#: packages/lib/models/Setting.js:1552
+msgid "Plugins"
+msgstr "Plugin"
+
+#: packages/app-desktop/gui/ConfigScreen/ButtonBar.js:27
+msgid "Apply"
+msgstr "Aplicați"
+
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/PluginsStates.js:113
+#, fuzzy, javascript-format
+msgid "Delete plugin \"%s\"?"
+msgstr "Ștergeți notițele \"%s\"?"
+
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/PluginsStates.js:155
+msgid "Browse all plugins"
+msgstr ""
+
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/PluginsStates.js:159
+msgid "Install from file"
+msgstr ""
+
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/PluginsStates.js:193
+msgid "You do not have any installed plugin."
+msgstr ""
+
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/PluginsStates.js:208
+#, fuzzy
+msgid "Plugin tools"
+msgstr "Plugin"
+
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/PluginsStates.js:209
+msgid "Manage your plugins"
+msgstr ""
+
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/SearchPlugins.js:68
+#, fuzzy
+msgid "No results"
+msgstr "Fără resurse!"
+
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/SearchPlugins.js:80
+#, fuzzy
+msgid "Search for plugins..."
+msgstr "Caută..."
+
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/PluginBox.js:130
+msgid "Install"
+msgstr ""
+
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/PluginBox.js:132
+#, fuzzy
+msgid "Installing..."
+msgstr "Se amână..."
+
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/PluginBox.js:134
+msgid "Installed"
+msgstr ""
+
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/PluginBox.js:140
+#, fuzzy
+msgid "Update"
+msgstr "Actualizat"
+
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/PluginBox.js:142
+#, fuzzy
+msgid "Updating..."
+msgstr "Se urmărește..."
+
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/PluginBox.js:154
+msgid "Please upgrade Joplin to use this plugin"
+msgstr ""
+
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/PluginBox.js:168
+#, javascript-format
+msgid "(%s)"
+msgstr ""
+
+#: packages/app-desktop/gui/ConfigScreen/controls/plugins/useOnInstallHandler.js:53
+#, fuzzy, javascript-format
+msgid "Could not install plugin: %s"
+msgstr "Nu s-au putut exporta notițele:% s"
+
+#: packages/app-desktop/gui/PromptDialog.min.js:249
+msgid "Clear"
+msgstr "Golire"
+
+#: packages/app-desktop/gui/NoteContentPropertiesDialog.js:76
+msgid "Words"
+msgstr "Cuvinte"
+
+#: packages/app-desktop/gui/NoteContentPropertiesDialog.js:77
+msgid "Characters"
+msgstr "Caractere"
+
+#: packages/app-desktop/gui/NoteContentPropertiesDialog.js:78
+msgid "Characters excluding spaces"
+msgstr "Caractere cu excepția spațiilor libere"
+
+#: packages/app-desktop/gui/NoteContentPropertiesDialog.js:79
+msgid "Lines"
+msgstr "Linii"
+
+#: packages/app-desktop/gui/NoteContentPropertiesDialog.js:98
+#: packages/lib/models/Setting.js:484 packages/lib/models/Setting.js:485
+#: packages/lib/models/Setting.js:486
+msgid "Editor"
+msgstr "Editor"
+
+#: packages/app-desktop/gui/NoteContentPropertiesDialog.js:99
+#: packages/lib/models/Setting.js:484 packages/lib/models/Setting.js:485
+#: packages/lib/models/Setting.js:487
+msgid "Viewer"
+msgstr "Vizualizator"
+
+#: packages/app-desktop/gui/NoteContentPropertiesDialog.js:105
+#, javascript-format
+msgid "Read time: %s min"
+msgstr "Durata lecturii: %s min"
+
+#: packages/app-desktop/gui/NoteContentPropertiesDialog.js:108
+msgid "Statistics"
+msgstr "Statistică"
+
+#: packages/app-desktop/gui/NoteContentPropertiesDialog.js:113
+#: packages/app-desktop/gui/ShareNoteDialog.js:186
+#: packages/app-desktop/services/plugins/UserWebviewDialogButtonBar.js:24
+msgid "Close"
+msgstr "Închide"
+
+#: packages/app-desktop/gui/NoteList/NoteList.js:162
+msgid "Custom order"
+msgstr "Comandă personalizată"
+
+#: packages/app-desktop/gui/NoteList/NoteList.js:162
+msgid "View"
+msgstr "Vizualizați"
+
+#: packages/app-desktop/gui/NoteList/NoteList.js:162
+#: packages/lib/models/Setting.js:500
+msgid "Sort notes by"
+msgstr "Sortați notițele după"
+
+#: packages/app-desktop/gui/NoteList/NoteList.js:162
+#, javascript-format
+msgid ""
+"To manually sort the notes, the sort order must be changed to \"%s\" in the "
+"menu \"%s\" > \"%s\""
+msgstr ""
+"Pentru a sorta notițele manual, ordinea trebuie sa fie schimbată în \"%s\" "
+"în meniu \"%s\" > \"%s\""
+
+#: packages/app-desktop/gui/NoteList/NoteList.js:414
+#, fuzzy
+msgid "No notes in here. Create one by clicking on \"New note\"."
+msgstr ""
+"Nu aveți niciun caiet de notițe creat. Creați unul făcând click pe butonnul "
+"(+)."
+
+#: packages/app-desktop/gui/NoteList/NoteList.js:414
+#, fuzzy
+msgid ""
+"There is currently no notebook. Create one by clicking on \"New notebook\"."
+msgstr ""
+"Nu aveți niciun caiet de notițe creat. Creați unul făcând click pe butonnul "
+"(+)."
+
+#: packages/app-desktop/gui/NoteList/commands/focusElementNoteList.js:17
+msgid "Note list"
+msgstr "Lista de notițe"
+
+#: packages/app-desktop/gui/getWindowTitle.js:19
+#: packages/app-desktop/gui/ResourceScreen.js:43 packages/lib/path-utils.js:83
+#: packages/lib/path-utils.js:118 packages/lib/models/BaseItem.js:708
+msgid "Untitled"
+msgstr "Fără denumire"
+
+#: packages/app-desktop/gui/NoteListControls/commands/focusSearch.js:16
+msgid "Search in all the notes"
+msgstr "Căutați în toate notițele"
+
+#: packages/app-desktop/gui/ResourceScreen.js:32
+msgid "Title"
+msgstr "Titlu"
+
+#: packages/app-desktop/gui/ResourceScreen.js:36
+msgid "Size"
+msgstr "Mărime"
+
+#: packages/app-desktop/gui/ResourceScreen.js:40
+msgid "Action"
+msgstr "Acțiune"
+
+#: packages/app-desktop/gui/ResourceScreen.js:95
+#, javascript-format
+msgid "Delete attachment \"%s\"?"
+msgstr "Ștergeți notițele \"%s\"?"
+
+#: packages/app-desktop/gui/ResourceScreen.js:141
+msgid ""
+"This is an advanced tool to show the attachments that are linked to your "
+"notes. Please be careful when deleting one of them as they cannot be "
+"restored afterwards."
+msgstr ""
+"Acesta este un instrument avansat pentru a afișa atașamentele care sunt "
+"legate de notele dumnevoastră. Vă rugăm să fiți atenți la ștergerea uneia "
+"dintre ele, deoarece acestea nu pot fi restaurate ulterior."
+
+#: packages/app-desktop/gui/ResourceScreen.js:142
+msgid "Please wait..."
+msgstr "Vă rugăm să așteptați..."
+
+#: packages/app-desktop/gui/ResourceScreen.js:144
+msgid "No resources!"
+msgstr "Fără resurse!"
+
+#: packages/app-desktop/gui/ResourceScreen.js:146
+#, javascript-format
+msgid "Warning: not all resources shown for performance reasons (limit: %s)."
+msgstr ""
+"Avertizare: nu toate resursele sunt afișate din motive de performanță "
+"(limită:% s)."
+
+#: packages/app-desktop/gui/ShareNoteDialog.js:159
+msgid "Synchronising..."
+msgstr "Sincronizează...."
+
+#: packages/app-desktop/gui/ShareNoteDialog.js:161
+msgid "Generating link..."
+msgid_plural "Generating links..."
+msgstr[0] "Se creează link..."
+msgstr[1] "Se crează un %s..."
+msgstr[2] "Se crează un %s..."
+
+#: packages/app-desktop/gui/ShareNoteDialog.js:163
+#, fuzzy
+msgid "Link has been copied to clipboard!"
+msgid_plural "Links have been copied to clipboard!"
+msgstr[0] "Linkul a fost copiat în clipboard!"
+msgstr[1] ""
+msgstr[2] ""
+
+#: packages/app-desktop/gui/ShareNoteDialog.js:170
+msgid ""
+"Note: When a note is shared, it will no longer be encrypted on the server."
+msgstr ""
+"Notă: Când o notă este partajată, aceasta nu va mai fi criptată pe server."
+
+#: packages/app-desktop/gui/ShareNoteDialog.js:180
+msgid "Share Notes"
+msgstr "Distribuie notițe"
+
+#: packages/app-desktop/gui/ShareNoteDialog.js:182
+msgid "Copy Shareable Link"
+msgid_plural "Copy Shareable Links"
+msgstr[0] "Copiați linkul care se poate partaja"
+msgstr[1] "Distribuie"
+msgstr[2] "Distribuie"
+
+#: packages/app-desktop/commands/toggleSafeMode.js:18
+#, fuzzy
+msgid "Toggle safe mode"
+msgstr "Comutați bara laterală"
+
+#: packages/app-desktop/commands/toggleExternalEditing.js:18
+#, fuzzy
+msgid "Toggle external editing"
+msgstr "Faceți click pentru a opri editarea în aplicația externă"
+
+#: packages/app-desktop/commands/toggleExternalEditing.js:37
+msgid "Stop"
+msgstr ""
+
+#: packages/app-desktop/commands/copyDevCommand.js:18
+#, fuzzy
+msgid "Copy dev mode command to clipboard"
+msgstr "Copiați locația în clipboard"
+
+#: packages/app-desktop/commands/stopExternalEditing.js:18
+msgid "Stop external editing"
+msgstr "Faceți click pentru a opri editarea în aplicația externă"
+
+#: packages/app-desktop/commands/startExternalEditing.js:20
+msgid "Edit in external editor"
+msgstr "Editați într-un editor extern"
+
+#: packages/app-desktop/commands/startExternalEditing.js:32
+#: packages/app-cli/app/command-edit.js:82
+#, javascript-format
+msgid "Error opening note in editor: %s"
+msgstr "Eroare deschidere notiță în editor: %s"
+
+#: packages/app-desktop/commands/openProfileDirectory.js:18
+#, fuzzy
+msgid "Open profile directory"
+msgstr "Deschideți directorul șablonului"
+
+#: packages/app-desktop/app.js:366
+#, javascript-format
+msgid "Open %s"
+msgstr "Deschideți %s"
+
+#: packages/app-desktop/services/plugins/UserWebviewDialogButtonBar.js:22
+#: packages/app-mobile/components/screens/Note.js:504
+#: packages/lib/shim-init-node.js:148 packages/lib/versionInfo.js:27
+msgid "Yes"
+msgstr "Da"
+
+#: packages/app-desktop/services/plugins/UserWebviewDialogButtonBar.js:23
+#: packages/app-mobile/components/screens/Note.js:505
+#: packages/lib/shim-init-node.js:148 packages/lib/versionInfo.js:27
+msgid "No"
+msgstr "Nu"
+
+#: packages/app-mobile/components/SelectDateTimeDialog.js:78
+msgid "Clear alarm"
+msgstr "Ștergeți alarma"
+
+#: packages/app-mobile/components/SelectDateTimeDialog.js:80
+msgid "Save alarm"
+msgstr "Salvați alarma"
+
+#: packages/app-mobile/components/NoteBodyViewer/hooks/useOnResourceLongPress.js:27
+#, fuzzy
+msgid "Open"
+msgstr "Deschideți..."
+
+#: packages/app-mobile/components/NoteBodyViewer/hooks/useOnResourceLongPress.js:28
+#: packages/app-mobile/components/screens/Note.js:796
+msgid "Share"
+msgstr "Distribuie"
+
+#: packages/app-mobile/components/CameraView.js:158
+msgid "Permission to use camera"
+msgstr "Permisiunea de a utliza camera"
+
+#: packages/app-mobile/components/CameraView.js:159
+msgid "Your permission to use your camera is required."
+msgstr "Este necesară permisiunea dumnevoastră de a utiliza camera."
+
+#: packages/app-mobile/components/screen-header.js:185
+msgid "Delete these notes?"
+msgstr "Ștergeți aceste notițe?"
+
+#: packages/app-mobile/components/side-menu-content.js:126
+#, fuzzy, javascript-format
+msgid "Notebook: %s"
+msgstr "Caiete de notițe"
+
+#: packages/app-mobile/components/side-menu-content.js:132
+msgid "Encrypted notebooks cannot be renamed"
+msgstr "Itemii criptați nu pot fi editați"
+
+#: packages/app-mobile/components/side-menu-content.js:312
+msgid "New Notebook"
+msgstr "Adăugați un nou caiet de notițe"
+
+#: packages/app-mobile/components/side-menu-content.js:316
+msgid "Configuration"
+msgstr "Configurare"
+
+#: packages/app-mobile/components/side-menu-content.js:351
+msgid "Mobile data - auto-sync disabled"
+msgstr ""
+
+#: packages/app-mobile/components/note-list.js:97
+#, fuzzy
+msgid "You currently have no notebooks."
+msgstr "Niciun caiet de notițe activ."
+
+#: packages/app-mobile/components/note-list.js:101
+msgid "Create a notebook"
+msgstr "Creați agendă"
+
+#: packages/app-mobile/components/note-list.js:105
+msgid "There are currently no notes. Create one by clicking on the (+) button."
+msgstr "Momentan nu există notițe. Creați făcând clic pe butonul (+)."
+
+#: packages/app-mobile/components/screens/folder.js:87
+#, javascript-format
+msgid "The notebook could not be saved: %s"
+msgstr "Caietul de notițe nu a puut fi salvat: %s"
+
+#: packages/app-mobile/components/screens/folder.js:109
+msgid "Edit notebook"
+msgstr "Editați caietul de notițe"
+
+#: packages/app-mobile/components/screens/folder.js:110
+#, fuzzy
+msgid "Enter notebook title"
+msgstr "Titlul caietului de notițe:"
+
+# vezi context
+#: packages/app-mobile/components/screens/onedrive-login.js:110
+msgid "Login with OneDrive"
+msgstr "Autentificare prin OneDrive"
+
+#: packages/app-mobile/components/screens/onedrive-login.js:121
+#: packages/app-mobile/components/screens/status.js:144
+msgid "Refresh"
+msgstr "Reîncărcați"
+
+#: packages/app-mobile/components/screens/UpgradeSyncTargetScreen.js:42
+msgid "Sync Target Upgrade"
+msgstr ""
+
+#: packages/app-mobile/components/screens/notes.js:154
+#: packages/app-cli/app/command-rmbook.js:26
+msgid ""
+"Delete notebook? All notes and sub-notebooks within this notebook will also "
+"be deleted."
+msgstr ""
+"Ștergeți agenda? Toate notițele și sub-notițele din această agendă vor fi "
+"șterse."
+
+#: packages/app-mobile/components/screens/NoteTagsDialog.js:163
+msgid "New tags:"
+msgstr "Etichete noi:"
+
+#: packages/app-mobile/components/screens/NoteTagsDialog.js:178
+msgid "Type new tags or select from list"
+msgstr ""
+
+#: packages/app-mobile/components/screens/dropbox-login.js:55
+msgid "Login with Dropbox"
+msgstr "Autentificați-vă cu Dropbox"
+
+#: packages/app-mobile/components/screens/dropbox-login.js:66
+msgid "Enter code here"
+msgstr "Introdu codul aici"
+
+#: packages/app-mobile/components/screens/encryption-config.js:119
+#, javascript-format
+msgid "Master Key %s"
+msgstr "Cheia master %s"
+
+#: packages/app-mobile/components/screens/encryption-config.js:120
+#: packages/app-mobile/components/screens/Note.js:724
+#, javascript-format
+msgid "Created: %s"
+msgstr "Creat: %s"
+
+#: packages/app-mobile/components/screens/encryption-config.js:122
+#: packages/app-mobile/components/screens/encryption-config.js:151
+msgid "Password:"
+msgstr "Parolă:"
+
+#: packages/app-mobile/components/screens/encryption-config.js:137
+msgid "Password cannot be empty"
+msgstr "Parolă nu poate fi un câmp gol"
+
+#: packages/app-mobile/components/screens/encryption-config.js:139
+msgid "Confirm password cannot be empty"
+msgstr "Parola confirmată nu poate fi un câmp gol"
+
+#: packages/app-mobile/components/screens/encryption-config.js:140
+#: packages/app-cli/app/command-e2ee.js:85
+msgid "Passwords do not match!"
+msgstr "Parolele nu se potrivesc!"
+
+#: packages/app-mobile/components/screens/encryption-config.js:163
+#: packages/app-cli/app/command-e2ee.js:79
+msgid "Confirm password:"
+msgstr "Confirmare parolă:"
+
+#: packages/app-mobile/components/screens/encryption-config.js:177
+msgid "Enable"
+msgstr "Activați"
+
+#: packages/app-mobile/components/screens/encryption-config.js:264
+#: packages/app-mobile/components/screens/config.js:331
+msgid "Encryption Config"
+msgstr ""
+
+#: packages/app-mobile/components/screens/encryption-config.js:280
+#: packages/app-cli/app/command-e2ee.js:110
+#, javascript-format
+msgid "Encryption is: %s"
+msgstr "Criptarea este: %s"
+
+#: packages/app-mobile/components/screens/config.js:57
+msgid "Warning"
+msgstr "Avertizare"
+
+#: packages/app-mobile/components/screens/config.js:57
+#: packages/app-mobile/components/screens/config.js:162
+msgid ""
+"In order to use file system synchronisation your permission to write to "
+"external storage is required."
+msgstr ""
+"Pentru a utiliza sincronizarea sistemului de fișiere este necesară "
+"permisiunea dumneavoastră de a scrie pe un spațiu de stocare extern."
+
+#: packages/app-mobile/components/screens/config.js:161
+#, fuzzy
+msgid "Information"
+msgstr "Configurare"
+
+#: packages/app-mobile/components/screens/config.js:451
+#, fuzzy
+msgid "Tools"
+msgstr "Unelte"
+
+#: packages/app-mobile/components/screens/config.js:453
+#, fuzzy
+msgid "Sync Status"
+msgstr "Status"
+
+#: packages/app-mobile/components/screens/config.js:454
+msgid "Log"
+msgstr "Log"
+
+#: packages/app-mobile/components/screens/config.js:456
+msgid "Creating report..."
+msgstr "Se creează raport..."
+
+#: packages/app-mobile/components/screens/config.js:456
+msgid "Export Debug Report"
+msgstr ""
+
+#: packages/app-mobile/components/screens/config.js:458
+msgid "Fixing search index..."
+msgstr ""
+
+#: packages/app-mobile/components/screens/config.js:458
+msgid "Fix search index"
+msgstr ""
+
+#: packages/app-mobile/components/screens/config.js:458
+msgid ""
+"Use this to rebuild the search index if there is a problem with search. It "
+"may take a long time depending on the number of notes."
+msgstr ""
+
+#: packages/app-mobile/components/screens/config.js:461
+msgid "Exporting profile..."
+msgstr "Se exportă profilul..."
+
+#: packages/app-mobile/components/screens/config.js:461
+msgid "Export profile"
+msgstr "Exportați profilul"
+
+#: packages/app-mobile/components/screens/config.js:461
+msgid "For debugging purpose only: export your profile to an external SD card."
+msgstr ""
+
+#: packages/app-mobile/components/screens/config.js:476
+msgid "More information"
+msgstr "Informații suplimentare"
+
+#: packages/app-mobile/components/screens/config.js:486
+msgid ""
+"To work correctly, the app needs the following permissions. Please enable "
+"them in your phone settings, in Apps > Joplin > Permissions"
+msgstr ""
+
+#: packages/app-mobile/components/screens/config.js:489
+msgid ""
+"- Storage: to allow attaching files to notes and to enable filesystem "
+"synchronisation."
+msgstr ""
+
+#: packages/app-mobile/components/screens/config.js:492
+msgid "- Camera: to allow taking a picture and attaching it to a note."
+msgstr ""
+
+#: packages/app-mobile/components/screens/config.js:495
+msgid "- Location: to allow attaching geo-location information to a note."
+msgstr ""
+
+#: packages/app-mobile/components/screens/config.js:524
+msgid "Joplin website"
+msgstr "Website Joplin"
+
+#: packages/app-mobile/components/screens/config.js:538
+msgid "Privacy Policy"
+msgstr ""
+
+#: packages/app-mobile/components/screens/Note.js:98
+msgid "This note has been modified:"
+msgstr "Această notiță a fost modificată:"
+
+#: packages/app-mobile/components/screens/Note.js:98
+msgid "Save changes"
+msgstr "Salvați schimbările"
+
+#: packages/app-mobile/components/screens/Note.js:98
+msgid "Discard changes"
+msgstr "Renunțați la schimbări"
+
+#: packages/app-mobile/components/screens/Note.js:150
+#, javascript-format
+msgid "No item with ID %s"
+msgstr "Niciun item cu ID-ul %s"
+
+#: packages/app-mobile/components/screens/Note.js:168
+msgid "This attachment is not downloaded or not decrypted yet."
+msgstr ""
+
+#: packages/app-mobile/components/screens/Note.js:173
+#, javascript-format
+msgid "The Joplin mobile app does not currently support this type of link: %s"
+msgstr ""
+
+#: packages/app-mobile/components/screens/Note.js:178
+#, javascript-format
+msgid "Links with protocol \"%s\" are not supported"
+msgstr ""
+
+#: packages/app-mobile/components/screens/Note.js:342
+msgid ""
+"In order to associate a geo-location with the note, the app needs your "
+"permission to access your location.\n"
+"\n"
+"You may turn off this option at any time in the Configuration screen."
+msgstr ""
+
+#: packages/app-mobile/components/screens/Note.js:343
+#, fuzzy
+msgid "Permission needed"
+msgstr "Permisiunea de a utliza camera"
+
+#: packages/app-mobile/components/screens/Note.js:449
+#: packages/app-cli/app/command-rmnote.js:27
+msgid "Delete note?"
+msgstr "Ștergeți notița?"
+
+#: packages/app-mobile/components/screens/Note.js:503
+#: packages/lib/shim-init-node.js:147
+#, javascript-format
+msgid ""
+"You are about to attach a large image (%dx%d pixels). Would you like to "
+"resize it down to %d pixels before attaching it?"
+msgstr ""
+"Ești pe cale să atașezi o imagine mare (%dx%d pixeli). Doriți să îl "
+"redimensionați până la %d pixeli înainte de a-l atașa?"
+
+#: packages/app-mobile/components/screens/Note.js:585
+#, javascript-format
+msgid "Unsupported image type: %s"
+msgstr ""
+
+#: packages/app-mobile/components/screens/Note.js:725
+#, javascript-format
+msgid "Updated: %s"
+msgstr "Actualizat: %s"
+
+#: packages/app-mobile/components/screens/Note.js:728
+msgid "View on map"
+msgstr "Vizualizați pe hartă"
+
+#: packages/app-mobile/components/screens/Note.js:735
+msgid "Go to source URL"
+msgstr ""
+
+#: packages/app-mobile/components/screens/Note.js:764
+msgid "Attach..."
+msgstr "Atașati..."
+
+#: packages/app-mobile/components/screens/Note.js:775
+msgid "Attach photo"
+msgstr "Atașează imagine"
+
+#: packages/app-mobile/components/screens/Note.js:776
+msgid "Take photo"
+msgstr ""
+
+#: packages/app-mobile/components/screens/Note.js:777
+#, fuzzy
+msgid "Choose an option"
+msgstr "Afișați opțiunile avansate"
+
+#: packages/app-mobile/components/screens/Note.js:810
+#, fuzzy
+msgid "Convert to note"
+msgstr "Mutați în caietul de notițe..."
+
+#: packages/app-mobile/components/screens/Note.js:810
+msgid "Convert to todo"
+msgstr ""
+
+#: packages/app-mobile/components/screens/Note.js:824
+msgid "Properties"
+msgstr ""
+
+#: packages/app-mobile/components/screens/Note.js:1008
+msgid "Add body"
+msgstr ""
+
+#: packages/app-mobile/components/screens/Note.js:1037
+#, fuzzy
+msgid "Add title"
+msgstr "titlu"
+
+#: packages/app-mobile/components/screens/search.js:160
+msgid "Search"
+msgstr "Caută"
+
+#: packages/server/dist/middleware/notificationHandler.js:26
+#, javascript-format
+msgid ""
+"The default admin password is insecure and has not been changed! [Change it "
+"now](%s)"
+msgstr ""
+
+#: packages/lib/onedrive-api-node-utils.js:46
+#, javascript-format
+msgid "All potential ports are in use - please report the issue at %s"
+msgstr ""
+
+#: packages/lib/onedrive-api-node-utils.js:86
+msgid ""
+"The application has been authorised - you may now close this browser tab."
+msgstr ""
+"Aplicația a fost autorizată - acum puteți închide această fereastră "
+"browserului."
+
+#: packages/lib/onedrive-api-node-utils.js:88
+msgid "The application has been successfully authorised."
+msgstr "Aplicația a fost autorizată cu succes."
+
+#: packages/lib/onedrive-api-node-utils.js:116
+msgid ""
+"Please open the following URL in your browser to authenticate the "
+"application. The application will create a directory in \"Apps/Joplin\" and "
+"will only read and write files in this directory. It will have no access to "
+"any files outside this directory nor to any other personal data. No data "
+"will be shared with any third party."
+msgstr ""
+"Deschideți următoarea adresă URL în browser pentru a autentifica aplicația. "
+"Aplicația va crea un director în \"Apps/Joplin\" și va citi și scrie doar "
+"fișiere în acest director. Nu va avea acces la nici un fișier din afara "
+"acestui director și nici la alte date personale. Nu se vor partaja date cu "
+"nicio terță parte."
+
+#: packages/lib/SyncTargetAmazonS3.js:28
+msgid "AWS S3"
+msgstr "AWS S3"
+
+#: packages/lib/SyncTargetDropbox.js:25
+msgid "Dropbox"
+msgstr "Dropbox"
+
+#: packages/lib/SyncTargetJoplinServer.js:30
+#, fuzzy
+msgid "Joplin Server"
+msgstr "Website Joplin"
+
+#: packages/lib/shim-init-node.js:212
+#, javascript-format
+msgid "Cannot access %s"
+msgstr "Nu se poate accesa %s"
+
+#: packages/lib/models/Folder.js:34 packages/lib/models/Note.js:36
+msgid "title"
+msgstr "titlu"
+
+#: packages/lib/models/Folder.js:35 packages/lib/models/Note.js:37
+msgid "updated date"
+msgstr "data actualizării"
+
+#: packages/lib/models/Folder.js:102
+msgid "Conflicts"
+msgstr "Conflicte"
+
+#: packages/lib/models/Folder.js:393
+msgid "Cannot move notebook to this location"
+msgstr "Nu se poate muta caietul de notițe în această locație"
+
+#: packages/lib/models/Folder.js:445
+#, javascript-format
+msgid "Notebooks cannot be named \"%s\", which is a reserved title."
+msgstr "Agendele nu pot fi denumite \"%s\", care au un titlu rezervat."
+
+#: packages/lib/models/Setting.js:92
+msgid "yes"
+msgstr "da"
+
+#: packages/lib/models/Setting.js:92 packages/lib/models/Setting.js:93
+#, javascript-format
+msgid "(wysiwyg: %s)"
+msgstr ""
+
+#: packages/lib/models/Setting.js:93
+msgid "no"
+msgstr "nu"
+
+#: packages/lib/models/Setting.js:95
+#, javascript-format
+msgid ""
+"Attention: If you change this location, make sure you copy all your content "
+"to it before syncing, otherwise all files will be removed! See the FAQ for "
+"more details: %s"
+msgstr ""
+"Atenție: dacă modificați această locație, asigurați-vă că copiați tot "
+"conținutul pe ea înainte de sincronizare, altfel toate fișierele vor fi "
+"eliminate! Consultați FAQ pentru mai multe detalii: %s"
+
+#: packages/lib/models/Setting.js:101
+msgid "Light"
+msgstr "Light"
+
+#: packages/lib/models/Setting.js:102
+msgid "Dark"
+msgstr "Dark"
+
+#: packages/lib/models/Setting.js:103
+msgid "Dracula"
+msgstr "Dracula"
+
+#: packages/lib/models/Setting.js:104
+msgid "Solarised Light"
+msgstr "Solarised Light"
+
+#: packages/lib/models/Setting.js:105
+msgid "Solarised Dark"
+msgstr "Solarised Dark"
+
+#: packages/lib/models/Setting.js:106
+msgid "Nord"
+msgstr "Nord"
+
+#: packages/lib/models/Setting.js:107
+msgid "Aritim Dark"
+msgstr "Aritim Dark"
+
+#: packages/lib/models/Setting.js:108
+msgid "OLED Dark"
+msgstr "OLED Dark"
+
+#: packages/lib/models/Setting.js:130
+msgid "Synchronisation target"
+msgstr ""
+
+#: packages/lib/models/Setting.js:132
+msgid ""
+"The target to synchronise to. Each sync target may have additional "
+"parameters which are named as `sync.NUM.NAME` (all documented below)."
+msgstr ""
+
+#: packages/lib/models/Setting.js:160
+msgid "Directory to synchronise with (absolute path)"
+msgstr ""
+
+#: packages/lib/models/Setting.js:172
+msgid "Nextcloud WebDAV URL"
+msgstr "URL NextCloud WebDAV"
+
+#: packages/lib/models/Setting.js:184
+msgid "Nextcloud username"
+msgstr "Nume utilizator Nextcloud"
+
+#: packages/lib/models/Setting.js:195
+msgid "Nextcloud password"
+msgstr "Parolă Nextcloud"
+
+#: packages/lib/models/Setting.js:206
+msgid "WebDAV URL"
+msgstr "URL-ul WebDAV"
+
+#: packages/lib/models/Setting.js:218
+msgid "WebDAV username"
+msgstr "Nume utilizator WebDAV"
+
+#: packages/lib/models/Setting.js:229
+msgid "WebDAV password"
+msgstr "Parolă WebDAV"
+
+#: packages/lib/models/Setting.js:248
+msgid "AWS S3 bucket"
+msgstr "AWS S3 bucket"
+
+#: packages/lib/models/Setting.js:260
+#, fuzzy
+msgid "AWS S3 URL"
+msgstr "AWS S3"
+
+#: packages/lib/models/Setting.js:271
+msgid "AWS key"
+msgstr "AWS key"
+
+#: packages/lib/models/Setting.js:282
+msgid "AWS secret"
+msgstr "AWS secret"
+
+#: packages/lib/models/Setting.js:293
+msgid "Joplin Server URL"
+msgstr ""
+
+#: packages/lib/models/Setting.js:308
+#, fuzzy
+msgid "Joplin Server Directory"
+msgstr "Deschideți directorul șablonului"
+
+#: packages/lib/models/Setting.js:319
+msgid "Joplin Server username"
+msgstr ""
+
+#: packages/lib/models/Setting.js:330
+#, fuzzy
+msgid "Joplin Server password"
+msgstr "Introduceți parola master:"
+
+#: packages/lib/models/Setting.js:342
+msgid "Attachment download behaviour"
+msgstr ""
+
+#: packages/lib/models/Setting.js:343
+msgid ""
+"In \"Manual\" mode, attachments are downloaded only when you click on them. "
+"In \"Auto\", they are downloaded when you open the note. In \"Always\", all "
+"the attachments are downloaded whether you open the note or not."
+msgstr ""
+"În modul \"Manual\", atașamentele sunt descărcate numai atunci când faceți "
+"clic pe ele. În modul \"Auto\", acestea sunt descărcate când deschideți "
+"nota. În modul „Mereu”, toate atașamentele sunt descărcate indiferent dacă "
+"deschideți nota sau nu."
+
+#: packages/lib/models/Setting.js:346
+msgid "Always"
+msgstr "Mereu"
+
+#: packages/lib/models/Setting.js:347
+msgid "Manual"
+msgstr "Manual"
+
+#: packages/lib/models/Setting.js:348
+msgid "Auto"
+msgstr "Auto"
+
+#: packages/lib/models/Setting.js:366
+msgid "Max concurrent connections"
+msgstr "Conexiuni maxime simultane"
+
+#: packages/lib/models/Setting.js:379
+msgid "Language"
+msgstr "Limbă"
+
+#: packages/lib/models/Setting.js:390
+msgid "Date format"
+msgstr "Format dată"
+
+#: packages/lib/models/Setting.js:410
+msgid "Time format"
+msgstr "Format timp"
+
+#: packages/lib/models/Setting.js:429
+msgid "Theme"
+msgstr "Temă"
+
+#: packages/lib/models/Setting.js:440
+msgid "Automatically switch theme to match system theme"
+msgstr "Comutați automat tema pentru a se potrivi cu tema sistemului"
+
+#: packages/lib/models/Setting.js:452
+msgid "Preferred light theme"
+msgstr "Tema light preferată"
+
+#: packages/lib/models/Setting.js:466
+msgid "Preferred dark theme"
+msgstr "Tema dark preferată"
+
+#: packages/lib/models/Setting.js:476
+msgid "Show note counts"
+msgstr "Afișează numărul de notițe"
+
+#: packages/lib/models/Setting.js:484 packages/lib/models/Setting.js:486
+#: packages/lib/models/Setting.js:487
+msgid "Split View"
+msgstr "Divizare vizualizare"
+
+#: packages/lib/models/Setting.js:484
+#, fuzzy, javascript-format
+msgid "%s / %s / %s"
+msgstr "%s = %s (%s)"
+
+#: packages/lib/models/Setting.js:485 packages/lib/models/Setting.js:486
+#: packages/lib/models/Setting.js:487
+#, javascript-format
+msgid "%s / %s"
+msgstr "%s / %s"
+
+#: packages/lib/models/Setting.js:491
+msgid "Uncompleted to-dos on top"
+msgstr ""
+
+#: packages/lib/models/Setting.js:492
+msgid "Show completed to-dos"
+msgstr "Arătați sarcinile terminate"
+
+#: packages/lib/models/Setting.js:518
+msgid "Auto-pair braces, parenthesis, quotations, etc."
+msgstr ""
+
+#: packages/lib/models/Setting.js:521 packages/lib/models/Setting.js:540
+msgid "Reverse sort order"
+msgstr "Inversați ordinea sortării"
+
+#: packages/lib/models/Setting.js:528
+#, fuzzy
+msgid "Sort notebooks by"
+msgstr "Sortați notițele după"
+
+#: packages/lib/models/Setting.js:541
+msgid "Save geo-location with notes"
+msgstr "Salvați geo-locația în  notițe"
+
+#: packages/lib/models/Setting.js:563
+msgid "When creating a new to-do:"
+msgstr "Când este creată o nouă sarcină:"
+
+#: packages/lib/models/Setting.js:566 packages/lib/models/Setting.js:582
+msgid "Focus title"
+msgstr ""
+
+#: packages/lib/models/Setting.js:567 packages/lib/models/Setting.js:583
+msgid "Focus body"
+msgstr ""
+
+#: packages/lib/models/Setting.js:579
+msgid "When creating a new note:"
+msgstr "Când este creată o nouă notiță:"
+
+#: packages/lib/models/Setting.js:612
+msgid "Enable soft breaks"
+msgstr ""
+
+#: packages/lib/models/Setting.js:613
+msgid "Enable typographer support"
+msgstr ""
+
+#: packages/lib/models/Setting.js:614
+#, fuzzy
+msgid "Enable Linkify"
+msgstr "Activați criptarea"
+
+#: packages/lib/models/Setting.js:615
+#, fuzzy
+msgid "Enable math expressions"
+msgstr "Activați criptarea"
+
+#: packages/lib/models/Setting.js:616
+msgid "Enable Fountain syntax support"
+msgstr ""
+
+#: packages/lib/models/Setting.js:617
+msgid "Enable Mermaid diagrams support"
+msgstr ""
+
+#: packages/lib/models/Setting.js:618
+msgid "Enable audio player"
+msgstr ""
+
+#: packages/lib/models/Setting.js:619
+msgid "Enable video player"
+msgstr ""
+
+#: packages/lib/models/Setting.js:620
+msgid "Enable PDF viewer"
+msgstr ""
+
+#: packages/lib/models/Setting.js:621
+msgid "Enable ==mark== syntax"
+msgstr ""
+
+#: packages/lib/models/Setting.js:622
+msgid "Enable footnotes"
+msgstr ""
+
+#: packages/lib/models/Setting.js:623
+msgid "Enable table of contents extension"
+msgstr ""
+
+#: packages/lib/models/Setting.js:624
+msgid "Enable ~sub~ syntax"
+msgstr ""
+
+#: packages/lib/models/Setting.js:625
+msgid "Enable ^sup^ syntax"
+msgstr ""
+
+#: packages/lib/models/Setting.js:626
+msgid "Enable deflist syntax"
+msgstr ""
+
+#: packages/lib/models/Setting.js:627
+msgid "Enable abbreviation syntax"
+msgstr ""
+
+#: packages/lib/models/Setting.js:628
+msgid "Enable markdown emoji"
+msgstr ""
+
+#: packages/lib/models/Setting.js:629
+msgid "Enable ++insert++ syntax"
+msgstr ""
+
+#: packages/lib/models/Setting.js:630
+msgid "Enable multimarkdown table extension"
+msgstr ""
+
+#: packages/lib/models/Setting.js:641
+msgid "Show tray icon"
+msgstr "Afișați iconița coșul de gunoi"
+
+#: packages/lib/models/Setting.js:643
+msgid "Note: Does not work in all desktop environments."
+msgstr ""
+
+#: packages/lib/models/Setting.js:643
+msgid ""
+"This will allow Joplin to run in the background. It is recommended to enable "
+"this setting so that your notes are constantly being synchronised, thus "
+"reducing the number of conflicts."
+msgstr ""
+
+#: packages/lib/models/Setting.js:647
+msgid "Start application minimised in the tray icon"
+msgstr ""
+
+#: packages/lib/models/Setting.js:662
+#, fuzzy
+msgid "Editor font size"
+msgstr "Editează notiță."
+
+#: packages/lib/models/Setting.js:669
+#, fuzzy
+msgid "Editor font"
+msgstr "Editează notiță."
+
+#: packages/lib/models/Setting.js:676 packages/lib/models/Setting.js:683
+#: packages/lib/models/Setting.js:809
+#, fuzzy
+msgid "Default"
+msgstr "Modul implicit: %s"
+
+#: packages/lib/models/Setting.js:694
+msgid "Editor font family"
+msgstr ""
+
+#: packages/lib/models/Setting.js:695
+msgid ""
+"Used for most text in the markdown editor. If not found, a generic "
+"proportional (variable width) font is used."
+msgstr ""
+
+#: packages/lib/models/Setting.js:704
+msgid "Editor monospace font family"
+msgstr ""
+
+#: packages/lib/models/Setting.js:705
+msgid ""
+"Used where a fixed width font is needed to lay out text legibly (e.g. "
+"tables, checkboxes, code). If not found, a generic monospace (fixed width) "
+"font is used."
+msgstr ""
+
+#: packages/lib/models/Setting.js:726
+msgid "Custom stylesheet for rendered Markdown"
+msgstr ""
+
+#: packages/lib/models/Setting.js:742
+msgid "Custom stylesheet for Joplin-wide app styles"
+msgstr ""
+
+#: packages/lib/models/Setting.js:747
+msgid "Automatically update the application"
+msgstr "Actualizați automat aplicația"
+
+#: packages/lib/models/Setting.js:748
+msgid "Get pre-releases when checking for updates"
+msgstr ""
+
+#: packages/lib/models/Setting.js:748
+#, javascript-format
+msgid "See the pre-release page for more details: %s"
+msgstr ""
+
+#: packages/lib/models/Setting.js:756
+msgid "Synchronisation interval"
+msgstr "Intervalul de sincronizare"
+
+#: packages/lib/models/Setting.js:760 packages/lib/models/Setting.js:761
+#: packages/lib/models/Setting.js:762
+#, javascript-format
+msgid "%d minutes"
+msgstr "%d minute"
+
+#: packages/lib/models/Setting.js:763
+#, javascript-format
+msgid "%d hour"
+msgstr "%d oră"
+
+#: packages/lib/models/Setting.js:764 packages/lib/models/Setting.js:765
+#, javascript-format
+msgid "%d hours"
+msgstr "%d ore"
+
+#: packages/lib/models/Setting.js:775
+msgid "Synchronise only over WiFi connection"
+msgstr ""
+
+#: packages/lib/models/Setting.js:782
+msgid "Text editor command"
+msgstr "Comandă editor de text"
+
+#: packages/lib/models/Setting.js:782
+msgid ""
+"The editor command (may include arguments) that will be used to open a note. "
+"If none is provided it will try to auto-detect the default editor."
+msgstr ""
+
+#: packages/lib/models/Setting.js:783
+msgid "Page size for PDF export"
+msgstr ""
+
+#: packages/lib/models/Setting.js:785
+msgid "A4"
+msgstr "A4"
+
+#: packages/lib/models/Setting.js:786
+msgid "Letter"
+msgstr "Letter"
+
+#: packages/lib/models/Setting.js:787
+msgid "A3"
+msgstr "A3"
+
+#: packages/lib/models/Setting.js:788
+msgid "A5"
+msgstr "A5"
+
+#: packages/lib/models/Setting.js:789
+msgid "Tabloid"
+msgstr "Tabloid"
+
+#: packages/lib/models/Setting.js:790
+msgid "Legal"
+msgstr "Legal"
+
+#: packages/lib/models/Setting.js:793
+msgid "Page orientation for PDF export"
+msgstr "Page orientation for PDF export"
+
+#: packages/lib/models/Setting.js:795
+msgid "Portrait"
+msgstr "Portrait"
+
+#: packages/lib/models/Setting.js:796
+msgid "Landscape"
+msgstr "Landscape"
+
+#: packages/lib/models/Setting.js:806
+msgid "Keyboard Mode"
+msgstr "Keyboard Mode"
+
+#: packages/lib/models/Setting.js:810
+msgid "Emacs"
+msgstr "Emacs"
+
+#: packages/lib/models/Setting.js:811
+msgid "Vim"
+msgstr "Vim"
+
+#: packages/lib/models/Setting.js:834
+msgid "Custom TLS certificates"
+msgstr "Certificate TLS cusomizate"
+
+#: packages/lib/models/Setting.js:835
+msgid ""
+"Comma-separated list of paths to directories to load the certificates from, "
+"or path to individual cert files. For example: /my/cert_dir, /other/custom."
+"pem. Note that if you make changes to the TLS settings, you must save your "
+"changes before clicking on \"Check synchronisation configuration\"."
+msgstr ""
+
+#: packages/lib/models/Setting.js:849
+msgid "Ignore TLS certificate errors"
+msgstr "Ignoră erorile de certificat TLS"
+
+#: packages/lib/models/Setting.js:858
+msgid "Fail-safe"
+msgstr ""
+
+#: packages/lib/models/Setting.js:859
+msgid ""
+"Fail-safe: Do not wipe out local data when sync target is empty (often the "
+"result of a misconfiguration or bug)"
+msgstr ""
+
+#: packages/lib/models/Setting.js:863
+msgid ""
+"Specify the port that should be used by the API server. If not set, a "
+"default will be used."
+msgstr ""
+
+#: packages/lib/models/Setting.js:868
+#, fuzzy
+msgid "Enable note history"
+msgstr "Activați criptarea"
+
+#: packages/lib/models/Setting.js:878
+msgid "days"
+msgstr "zile"
+
+#: packages/lib/models/Setting.js:878
+#, javascript-format
+msgid "%d days"
+msgstr "%d zile"
+
+#: packages/lib/models/Setting.js:880
+msgid "Keep note history for"
+msgstr "Păstrați istoricul notițelor pentru"
+
+#: packages/lib/models/Setting.js:907
+msgid "Notebook list growth factor"
+msgstr ""
+
+#: packages/lib/models/Setting.js:908 packages/lib/models/Setting.js:921
+#: packages/lib/models/Setting.js:934
+msgid ""
+"The factor property sets how the item will grow or shrink to fit the "
+"available space in its container with respect to the other items. Thus an "
+"item with a factor of 2 will take twice as much space as an item with a "
+"factor of 1.Restart app to see changes."
+msgstr ""
+
+#: packages/lib/models/Setting.js:920
+msgid "Note list growth factor"
+msgstr ""
+
+#: packages/lib/models/Setting.js:933
+msgid "Note area growth factor"
+msgstr ""
+
+#: packages/lib/models/Setting.js:1143
+#, javascript-format
+msgid "Invalid option value: \"%s\". Possible values are: %s."
+msgstr ""
+
+#: packages/lib/models/Setting.js:1542
+msgid "General"
+msgstr "General"
+
+#: packages/lib/models/Setting.js:1544
+#, fuzzy
+msgid "Synchronisation"
+msgstr "Statusul sincronizării"
+
+#: packages/lib/models/Setting.js:1546
+msgid "Appearance"
+msgstr "Aspect"
+
+#: packages/lib/models/Setting.js:1548
+#, fuzzy
+msgid "Note"
+msgstr "Caiete de notițe"
+
+#: packages/lib/models/Setting.js:1550
+#: packages/lib/services/interop/InteropService.js:49
+#: packages/lib/services/interop/InteropService.js:59
+msgid "Markdown"
+msgstr "Markdown"
+
+#: packages/lib/models/Setting.js:1554
+msgid "Application"
+msgstr "Aplicație"
+
+#: packages/lib/models/Setting.js:1558
+msgid "Encryption"
+msgstr "Criptare"
+
+#: packages/lib/models/Setting.js:1560
+msgid "Web Clipper"
+msgstr "Web Clipper"
+
+#: packages/lib/models/Setting.js:1562
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "Keyboard Mode"
+
+#: packages/lib/models/Setting.js:1569
+msgid ""
+"These plugins enhance the Markdown renderer with additional features. Please "
+"note that, while these features might be useful, they are not standard "
+"Markdown and thus most of them will only work in Joplin. Additionally, some "
+"of them are *incompatible* with the WYSIWYG editor. If you open a note that "
+"uses one of these plugins in that editor, you will lose the plugin "
+"formatting. It is indicated below which plugins are compatible or not with "
+"the WYSIWYG editor."
+msgstr ""
+
+#: packages/lib/models/Setting.js:1571
+#, javascript-format
+msgid "Notes and settings are stored in: %s"
+msgstr ""
+
+#: packages/lib/models/Resource.js:352
+msgid "Not downloaded"
+msgstr ""
+
+#: packages/lib/models/Resource.js:354
+msgid "Downloading"
+msgstr ""
+
+#: packages/lib/models/Resource.js:356
+msgid "Downloaded"
+msgstr ""
+
+#: packages/lib/models/Resource.js:358
+msgid "Error"
+msgstr "Eroare"
+
+#: packages/lib/models/Resource.js:403
+#, fuzzy, javascript-format
+msgid "Attachment conflict: \"%s\""
+msgstr "Atașați fișier"
+
+#: packages/lib/models/Resource.js:404
+#, javascript-format
+msgid ""
+"There was a [conflict](%s) on the attachment below.\n"
+"\n"
+"%s"
+msgstr ""
+
+#: packages/lib/models/Tag.js:223
+#, javascript-format
+msgid "The tag \"%s\" already exists. Please choose a different name."
+msgstr ""
+
+#: packages/lib/models/Note.js:38
+msgid "created date"
+msgstr "data creării"
+
+#: packages/lib/models/Note.js:39
+msgid "custom order"
+msgstr ""
+
+#: packages/lib/models/Note.js:117
+msgid "This note does not have geolocation information."
+msgstr "Această notă nu conține informații despre geolocalizare."
+
+#: packages/lib/models/Note.js:525
+#, javascript-format
+msgid "Cannot copy note to \"%s\" notebook"
+msgstr "Nu se poate copia notița în caietul de notițe \"%s\""
+
+#: packages/lib/models/Note.js:537
+#, javascript-format
+msgid "Cannot move note to \"%s\" notebook"
+msgstr "Nu se poate muta notița în caietul de notițe \"%s\""
+
+#: packages/lib/models/BaseItem.js:707
+msgid "Encrypted"
+msgstr "Criptat"
+
+#: packages/lib/models/BaseItem.js:768
+msgid "Encrypted items cannot be modified"
+msgstr "Itemii criptați nu pot fi editați"
+
+#: packages/lib/BaseApplication.js:149 packages/lib/BaseApplication.js:161
+#: packages/lib/BaseApplication.js:193
+#, javascript-format
+msgid "Usage: %s"
+msgstr "Utilizare: %s"
+
+#: packages/lib/BaseApplication.js:228
+#, javascript-format
+msgid "Unknown flag: %s"
+msgstr ""
+
+#: packages/lib/SyncTargetOneDrive.js:32
+msgid "OneDrive"
+msgstr "OneDrive"
+
+#: packages/lib/components/shared/config-shared.js:50
+msgid "Checking... Please wait."
+msgstr "Se verifică... Vă rugăm să așteptați."
+
+#: packages/lib/components/shared/config-shared.js:52
+msgid "Success! Synchronisation configuration appears to be correct."
+msgstr "Succes! Configurația de sincronizare pare a fi corectă."
+
+#: packages/lib/components/shared/config-shared.js:54
+msgid ""
+"Error. Please check that URL, username, password, etc. are correct and that "
+"the sync target is accessible. The reported error was:"
+msgstr ""
+"Eroare. Vă rugăm să verificați dacă adresa URL, numele de utilizator, parola "
+"etc. sunt corecte și că ținta de sincronizare este accesibilă. Eroarea "
+"raportată a fost:"
+
+#: packages/lib/components/shared/dropbox-login-shared.js:39
+msgid "The application has been authorised!"
+msgstr "Aplicația a fost autorizată!"
+
+#: packages/lib/components/shared/dropbox-login-shared.js:43
+#, javascript-format
+msgid ""
+"Could not authorise application:\n"
+"\n"
+"%s\n"
+"\n"
+"Please try again."
+msgstr ""
+"Nu s-a putut autoriza aplicația:\n"
+"\n"
+"% s\n"
+"\n"
+"Vă rugăm să încercați din nou."
+
+#: packages/lib/components/shared/encryption-config-shared.js:33
+msgid ""
+"Please confirm that you would like to re-encrypt your complete database."
+msgstr ""
+"Vă rugăm să confirmați că doriți să criptați din nou baza de date completă."
+
+#: packages/lib/components/shared/encryption-config-shared.js:39
+msgid "Your data is going to be re-encrypted and synced again."
+msgstr "Datele dumneavoastre vor fi re-criptate și sincronizate din nou."
+
+#: packages/lib/components/shared/encryption-config-shared.js:49
+msgid ""
+"Please enter your password in the master key list below before upgrading the "
+"key."
+msgstr ""
+"Vă rugăm să introduceți parola în lista de chei master de mai jos înainte de "
+"a actualiza cheia."
+
+#: packages/lib/components/shared/encryption-config-shared.js:58
+msgid "The master key has been upgraded successfully!"
+msgstr "Cheia master a fost actualizată cu succes!"
+
+#: packages/lib/components/shared/encryption-config-shared.js:60
+#, javascript-format
+msgid "Could not upgrade master key: %s"
+msgstr "Nu s-a putut actualiza cheia master:% s"
+
+#: packages/lib/components/shared/encryption-config-shared.js:116
+#, fuzzy, javascript-format
+msgid "Decrypted items: %s / %s"
+msgstr "Se decriptează itemi: %d/%d"
+
+#: packages/lib/onedrive-api.js:392
+msgid ""
+"Cannot refresh token: authentication data is missing. Starting the "
+"synchronisation again may fix the problem."
+msgstr ""
+
+#: packages/lib/Synchronizer.js:119
+#, javascript-format
+msgid "Created local items: %d."
+msgstr "Creare itemi locali: %d."
+
+#: packages/lib/Synchronizer.js:121
+#, javascript-format
+msgid "Updated local items: %d."
+msgstr "Itemi locali actualizați: %d."
+
+#: packages/lib/Synchronizer.js:123
+#, javascript-format
+msgid "Created remote items: %d."
+msgstr ""
+
+#: packages/lib/Synchronizer.js:125
+#, javascript-format
+msgid "Updated remote items: %d."
+msgstr ""
+
+#: packages/lib/Synchronizer.js:127
+#, javascript-format
+msgid "Deleted local items: %d."
+msgstr "Itemi locali șterși: %d."
+
+#: packages/lib/Synchronizer.js:129
+#, javascript-format
+msgid "Deleted remote items: %d."
+msgstr ""
+
+#: packages/lib/Synchronizer.js:131
+#, javascript-format
+msgid "Fetched items: %d/%d."
+msgstr ""
+
+#: packages/lib/Synchronizer.js:133
+msgid "Cancelling..."
+msgstr "Se amână..."
+
+#: packages/lib/Synchronizer.js:135
+#, javascript-format
+msgid "Completed: %s"
+msgstr "Completat: %s"
+
+#: packages/lib/Synchronizer.js:137
+#, javascript-format
+msgid "Last error: %s"
+msgstr "Ultima eroare: %s"
+
+#: packages/lib/Synchronizer.js:244
+msgid "Idle"
+msgstr ""
+
+#: packages/lib/Synchronizer.js:246
+msgid "In progress"
+msgstr "În progres"
+
+#: packages/lib/Synchronizer.js:844
+msgid ""
+"Unknown item type downloaded - please upgrade Joplin to the latest version"
+msgstr ""
+
+#: packages/lib/JoplinServerApi.js:63
+#, javascript-format
+msgid ""
+"Could not connect to Joplin Server. Please check the Synchronisation options "
+"in the config screen. Full error was:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: packages/lib/SyncTargetNextcloud.js:25
+msgid "Nextcloud"
+msgstr "Nextcloud"
+
+#: packages/lib/SyncTargetWebDAV.js:23
+msgid "WebDAV"
+msgstr "WebDAV"
+
+#: packages/lib/SyncTargetFilesystem.js:18
+msgid "File system"
+msgstr ""
+
+#: packages/lib/commands/historyForward.js:17
+msgid "Forward"
+msgstr ""
+
+#: packages/lib/versionInfo.js:10
+#, javascript-format
+msgid "Revision: %s (%s)"
+msgstr "Revizuire:% s (% s)"
+
+#: packages/lib/versionInfo.js:22
+#, javascript-format
+msgid "%s %s (%s, %s)"
+msgstr "%s %s (%s, %s)"
+
+#: packages/lib/versionInfo.js:24
+#, javascript-format
+msgid "Client ID: %s"
+msgstr "Client ID: %s"
+
+#: packages/lib/versionInfo.js:25
+#, javascript-format
+msgid "Sync Version: %s"
+msgstr "Versiunea de sincronizare: %s"
+
+#: packages/lib/versionInfo.js:26
+#, javascript-format
+msgid "Profile Version: %s"
+msgstr "Versiunea profil: %s"
+
+#: packages/lib/versionInfo.js:27
+#, javascript-format
+msgid "Keychain Supported: %s"
+msgstr ""
+
+#: packages/lib/services/RevisionService.js:217
+msgid "Restored Notes"
+msgstr ""
+
+#: packages/lib/services/interop/InteropService_Exporter_Jex.js:43
+msgid "There is no data to export."
+msgstr "Nu există date de exportat."
+
+#: packages/lib/services/interop/types.js:23
+msgid "File"
+msgstr "Fișier"
+
+#: packages/lib/services/interop/types.js:23
+msgid "Directory"
+msgstr "Directoriu"
+
+#: packages/lib/services/interop/InteropService_Importer_Md.js:41
+msgid "Please specify the notebook where the notes should be imported to."
+msgstr ""
+
+#: packages/lib/services/interop/InteropService.js:48
+#: packages/lib/services/interop/InteropService.js:57
+msgid "Joplin Export File"
+msgstr ""
+
+#: packages/lib/services/interop/InteropService.js:50
+#: packages/lib/services/interop/InteropService.js:58
+msgid "Joplin Export Directory"
+msgstr ""
+
+#: packages/lib/services/interop/InteropService.js:51
+msgid "Evernote Export File (as Markdown)"
+msgstr ""
+
+#: packages/lib/services/interop/InteropService.js:52
+msgid "Evernote Export File (as HTML)"
+msgstr ""
+
+#: packages/lib/services/interop/InteropService.js:60
+msgid "HTML File"
+msgstr "Fișier HTML"
+
+#: packages/lib/services/interop/InteropService.js:61
+msgid "HTML Directory"
+msgstr "Directoriu HTML"
+
+#: packages/lib/services/interop/InteropService.js:127
+#, javascript-format
+msgid "Cannot load \"%s\" module for format \"%s\" and output \"%s\""
+msgstr ""
+
+#: packages/lib/services/interop/InteropService.js:150
+#, javascript-format
+msgid "Cannot load \"%s\" module for format \"%s\" and target \"%s\""
+msgstr ""
+
+#: packages/lib/services/interop/InteropService.js:194
+#: packages/lib/services/interop/InteropService.js:206
+#: packages/app-cli/app/command-cp.js:24 packages/app-cli/app/command-cp.js:27
+#: packages/app-cli/app/command-import.js:34
+#: packages/app-cli/app/command-mv.js:22 packages/app-cli/app/command-mv.js:25
+#: packages/app-cli/app/command-use.js:21
+#: packages/app-cli/app/command-ren.js:23
+#: packages/app-cli/app/command-rmbook.js:25
+#: packages/app-cli/app/command-cat.js:25
+#: packages/app-cli/app/command-rmnote.js:25
+#: packages/app-cli/app/command-attach.js:21
+#: packages/app-cli/app/command-export.js:36
+#: packages/app-cli/app/command-export.js:40
+#: packages/app-cli/app/command-geoloc.js:20
+#: packages/app-cli/app/command-search.js:27
+#: packages/app-cli/app/command-set.js:32
+#: packages/app-cli/app/command-help.js:66
+#: packages/app-cli/app/command-todo.js:21
+#: packages/app-cli/app/command-tag.js:33
+#: packages/app-cli/app/command-tag.js:36
+#: packages/app-cli/app/command-tag.js:42
+#: packages/app-cli/app/command-tag.js:43
+#: packages/app-cli/app/command-tag.js:81
+#: packages/app-cli/app/command-tag.js:87
+#: packages/app-cli/app/command-done.js:20
+#, javascript-format
+msgid "Cannot find \"%s\"."
+msgstr "Nu poate fi găsit \"%s\"."
+
+#: packages/lib/services/interop/InteropService.js:199
+#, javascript-format
+msgid "Please specify import format for %s"
+msgstr "Specificați formatul de import pentru% s"
+
+#: packages/lib/services/KeymapService.js:275
+msgid "command"
+msgstr ""
+
+#: packages/lib/services/KeymapService.js:275
+#: packages/lib/services/KeymapService.js:280
+#, javascript-format
+msgid "\"%s\" is missing the required \"%s\" property."
+msgstr ""
+
+#: packages/lib/services/KeymapService.js:280
+#: packages/lib/services/KeymapService.js:287
+msgid "accelerator"
+msgstr ""
+
+#: packages/lib/services/KeymapService.js:287
+#, fuzzy, javascript-format
+msgid "Invalid %s: %s."
+msgstr "Răspuns invalid: %s"
+
+#: packages/lib/services/KeymapService.js:305
+#, javascript-format
+msgid ""
+"Accelerator \"%s\" is used for \"%s\" and \"%s\" commands. This may lead to "
+"unexpected behaviour."
+msgstr ""
+
+#: packages/lib/services/KeymapService.js:330
+#, javascript-format
+msgid "Accelerator \"%s\" is not valid."
+msgstr ""
+
+#: packages/lib/services/ReportService.js:123
+msgid "Items that cannot be synchronised"
+msgstr "Itemii nu pot fi sincronizați"
+
+#: packages/lib/services/ReportService.js:124
+msgid ""
+"These items will remain on the device but will not be uploaded to the sync "
+"target. In order to find these items, either search for the title or the ID "
+"(which is displayed in brackets above)."
+msgstr ""
+
+#: packages/lib/services/ReportService.js:129
+#, fuzzy, javascript-format
+msgid "%s (%s) could not be uploaded: %s"
+msgstr "Acest fișier nu a putut fi deschis: %s"
+
+#: packages/lib/services/ReportService.js:132
+#, fuzzy, javascript-format
+msgid "Item \"%s\" could not be downloaded: %s"
+msgstr "Acest fișier nu a putut fi deschis: %s"
+
+#: packages/lib/services/ReportService.js:139
+#, fuzzy
+msgid "Items that cannot be decrypted"
+msgstr "Itemii nu pot fi sincronizați"
+
+#: packages/lib/services/ReportService.js:140
+msgid ""
+"Joplin failed to decrypt these items multiple times, possibly because they "
+"are corrupted or too large. These items will remain on the device but Joplin "
+"will no longer attempt to decrypt them."
+msgstr ""
+
+#: packages/lib/services/ReportService.js:145
+#: packages/app-cli/app/cli-utils.js:140
+#, javascript-format
+msgid "%s: %s"
+msgstr "%s: %s"
+
+#: packages/lib/services/ReportService.js:171
+#, fuzzy
+msgid "Attachments"
+msgstr "Atașați fișier"
+
+#: packages/lib/services/ReportService.js:178
+msgid "Downloaded and decrypted"
+msgstr "Descărcat și decriptat"
+
+#: packages/lib/services/ReportService.js:178
+#: packages/lib/services/ReportService.js:179
+#: packages/lib/services/ReportService.js:180
+#: packages/lib/services/ReportService.js:184
+#, fuzzy, javascript-format
+msgid "%s: %d"
+msgstr "%s: %s"
+
+#: packages/lib/services/ReportService.js:179
+msgid "Downloaded and encrypted"
+msgstr "Descărcat și criptat"
+
+#: packages/lib/services/ReportService.js:180
+#, fuzzy
+msgid "Created locally"
+msgstr "Creare itemi locali: %d."
+
+#: packages/lib/services/ReportService.js:191
+#, fuzzy
+msgid "Attachments that could not be downloaded"
+msgstr "Acest fișier nu a putut fi deschis: %s"
+
+#: packages/lib/services/ReportService.js:195
+#, javascript-format
+msgid "%s (%s): %s"
+msgstr "%s (%s): %s"
+
+#: packages/lib/services/ReportService.js:206
+msgid "Sync status (synced items / total items)"
+msgstr ""
+
+#: packages/lib/services/ReportService.js:210
+#, javascript-format
+msgid "%s: %d/%d"
+msgstr "%s: %d/%d"
+
+#: packages/lib/services/ReportService.js:212
+#, javascript-format
+msgid "Total: %d/%d"
+msgstr "Total: %d/%d"
+
+#: packages/lib/services/ReportService.js:214
+#, javascript-format
+msgid "Conflicted: %d"
+msgstr "În conflict: %d"
+
+#: packages/lib/services/ReportService.js:215
+#, javascript-format
+msgid "To delete: %d"
+msgstr "De șters: %d"
+
+#: packages/lib/services/ReportService.js:217
+msgid "Folders"
+msgstr "Fișiere"
+
+#: packages/lib/services/ReportService.js:223
+#, javascript-format
+msgid "%s: %d notes"
+msgstr "%s: %d notițe"
+
+#: packages/lib/services/ReportService.js:228
+msgid "Coming alarms"
+msgstr "Alarmele următoare"
+
+#: packages/lib/services/ReportService.js:232
+#, javascript-format
+msgid "On %s: %s"
+msgstr "Pe %s: %s"
+
+#: packages/lib/services/spellChecker/SpellCheckerService.js:107
+msgid "No suggestions"
+msgstr ""
+
+#: packages/lib/services/spellChecker/SpellCheckerService.js:114
+msgid "Add to dictionary"
+msgstr ""
+
+#: packages/lib/services/spellChecker/SpellCheckerService.js:153
+msgid "Use spell checker"
+msgstr ""
+
+#: packages/lib/services/spellChecker/SpellCheckerService.js:173
+#, fuzzy
+msgid "Change language"
+msgstr "Limbă"
+
+#: packages/app-cli/app/command-cp.js:13
+msgid ""
+"Duplicates the notes matching <note> to [notebook]. If no notebook is "
+"specified the note is duplicated in the current notebook."
+msgstr ""
+"Dublează notele care se potrivesc <note> in [agendă]. Dacă nu este "
+"specificat nici o agendă, nota este dublată în agenda curentă."
+
+#: packages/app-cli/app/command-ls.js:18
+msgid ""
+"Displays the notes in the current notebook. Use `ls /` to display the list "
+"of notebooks."
+msgstr ""
+"Afișează notele în agenda curentă. Utilizați 'ls /' pentru a afișa lista de "
+"notițe."
+
+#: packages/app-cli/app/command-ls.js:27
+msgid "Displays only the first top <num> notes."
+msgstr "Afișează numai primele notițe."
+
+#: packages/app-cli/app/command-ls.js:28
+msgid "Sorts the item by <field> (eg. title, updated_time, created_time)."
+msgstr ""
+"Sortează elementul după <field> (de exemplu, titlu, data_actualizării, "
+"data_creării)."
+
+#: packages/app-cli/app/command-ls.js:29
+msgid "Reverses the sorting order."
+msgstr "Inversează ordinea sortării."
+
+#: packages/app-cli/app/command-ls.js:30
+msgid ""
+"Displays only the items of the specific type(s). Can be `n` for notes, `t` "
+"for to-dos, or `nt` for notes and to-dos (eg. `-tt` would display only the "
+"to-dos, while `-tnt` would display notes and to-dos."
+msgstr ""
+"Afișează numai elementele de tipul (tipurile) specific(e). Tipuri acceptate: "
+"\"n\" pentru notițe, \"t\" pentru to-dos, sau \"nt\" pentru notițe și to-dos "
+"(de exemplu, `-tt` afișează numai to-dos, în timp ce `-tnt` afișează notițe "
+"și to-dos."
+
+#: packages/app-cli/app/command-ls.js:31
+msgid "Either \"text\" or \"json\""
+msgstr "Sau \"text\", sau \"json\""
+
+#: packages/app-cli/app/command-ls.js:32 packages/app-cli/app/command-tag.js:18
+msgid ""
+"Use long list format. Format is ID, NOTE_COUNT (for notebook), DATE, "
+"TODO_CHECKED (for to-dos), TITLE"
+msgstr ""
+"Utilizați formatul listei lungi. Formatul este ID, NOTE_COUNT (pentru "
+"agendă), DATE, TODO_CHECKED (pentru todos), TITLE"
+
+#: packages/app-cli/app/command-ls.js:63
+msgid "Please select a notebook first."
+msgstr "Selectați prima dată un caiet de notițe."
+
+#: packages/app-cli/app/command-import.js:14
+msgid "Imports data into Joplin."
+msgstr "Importați date în Joplin."
+
+#: packages/app-cli/app/command-import.js:25
+#, javascript-format
+msgid "Source format: %s"
+msgstr "Formatul sursei: %s"
+
+#: packages/app-cli/app/command-import.js:26
+msgid "Do not ask for confirmation."
+msgstr "Nu cere confirmarea."
+
+#: packages/app-cli/app/command-import.js:27
+#, javascript-format
+msgid "Output format: %s"
+msgstr "Formatul sursei: %s"
+
+#: packages/app-cli/app/command-import.js:65
+msgid "Importing notes..."
+msgstr "Se importă notițe..."
+
+#: packages/app-cli/app/help-utils.js:56
+msgid "Enum"
+msgstr "Enum"
+
+#: packages/app-cli/app/help-utils.js:56
+#, javascript-format
+msgid "Type: %s."
+msgstr "Tip: %s."
+
+#: packages/app-cli/app/help-utils.js:57
+#, javascript-format
+msgid "Possible values: %s."
+msgstr "Valori posibile: %s."
+
+#: packages/app-cli/app/help-utils.js:71
+#, javascript-format
+msgid "Default: %s"
+msgstr "Modul implicit: %s"
+
+#: packages/app-cli/app/help-utils.js:77
+msgid "Possible keys/values:"
+msgstr "Posibile chei/valori:"
+
+#: packages/app-cli/app/command-server.js:14
+#, javascript-format
+msgid ""
+"Start, stop or check the API server. To specify on which port it should run, "
+"set the api.port config variable. Commands are (%s)."
+msgstr ""
+"Porniți, opriți sau verificați serverul API. Pentru a specifica pe ce port "
+"trebuie să ruleze, setați variabila de configurare api.port. Comenzile sunt "
+"(% s)."
+
+#: packages/app-cli/app/command-server.js:38
+#, javascript-format
+msgid "Server is already running on port %d"
+msgstr "Serverul rulează deja pe portul% d"
+
+#: packages/app-cli/app/command-server.js:44
+#, javascript-format
+msgid "Server is running on port %d"
+msgstr "Serverul rulează pe portul %d"
+
+#: packages/app-cli/app/command-server.js:44
+#: packages/app-cli/app/command-server.js:47
+msgid "Server is not running."
+msgstr "Serverul nu rulează."
+
+#: packages/app-cli/app/command-e2ee.js:18
+msgid ""
+"Manages E2EE configuration. Commands are `enable`, `disable`, `decrypt`, "
+"`status`, `decrypt-file` and `target-status`."
+msgstr ""
+"Gestionarea configurația E2EE. Comenzile sunt „enable\", „disable\", „decrypt"
+"\", „status\", „decrypt-file\" și „target-status\"."
+
+#: packages/app-cli/app/command-e2ee.js:36
+#: packages/app-cli/app/command-e2ee.js:74
+msgid "Enter master password:"
+msgstr "Introduceți parola master:"
+
+#: packages/app-cli/app/command-e2ee.js:38
+#: packages/app-cli/app/command-e2ee.js:76
+#: packages/app-cli/app/command-e2ee.js:81
+msgid "Operation cancelled"
+msgstr "Operațiunea a fost amânată"
+
+#: packages/app-cli/app/command-e2ee.js:47
+msgid ""
+"Starting decryption... Please wait as it may take several minutes depending "
+"on how much there is to decrypt."
+msgstr ""
+"Se începe decriptarea... Vă rugăm să așteptați, deoarece poate dura câteva "
+"minute, în funcție de cât este de decriptat."
+
+#: packages/app-cli/app/command-e2ee.js:55
+#, javascript-format
+msgid "Decrypted items: %d"
+msgstr "Elemente decriptate: %d"
+
+#: packages/app-cli/app/command-e2ee.js:56
+#, javascript-format
+msgid "Skipped items: %d (use --retry-failed-items to retry decrypting them)"
+msgstr ""
+"Elemente omise:% d (utilizați --retry-failed-items pentru a încerca din nou "
+"decriptarea acestora)"
+
+#: packages/app-cli/app/command-e2ee.js:70
+msgid "Completed decryption."
+msgstr "Decriptare completă."
+
+#: packages/app-cli/app/command-mkbook.js:12
+msgid "Creates a new notebook."
+msgstr "Creați caiet de notițe."
+
+#: packages/app-cli/app/command-mv.js:14
+msgid "Moves the notes matching <note> to [notebook]."
+msgstr "Mutați notițele care se potrivesc cu <notă> la [agendă]."
+
+#: packages/app-cli/app/command-config.js:13
+msgid ""
+"Gets or sets a config value. If [value] is not provided, it will show the "
+"value of [name]. If neither [name] nor [value] is provided, it will list the "
+"current configuration."
+msgstr ""
+"Obține sau setează o valoare de configurare. Dacă [valoare] nu este "
+"furnizată, va afișa valoarea [nume]. Dacă nu este furnizat nici [nume], nici "
+"[valoare], va afișa configurația curentă."
+
+#: packages/app-cli/app/command-config.js:18
+msgid "Also displays unset and hidden config variables."
+msgstr "Afișează, de asemenea, variabile de configurare nesetate și ascunse."
+
+#: packages/app-cli/app/command-config.js:79
+#, javascript-format
+msgid "%s = %s (%s)"
+msgstr "%s = %s (%s)"
+
+#: packages/app-cli/app/command-config.js:81
+#, javascript-format
+msgid "%s = %s"
+msgstr "%s = %s"
+
+#: packages/app-cli/app/command-use.js:12
+msgid ""
+"Switches to [notebook] - all further operations will happen within this "
+"notebook."
+msgstr ""
+"Trece la [agendă] - toate operațiunile ulterioare vor avea loc în această "
+"agendă."
+
+#: packages/app-cli/app/command-sync.js:29
+msgid "Synchronises with remote storage."
+msgstr "Sincronizarea cu stocarea de la distanță."
+
+#: packages/app-cli/app/command-sync.js:34
+msgid "Sync to provided target (defaults to sync.target config value)"
+msgstr ""
+"Sincronizarea cu o ținta specificată (presetat la valoare de configurare "
+"sync.target)"
+
+#: packages/app-cli/app/command-sync.js:35
+msgid "Upgrade the sync target to the latest version."
+msgstr ""
+
+#: packages/app-cli/app/command-sync.js:105
+#, javascript-format
+msgid "Not authentified with %s. Please provide any missing credentials."
+msgstr ""
+"Nu este autentificat cu% s. Vă rugăm să furnizați toate credențialele omise."
+
+#: packages/app-cli/app/command-sync.js:128
+msgid "Synchronisation is already in progress."
+msgstr "Sincronizarea este deja în progres."
+
+#: packages/app-cli/app/command-sync.js:133
+#, javascript-format
+msgid ""
+"Lock file is already being hold. If you know that no synchronisation is "
+"taking place, you may delete the lock file at \"%s\" and resume the "
+"operation."
+msgstr ""
+"Fișierul de blocare este deja în așteptare. Dacă știți că nu are loc nici o "
+"sincronizare, puteți șterge fișierul de blocare la „% s\" și puteți relua "
+"operația."
+
+#: packages/app-cli/app/command-sync.js:175
+#, javascript-format
+msgid "Synchronisation target: %s (%s)"
+msgstr "Țintă de sincronizare:% s (% s)"
+
+#: packages/app-cli/app/command-sync.js:177
+msgid "Cannot initialise synchroniser."
+msgstr "Nu se poate inițializa sincronizatorul."
+
+#: packages/app-cli/app/command-sync.js:207
+msgid "Starting synchronisation..."
+msgstr "Se începe sincronizarea..."
+
+#: packages/app-cli/app/command-sync.js:230
+msgid "Downloading resources..."
+msgstr "Se descarcă resursele..."
+
+#: packages/app-cli/app/command-sync.js:242
+#, javascript-format
+msgid "Sync target must be upgraded! Run `%s` to proceed."
+msgstr ""
+
+#: packages/app-cli/app/command-sync.js:260
+msgid "Cancelling... Please wait."
+msgstr "Se anulează... Vă rugăm să așteptați."
+
+#: packages/app-cli/app/command-ren.js:14
+msgid "Renames the given <item> (note or notebook) to <name>."
+msgstr "Redenumește <item>dat (notiță sau agendă) în <name>."
+
+#: packages/app-cli/app/command-rmbook.js:13
+msgid "Deletes the given notebook."
+msgstr "Șterge agenda."
+
+#: packages/app-cli/app/command-rmbook.js:17
+msgid "Deletes the notebook without asking for confirmation."
+msgstr "Șterge caietele de notițe fără a mai cere confirmarea."
+
+#: packages/app-cli/app/command-mktodo.js:12
+msgid "Creates a new to-do."
+msgstr "Creează un nou to-do."
+
+#: packages/app-cli/app/command-mktodo.js:16
+#: packages/app-cli/app/command-mknote.js:16
+msgid "Notes can only be created within a notebook."
+msgstr "Notițele pot fi create numai în cadrul unui caiet de notițe."
+
+#: packages/app-cli/app/command-cat.js:14
+msgid "Displays the given note."
+msgstr "Afișează notițele specificate."
+
+#: packages/app-cli/app/command-cat.js:18
+msgid "Displays the complete information about note."
+msgstr "Afișează informațiile complete despre notiță."
+
+#: packages/app-cli/app/command-edit.js:17
+msgid "Edit note."
+msgstr "Editează notiță."
+
+#: packages/app-cli/app/command-edit.js:30
+msgid ""
+"No text editor is defined. Please set it using `config editor <editor-path>`"
+msgstr ""
+"Nu este specificat niciun editor de text. Vă rugăm să setați folosind "
+"`editorul de configurare <editor-path>`"
+
+#: packages/app-cli/app/command-edit.js:40
+msgid "No active notebook."
+msgstr "Niciun caiet de notițe activ."
+
+#: packages/app-cli/app/command-edit.js:46
+#, javascript-format
+msgid "Note does not exist: \"%s\". Create it?"
+msgstr "Notița nu există: \"%s\". Doriți să o creați?"
+
+#: packages/app-cli/app/command-edit.js:75
+msgid "Starting to edit note. Close the editor to get back to the prompt."
+msgstr ""
+
+#: packages/app-cli/app/command-edit.js:97
+msgid "Note has been saved."
+msgstr "Notița a fost salvată."
+
+#: packages/app-cli/app/app-gui.js:452
+msgid "To delete a tag, untag the associated notes."
+msgstr ""
+"Pentru a șterge o eticheta, ștergeți eticheta respectivă din cadrul "
+"notițelor aferente."
+
+#: packages/app-cli/app/app-gui.js:462
+msgid "Please select the note or notebook to be deleted first."
+msgstr "Selectați mai întâi notița sau agenda care trebuie șters."
+
+#: packages/app-cli/app/app-gui.js:750
+msgid "Press Ctrl+D or type \"exit\" to exit the application"
+msgstr "Apăsați Ctrl+D ori scrieți \"exit\" pentru a ieși din aplicație"
+
+#: packages/app-cli/app/command-rmnote.js:13
+msgid "Deletes the notes matching <note-pattern>."
+msgstr "Ștergeți notițele care se potrivesc cu <note-pattern>."
+
+#: packages/app-cli/app/command-rmnote.js:17
+msgid "Deletes the notes without asking for confirmation."
+msgstr "Ștergeți notițele fără a cere confirmare."
+
+#: packages/app-cli/app/command-rmnote.js:27
+#, javascript-format
+msgid "%d notes match this pattern. Delete them?"
+msgstr "Notițile: %d se potrivesc acestui model. Doriți sa le ștergeți?"
+
+#: packages/app-cli/app/command-attach.js:13
+msgid "Attaches the given file to the note."
+msgstr "Atașează fișierul în notiță."
+
+#: packages/app-cli/app/command-version.js:11
+msgid "Displays version information"
+msgstr "Afișează informații despre versiune"
+
+#: packages/app-cli/app/command-version.js:16
+#, javascript-format
+msgid "%s %s (%s)"
+msgstr "%s %s (%s)"
+
+#: packages/app-cli/app/command-undone.js:12
+msgid "Marks a to-do as non-completed."
+msgstr "Marcați o sarcină ca fiind necompletă."
+
+#: packages/app-cli/app/command-export.js:13
+msgid ""
+"Exports Joplin data to the given path. By default, it will export the "
+"complete database including notebooks, notes, tags and resources."
+msgstr ""
+"Exportă date Joplin pe calea dată. În mod implicit, va exporta baza de date "
+"completă, inclusiv agendele, notițele, etichete și resurse."
+
+#: packages/app-cli/app/command-export.js:23
+#, javascript-format
+msgid "Destination format: %s"
+msgstr "Format la destinație: %s"
+
+#: packages/app-cli/app/command-export.js:23
+msgid "Exports only the given note."
+msgstr "Exportă numai notița specificată."
+
+#: packages/app-cli/app/command-export.js:23
+msgid "Exports only the given notebook."
+msgstr "Exportă doar agenda specificată."
+
+#: packages/app-cli/app/command-mknote.js:12
+msgid "Creates a new note."
+msgstr "Creați o nouă notiță."
+
+#: packages/app-cli/app/main.js:92
+msgid "Type `joplin help` for usage information."
+msgstr "Tastați `joplin help` pentru informații de utilizare."
+
+#: packages/app-cli/app/main.js:94
+msgid "Fatal error:"
+msgstr "Eroare fatală:"
+
+#: packages/app-cli/app/command-geoloc.js:13
+msgid "Displays a geolocation URL for the note."
+msgstr "Afișează o adresă URL de geolocație pentru notiță."
+
+#: packages/app-cli/app/gui/NoteWidget.js:36
+msgid ""
+"Welcome to Joplin!\n"
+"\n"
+"Type `:help shortcuts` for the list of keyboard shortcuts, or just `:help` "
+"for usage information.\n"
+"\n"
+"For example, to create a notebook press `mb`; to create a note press `mn`."
+msgstr ""
+"Bine ați venit în Joplin!\n"
+"\n"
+"Tastați `:help shortcuts` pentru afișarea listei scurtăturilor for ori doar "
+"`:help` pentru informații de utilizare.\n"
+"\n"
+"De exemplu, creați un caiet de notițe apăsând 'mb'; pentru a crea o notă "
+"apăsați 'mn'."
+
+#: packages/app-cli/app/gui/NoteWidget.js:48
+msgid ""
+"One or more items are currently encrypted and you may need to supply a "
+"master password. To do so please type `e2ee decrypt`. If you have already "
+"supplied the password, the encrypted items are being decrypted in the "
+"background and will be available soon."
+msgstr ""
+"Unul sau mai multe elemente sunt criptate în prezent și este posibil să fie "
+"necesar să furnizați o parolă master. Pentru a face acest lucru, vă rugăm să "
+"tastați `e2ee decriptare`. Dacă ați furnizat deja parola, elementele "
+"criptate sunt decriptate în fundal și vor fi disponibile în curând."
+
+#: packages/app-cli/app/gui/NoteWidget.js:50
+msgid "You may also type `status` for more information."
+msgstr "De asemenea, puteți introduce `status` pentru mai multe informații."
+
+#: packages/app-cli/app/gui/FolderListWidget.js:31
+msgid "Search:"
+msgstr "Căutați:"
+
+#: packages/app-cli/app/command-search.js:13
+msgid "Searches for the given <pattern> in all the notes."
+msgstr "Caută <pattern> dat în toate notițele."
+
+#: packages/app-cli/app/command-set.js:22
+#, javascript-format
+msgid ""
+"Sets the property <name> of the given <note> to the given [value]. Possible "
+"properties are:\n"
+"\n"
+"%s"
+msgstr ""
+"Setează proprietatea <name>a <note> date la [valoarea] dată. Proprietățile "
+"posibile sunt: % s"
+
+#: packages/app-cli/app/cli-utils.js:109
+#, javascript-format
+msgid "Missing required argument: %s"
+msgstr "Lipsește argumentul necesar: %s"
+
+#: packages/app-cli/app/cli-utils.js:144
+msgid "Your choice: "
+msgstr "Alegerea dumneavoastră: "
+
+#: packages/app-cli/app/cli-utils.js:151
+#, javascript-format
+msgid "Invalid answer: %s"
+msgstr "Răspuns invalid: %s"
+
+#: packages/app-cli/app/cli-utils.js:161 packages/app-cli/app/app.js:137
+msgid "Y"
+msgstr "Y"
+
+#: packages/app-cli/app/cli-utils.js:161 packages/app-cli/app/app.js:137
+msgid "n"
+msgstr "n"
+
+#: packages/app-cli/app/base-command.js:15
+msgid "Cannot change encrypted item"
+msgstr "Nu se poate schimba itemul criptat"
+
+#: packages/app-cli/app/command-help.js:13
+msgid "Displays usage information."
+msgstr "Afișați informațiile de utilizare."
+
+#: packages/app-cli/app/command-help.js:36
+#, javascript-format
+msgid "For information on how to customise the shortcuts please visit %s"
+msgstr ""
+"Pentru informații despre cum să personalizați comenzile rapide, vizitați %s"
+
+#: packages/app-cli/app/command-help.js:44
+msgid "Shortcuts are not available in CLI mode."
+msgstr "Scurtăturile nu sunt disponibile în modul CLI."
+
+#: packages/app-cli/app/command-help.js:71
+msgid ""
+"Type `help [command]` for more information about a command; or type `help "
+"all` for the complete usage information."
+msgstr ""
+"Tastați `help [command]` pentru mai multe informații despre o comandă; sau "
+"tastați „help all\" pentru informații complete de utilizare."
+
+#: packages/app-cli/app/command-help.js:73
+msgid "The possible commands are:"
+msgstr "Comenzile posibile sunt:"
+
+#: packages/app-cli/app/command-help.js:77
+msgid ""
+"In any command, a note or notebook can be referred to by title or ID, or "
+"using the shortcuts `$n` or `$b` for, respectively, the currently selected "
+"note or notebook. `$c` can be used to refer to the currently selected item."
+msgstr ""
+
+#: packages/app-cli/app/command-help.js:79
+msgid "To move from one pane to another, press Tab or Shift+Tab."
+msgstr "Pentru a vă muta dintr-un panou în altul, apăsați Tab ori Shift+Tab."
+
+#: packages/app-cli/app/command-help.js:80
+msgid ""
+"Use the arrows and page up/down to scroll the lists and text areas "
+"(including this console)."
+msgstr ""
+"Utilizați săgețile și pagina sus / jos pentru a derula listele și zonele de "
+"text (inclusiv această consolă)."
+
+#: packages/app-cli/app/command-help.js:81
+msgid "To maximise/minimise the console, press \"tc\"."
+msgstr "Pentru a maximiza/minimiza consola, apăsați \"tc\"."
+
+#: packages/app-cli/app/command-help.js:82
+msgid "To enter command line mode, press \":\""
+msgstr "Pentru a intra în linia de comandă, apăsați \":\""
+
+#: packages/app-cli/app/command-help.js:83
+msgid "To exit command line mode, press ESCAPE"
+msgstr "Pentru a ieși din modul linie de comandă, apăsați ESCAPE"
+
+#: packages/app-cli/app/command-help.js:84
+msgid ""
+"For the list of keyboard shortcuts and config options, type `help keymap`"
+msgstr ""
+"Pentru lista de comenzi rapide de la tastatură și opțiuni de configurare, "
+"tastați `help keymap`"
+
+#: packages/app-cli/app/command-todo.js:14
+msgid ""
+"<todo-command> can either be \"toggle\" or \"clear\". Use \"toggle\" to "
+"toggle the given to-do between completed and uncompleted state (If the "
+"target is a regular note it will be converted to a to-do). Use \"clear\" to "
+"convert the to-do back to a regular note."
+msgstr ""
+"<todo-command> poate fi \"toggle\" sau \"clear\". Utilizați \"toggle\" "
+"pentru a comuta între starea finalizată și cea nefinalizată (dacă ținta este "
+"o notă obișnuită, aceasta va fi transformată în to-do). Utilizați „clear\" "
+"pentru a converti to-do înapoi la o notă obișnuită."
+
+#: packages/app-cli/app/command-exit.js:11
+msgid "Exits the application."
+msgstr "Ieșire din aplicație."
+
+#: packages/app-cli/app/app.js:62
+#, javascript-format
+msgid "More than one item match \"%s\". Please narrow down your query."
+msgstr ""
+"Mai multe elemente se potrivesc cu „%s\". Vă rugăm să restrângeți "
+"interogarea."
+
+#: packages/app-cli/app/app.js:92
+msgid "No notebook selected."
+msgstr "Niciun caiet de notițe nu a fost selectat."
+
+#: packages/app-cli/app/app.js:98
+msgid "No notebook has been specified."
+msgstr "Niciun caiet de notițe nu a fost specificat."
+
+#: packages/app-cli/app/app.js:137
+msgid "N"
+msgstr "N"
+
+#: packages/app-cli/app/app.js:137
+msgid "y"
+msgstr "y"
+
+#: packages/app-cli/app/app.js:170
+msgid "Cancelling background synchronisation... Please wait."
+msgstr "Se anulează sincronizarea... Vă rugăm să așteptați."
+
+#: packages/app-cli/app/app.js:255
+#, javascript-format
+msgid "No such command: %s"
+msgstr "Nu există o asemenea comandă: %s"
+
+#: packages/app-cli/app/app.js:303
+#, javascript-format
+msgid "The command \"%s\" is only available in GUI mode"
+msgstr "Comanda \"%s\" este disponibilă doar în modul GUI"
+
+#: packages/app-cli/app/command-status.js:13
+msgid "Displays summary about the notes and notebooks."
+msgstr "Afișează rezumatul despre notițe și agende."
+
+#: packages/app-cli/app/command-status.js:44
+msgid ""
+"To retry decryption of these items. Run `e2ee decrypt --retry-failed-items`"
+msgstr ""
+"Pentru a reîncerca decriptarea acestor elemente. Rulați `e2ee decrypt --"
+"retry-failed-items`"
+
+#: packages/app-cli/app/command-tag.js:14
+msgid ""
+"<tag-command> can be \"add\", \"remove\", \"list\", or \"notetags\" to "
+"assign or remove [tag] from [note], to list notes associated with [tag], or "
+"to list tags associated with [note]. The command `tag list` can be used to "
+"list all the tags (use -l for long option)."
+msgstr ""
+"<tag-command> poate fi be \"add\", \"remove\", \"list\", sau \"notetags\" "
+"pentru a aloca sau a elimina [tag] dela [note], pentru a afișa lista de "
+"notițe asociate cu [tag], sau pentru a afișa lista de etichete asociate cu "
+"[note]. Comanda `tag list` poate fi utilizată pentru a afișa toată lista de "
+"etichete (utilizați -l pentru opțiunea long)."
+
+#: packages/app-cli/app/command-tag.js:90
+#, javascript-format
+msgid "Invalid command: \"%s\""
+msgstr "Comandă invalidă: \"%s\""
+
+#: packages/app-cli/app/command-done.js:14
+msgid "Marks a to-do as done."
+msgstr "Marcați o sarcină ca fiind terminată."
+
+#: packages/app-cli/app/command-done.js:21
+#, javascript-format
+msgid "Note is not a to-do: \"%s\""
+msgstr "Notița nu este o sarcină: \"%s\""
+
+#~ msgid "Unknown"
+#~ msgstr "Necunoscut"
+
+#~ msgid "Checking..."
+#~ msgstr "Verificare..."
+
+#~ msgid ""
+#~ "The Joplin Nextcloud App is either not installed or misconfigured. Please "
+#~ "see the full error message below:"
+#~ msgstr ""
+#~ "Aplicația Joplin Nextcloud nu este instalată sau configurată greșit. "
+#~ "Consultați mesajul de eroare complet de mai jos:"
+
+#~ msgid "Show Log"
+#~ msgstr "Afișați log"
+
+#~ msgid "Joplin Nextcloud App status:"
+#~ msgstr "Joplin Nextcloud App status:"
+
+#~ msgid "Check Status"
+#~ msgstr "Verificare Status"
+
+#~ msgid "Help"
+#~ msgstr "Ajutor"
+
+#~ msgid "OneDrive Dev (For testing only)"
+#~ msgstr "OneDrive Dev (Doar pentru teste)"
+
+#~ msgid ""
+#~ "Type a note title or part of its content to jump to it. Or type # "
+#~ "followed by a tag name, or @ followed by a notebook name."
+#~ msgstr ""
+#~ "Tastați un titlu de notă sau o parte din conținutul acesteia pentru a "
+#~ "trece la ea. Sau tastați # urmat de un nume de etichetă sau @ urmat de un "
+#~ "nume de agendă."
+
+#~ msgid "Name"
+#~ msgstr "Nume"
+
+#~ msgid "Icon"
+#~ msgstr "Icon"
+
+#~ msgid "Notebook properties"
+#~ msgstr "Proprietățile agendei"
+
+#, javascript-format
+#~ msgid "This file could not be opened: %s"
+#~ msgstr "Acest fișier nu a putut fi deschis: %s"
+
+#, fuzzy
+#~ msgid "emphasized text"
+#~ msgstr "text accentuat"
+
+#~ msgid "Click to stop external editing"
+#~ msgstr "Faceți click pentru a opri editarea în aplicația externă"
+
+#, fuzzy
+#~ msgid "Content Properties"
+#~ msgstr "Titlul caietului de notițe:"
+
+#~ msgid "Please create a notebook first."
+#~ msgstr "Creați un caiet de sarcini prima dată."
+
+#~ msgid "Please create a notebook first"
+#~ msgstr "Creați un caiet de sarcini prima dată"
+
+#~ msgid "Usage"
+#~ msgstr "Utilizare"
+
+#~ msgid "Move to notebook..."
+#~ msgstr "Mutați în caietul de notițe..."
+
+#, javascript-format
+#~ msgid "Move %d notes to notebook \"%s\"?"
+#~ msgstr "Mutați %d notițe în caietul de notițe \"%s\"?"
+
+#~ msgid "Press to set the decryption password."
+#~ msgstr "Apăsați pentru a seta parola de decriptare."
+
+#, fuzzy
+#~ msgid "Some items cannot be synchronised. Press for more info."
+#~ msgstr "Câțiva itemi nu pot fi sincronizați."
+
+#~ msgid "Show all"
+#~ msgstr "Afișați tot"
+
+#~ msgid "Errors only"
+#~ msgstr "Doar erori"
+
+#, javascript-format
+#~ msgid "Database v%s"
+#~ msgstr "Baza de date v%s"
+
+#, fuzzy, javascript-format
+#~ msgid "FTS enabled: %d"
+#~ msgstr "De șters: %d"
+
+#~ msgid "Exit"
+#~ msgstr "Ieșiți"
+
+#~ msgid "Select date"
+#~ msgstr "Selectați data"
+
+#~ msgid "Confirm"
+#~ msgstr "Confirmați"
+
+#~ msgid "Attach any file"
+#~ msgstr "Atașați orice fișier"
+
+#~ msgid "Unknown log level: %s"
+#~ msgstr "Nivel de log necunoscut: %s"
+
+#~ msgid "Unknown level ID: %s"
+#~ msgstr "ID nivel necunoscut: %s"
+
+#, fuzzy
+#~ msgid "Synchronize"
+#~ msgstr "Sincronizați"
+
+#~ msgid ""
+#~ "This item is currently encrypted: %s \"%s\". Please wait for all items to "
+#~ "be decrypted and try again."
+#~ msgstr ""
+#~ "Acest element este criptat în prezent:% s \"% s\". Vă rugăm să așteptați "
+#~ "ca toate elementele să fie decriptate și să încercați din nou."
+
+#~ msgid "Remove tag \"%s\" and its descendant tags from all notes?"
+#~ msgstr ""
+#~ "Eliminați eticheta \"% s\" și etichetele descendente din toate notițele?"
+
+#~ msgid ""
+#~ "Could not synchronise with OneDrive.\n"
+#~ "\n"
+#~ "This error often happens when using OneDrive for Business, which "
+#~ "unfortunately cannot be supported.\n"
+#~ "\n"
+#~ "Please consider using a regular OneDrive account."
+#~ msgstr ""
+#~ "Nu s-a putut sincroniza cu OneDrive.\n"
+#~ "\n"
+#~ "Această eroare se întâmplă adesea atunci când se utilizează OneDrive "
+#~ "pentru Business, care, din păcate, nu poate fi suportată. \n"
+#~ "\n"
+#~ "Vă rugăm să luați în considerare utilizarea unui cont OneDrive obișnuit."
+
+#, fuzzy
+#~ msgid "Cannot move tag to this location."
+#~ msgstr "Nu se poate muta caietul de notițe în această locație"
+
+#~ msgid "Add or remove tags"
+#~ msgstr "Adăugați ori eliminați etichete"
+
+#, fuzzy
+#~ msgid "Content properties"
+#~ msgstr "Titlul caietului de notițe:"
+
+#, fuzzy
+#~ msgid "Resources"
+#~ msgstr "Resurse: %d."
+
+#, fuzzy
+#~ msgid "Confirm master password:"
+#~ msgstr "Setați parola"
+
+#, fuzzy
+#~ msgid "Confirm password"
+#~ msgstr "Confirmați"
+
+#, fuzzy
+#~ msgid "Missing required argument: note"
+#~ msgstr "Lipsește argumentul necesar: %s"
+
+#~ msgid "Synchronisation status"
+#~ msgstr "Statusul sincronizării"
+
+#~ msgid "General Options"
+#~ msgstr "Opțiuni Generale"
+
+#~ msgid "Encryption options"
+#~ msgstr "Opțiuni de criptare"
+
+#~ msgid "Encryption Options"
+#~ msgstr "Opțiuni de criptare"
+
+#~ msgid "Clipper Options"
+#~ msgstr "Opțiuni Clipper"
+
+#~ msgid "Cancel synchronisation"
+#~ msgstr "Amânați sincronizarea"
+
+#~ msgid "Hide metadata"
+#~ msgstr "Ascundeți metadatele"
+
+#~ msgid "Show metadata"
+#~ msgstr "Afișați metadatele"
+
+#~ msgid "Delete notebook"
+#~ msgstr "Ștergeți caiet de notițe"
+
+#~ msgid "Welcome"
+#~ msgstr "Bine ați venit"
+
+#~ msgid "Separate each tag by a comma."
+#~ msgstr "Separați fiecare etichetă printr-o virgulă."
+
+#~ msgid "State: %s."
+#~ msgstr "Statut: %s."
+
+#~ msgid "A notebook with this title already exists: \"%s\""
+#~ msgstr "Un caiet de notițe cu acest titlu există deja: \"%s\""

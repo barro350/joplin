@@ -9,17 +9,17 @@ This file was auto-generated from readme/clipper.md and any manual change
 made to it will be overwritten. To make a change to this file please modify
 the source Markdown file:
 
-https://github.com/laurent22/joplin/blob/master/readme/clipper.md
+https://github.com/laurent22/joplin/blob/dev/readme/clipper.md
 
 -->
 
 <head>
-	<title>Web Clipper | Joplin</title>
+	<title>Joplin Web Clipper | Joplin</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://joplinapp.org/css/bootstrap.min.css">
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="https://joplinapp.org/favicon.ico">
 	<!-- <link rel="stylesheet" href="https://joplinapp.org/css/fontawesome-all.min.css">  -->
 	<link rel="stylesheet" href="https://joplinapp.org/css/fork-awesome.min.css"> 
 	<script src="https://joplinapp.org/js/jquery-3.2.1.slim.min.js"></script>
@@ -28,6 +28,15 @@ https://github.com/laurent22/joplin/blob/master/readme/clipper.md
 		background-color: #F1F1F1;
 		color: #333333;
 	}
+
+	.root {
+		overflow: hidden;
+	}
+
+	a[href^="mailto:"] {
+		word-break: break-all;
+	}
+
 	table {
 		margin-bottom: 1em;
 	}
@@ -72,6 +81,7 @@ https://github.com/laurent22/joplin/blob/master/readme/clipper.md
 		background-color: #eee;
 		border: 1px solid #ccc;
 		font-size: .85em;
+	/*	word-break: break-all; */
 	}
 	pre code {
 		border: none;
@@ -184,8 +194,9 @@ https://github.com/laurent22/joplin/blob/master/readme/clipper.md
 	}
 	.nav {
 		background-color: black;
-		display: table;
-		width: inherit;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 	}
 	.nav.sticky {
 		position:fixed;
@@ -202,7 +213,8 @@ https://github.com/laurent22/joplin/blob/master/readme/clipper.md
 		padding-left: 2em;
 		margin-bottom: 0;
 		display: table-cell;
-		/* min-width: 250px; */
+		display: flex;
+		width: 100%;
 		/* For GSoC: */
 		min-width: 470px;
 	}
@@ -215,11 +227,11 @@ https://github.com/laurent22/joplin/blob/master/readme/clipper.md
 		font-weight: bold;
 	}
 	.nav-right {
-		display: table-cell;
-		width: 100%;
+		display: flex;
 		text-align: right;
 		vertical-align: middle;
 		line-height: 0;
+		margin-right: 10px;
 	}
 	.nav-right .share-btn {
 		display: none;
@@ -228,7 +240,7 @@ https://github.com/laurent22/joplin/blob/master/readme/clipper.md
 		display: none;
 	}
 	.footer {
-		padding-top: 1em;
+		padding: 2em;
 		border-top: 1px solid #d4d4d4;
 		margin-top: 2em;
 		color: gray;
@@ -254,6 +266,23 @@ https://github.com/laurent22/joplin/blob/master/readme/clipper.md
 		opacity: 1;
 	}
 
+	@media (min-width: 992px) {
+		.content{
+			display: flex;
+		}
+
+		#toc{
+			display: block!important;
+			align-self: flex-start;
+			width: 300px;
+			position: sticky; top: 20px; left: 0;            
+		}
+
+		.main{
+			width: calc(100% - 300px);
+		}
+	}
+
 	.bottom-links {
 		display: flex;
 		justify-content: center;
@@ -275,7 +304,7 @@ https://github.com/laurent22/joplin/blob/master/readme/clipper.md
 
 <body>
 
-<div class="container page-clipper">
+<div class="container root page-clipper">
 
 <div class="header">
 	<a class="forkme" href="https://github.com/laurent22/joplin"><img src="https://joplinapp.org/images/ForkMe.png"/></a>
@@ -288,15 +317,10 @@ https://github.com/laurent22/joplin/blob/master/readme/clipper.md
 		<ul>
 			<li class=""><a href="https:&#x2F;&#x2F;joplinapp.org/" title="Home"><i class="fa fa-home"></i></a></li>
 			<li><a href="https://discourse.joplinapp.org" title="Forum">Forum</a></li>
-			<li><a class="help" href="#" title="Menu">Menu</a></li>
-			<!-- <li><a class="gsod" href="https://joplinapp.org/gsod2020/" title="Google Season of Docs 2020">GSoD 2020</a></li> -->
+			<li><a class="gsoc" href="https://joplinapp.org/gsoc2021/index/" title="Google Summer of Code 2021">GSoC 2021</a></li>
 		</ul>
 		<div class="nav-right">
-			<!--
-				<iframe class="share-btn" src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fjoplinapp.org&layout=button&size=small&mobile_iframe=true&width=60&height=20&appId" width="60" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-				<iframe class="share-btn" src="https://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fjoplinapp.org" width="62" height="20" title="Tweet" style="border: 0; overflow: hidden;"></iframe>
-			-->
-			<iframe class="share-btn share-btn-github" src="https://ghbtns.com/github-btn.html?user=laurent22&repo=joplin&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+			<iframe class="share-btn share-btn-github" src="https://ghbtns.com/github-btn.html?user=laurent22&repo=joplin&type=star&count=true" frameborder="0" scrolling="0" width="115px" height="20px"></iframe>
 		</div>
 	</div>
 </div>
@@ -320,23 +344,47 @@ https://github.com/laurent22/joplin/blob/master/readme/clipper.md
 <li><a href="https://joplinapp.org/e2ee/">How to enable end-to-end encryption</a></li>
 <li><a href="https://joplinapp.org/conflict/">What is a conflict?</a></li>
 <li><a href="https://joplinapp.org/debugging/">How to enable debug mode</a></li>
-<li><a href="https://joplinapp.org/api/">API documentation</a></li>
+<li><a href="https://joplinapp.org/rich_text_editor/">About the Rich Text editor limitations</a></li>
 <li><a href="https://joplinapp.org/faq/">FAQ</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - Get Started</p>
+<ul>
+<li><a href="https://joplinapp.org/api/overview/">Joplin API Overview</a></li>
+<li><a href="https://joplinapp.org/api/get_started/plugins/">Plugin development</a></li>
+<li><a href="https://joplinapp.org/api/tutorials/toc_plugin/">Plugin tutorial</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - References</p>
+<ul>
+<li><a href="https://joplinapp.org/api/references/plugin_api/classes/joplin.html">Plugin API</a></li>
+<li><a href="https://joplinapp.org/api/references/rest_api/">Data API</a></li>
+<li><a href="https://joplinapp.org/api/references/plugin_manifest/">Plugin manifest</a></li>
+<li><a href="https://joplinapp.org/api/references/plugin_loading_rules/">Plugin loading rules</a></li>
 </ul>
 </li>
 <li>
 <p>Development</p>
 <ul>
+<li><a href="https://github.com/laurent22/joplin/blob/dev/BUILD.md">How to build the apps</a></li>
 <li><a href="https://joplinapp.org/spec/e2ee/">End-to-end encryption spec</a></li>
 <li><a href="https://joplinapp.org/spec/history/">Note History spec</a></li>
 <li><a href="https://joplinapp.org/spec/sync_lock/">Sync Lock spec</a></li>
+<li><a href="https://joplinapp.org/spec/plugins/">Plugin Architecture spec</a></li>
+<li><a href="https://joplinapp.org/spec/search_sorting/">Search Sorting spec</a></li>
+<li><a href="https://joplinapp.org/spec/server_file_url_format/">Server: File URL Format</a></li>
+<li><a href="https://joplinapp.org/spec/server_delta_sync/">Server: Delta Sync</a></li>
+<li><a href="https://joplinapp.org/spec/server_sharing/">Server: Sharing</a></li>
 </ul>
 </li>
 <li>
-<p>Google Summer of Code 2020</p>
+<p>Google Summer of Code 2021</p>
 <ul>
-<li><a href="https://joplinapp.org/gsoc2020">Google Summer of Code 2020</a></li>
-<li><a href="https://joplinapp.org/gsoc2020/ideas/">Project Ideas</a></li>
+<li><a href="https://joplinapp.org/gsoc2021/index/">Google Summer of Code 2021</a></li>
+<li><a href="https://joplinapp.org/gsoc2021/pull_request_guidelines/">How to submit a GSoC pull request</a></li>
+<li><a href="https://joplinapp.org/gsoc2021/ideas/">Project Ideas</a></li>
 </ul>
 </li>
 <li>
@@ -344,18 +392,23 @@ https://github.com/laurent22/joplin/blob/master/readme/clipper.md
 <ul>
 <li><a href="https://joplinapp.org/changelog/">Changelog (Desktop App)</a></li>
 <li><a href="https://joplinapp.org/changelog_cli/">Changelog (CLI App)</a></li>
+<li><a href="https://joplinapp.org/changelog_server/">Changelog (Server)</a></li>
 <li><a href="https://joplinapp.org/stats/">Stats</a></li>
 <li><a href="https://joplinapp.org/donate/">Donate</a></li>
 </ul>
 </li>
 </ul>
 </div>
+
+	<div class="main">
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://joplinapp.org/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://joplinapp.org/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://joplinapp.org/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://joplinapp.org/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
+<hr>
 <h1>Joplin Web Clipper<a name="joplin-web-clipper" href="#joplin-web-clipper" class="heading-anchor">🔗</a></h1>
 <p>The Web Clipper is a browser extension that allows you to save web pages and screenshots from your browser. To start using it, open the Joplin desktop application, go to the <strong>Web Clipper Options</strong> and follow the instructions.</p>
 <img src="https://joplinapp.org/images/WebExtensionScreenshot.png" style="max-width: 50%; border: 1px solid gray;">
 <h1>Troubleshooting the web clipper service<a name="troubleshooting-the-web-clipper-service" href="#troubleshooting-the-web-clipper-service" class="heading-anchor">🔗</a></h1>
 <p>The web clipper extension and the Joplin application communicates via a service, which is started by the Joplin desktop app.</p>
-<p>However certain things can interfer with this service and prevent it from being accessible or from starting. If something does not work, check the following:</p>
+<p>However certain things can interfere with this service and prevent it from being accessible or from starting. If something does not work, check the following:</p>
 <ul>
 <li>Check that the service is started. You can check this in the Web clipper options in the desktop app.</li>
 <li>Check that the port used by the service is not blocked by a firewall. You can find the port number in the Web clipper options in the desktop Joplin application.</li>
@@ -382,10 +435,10 @@ https://github.com/laurent22/joplin/blob/master/readme/clipper.md
 <p>Now use the extension as normal and replicate the bug you're having.</p>
 <p>Copy and paste the content of both the debugging window and the Firefox console, and post it to the <a href="https://discourse.joplinapp.org/">forum</a>.</p>
 <h1>Using the Web Clipper service<a name="using-the-web-clipper-service" href="#using-the-web-clipper-service" class="heading-anchor">🔗</a></h1>
-<p>The Web Clipper service can be used to create, modify or delete notes, notebooks, tags, etc. from any other application. It exposes an API with a number of methods to manage Joplin's data. For more information about this API and how to use it, please check the <a href="https://joplinapp.org/api/">Joplin API documentation</a>.</p>
+<p>The Web Clipper service can be used to create, modify or delete notes, notebooks, tags, etc. from any other application. It exposes an API with a number of methods to manage Joplin's data. For more information about this API and how to use it, please check the <a href="https://joplinapp.org/api/references/rest_api/">Joplin API documentation</a>.</p>
 
 		<div class="bottom-links">
-			<a href="https://github.com/laurent22/joplin/blob/master/readme/clipper.md">
+			<a href="https://github.com/laurent22/joplin/blob/dev/readme/clipper.md">
 				<i class="fa fa-github"></i> Improve this doc
 			</a>
 		</div>
@@ -400,13 +453,6 @@ https://github.com/laurent22/joplin/blob/master/readme/clipper.md
 		}
 	}
 
-	$('#toc').hide();
-
-	$('.help').click(function(event) {
-		event.preventDefault();
-		$('#toc').show();
-	});
-
 	$(window).scroll(function() {
 		stickyHeader();
 	});
@@ -419,8 +465,10 @@ https://github.com/laurent22/joplin/blob/master/readme/clipper.md
 	ga('send', 'pageview');
 </script>
 
+</div></div>
+
 <div class="footer">
-Copyright (c) 2016-2020 Laurent Cozic
+Copyright (C) 2016-2021 Laurent Cozic
 </div>
 </body>
 </html>
