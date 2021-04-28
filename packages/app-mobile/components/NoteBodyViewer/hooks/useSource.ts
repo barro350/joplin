@@ -23,7 +23,7 @@ function usePrevious(value: any, initialValue: any = null): any {
 	return ref.current;
 }
 
-export default function useSource(noteBody: string, noteMarkupLanguage: number, themeId: number, highlightedKeywords: string[], noteResources: any, paddingBottom: number, noteHash: string): UseSourceResult {
+export default function useSource(noteBody: string, noteMarkupLanguage: number, themeId: number, highlightedKeywords: string[], noteResources: any, paddingBottom: number, noteHash: string, customCss: any): UseSourceResult {
 	const [source, setSource] = useState<Source>(undefined);
 	const [injectedJs, setInjectedJs] = useState<string[]>([]);
 	const [resourceLoadedTime, setResourceLoadedTime] = useState(0);
@@ -82,6 +82,7 @@ export default function useSource(noteBody: string, noteMarkupLanguage: number, 
 				resources: noteResources,
 				codeTheme: theme.codeThemeCss,
 				postMessageSyntax: 'window.joplinPostMessage_',
+				userCss: customCss,
 				enableLongPress: shim.mobilePlatform() === 'android', // On iOS, there's already a built-on open/share menu
 			};
 
@@ -148,7 +149,7 @@ export default function useSource(noteBody: string, noteMarkupLanguage: number, 
 						<meta name="viewport" content="width=device-width, initial-scale=1">
 						${assetsToHeaders(result.pluginAssets, { asHtml: true })}
 					</head>
-					<body>
+					<body class="mobile ${shim.platformName()}">
 						${html}
 					</body>
 				</html>

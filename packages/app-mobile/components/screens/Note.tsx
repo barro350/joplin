@@ -1054,6 +1054,7 @@ class NoteScreenComponent extends BaseScreenComponent {
 						onCheckboxChange={this.onBodyViewerCheckboxChange}
 						onMarkForDownload={this.onMarkForDownload}
 						onLoadEnd={this.onBodyViewerLoadEnd}
+						customCss={this.props.customCss}
 					/>
 				);
 		} else {
@@ -1248,6 +1249,7 @@ const NoteScreen = connect((state: any) => {
 		showSideMenu: state.showSideMenu,
 		provisionalNoteIds: state.provisionalNoteIds,
 		highlightedWords: state.highlightedWords,
+		customCss: state.customCss,
 	};
 })(NoteScreenComponent);
 

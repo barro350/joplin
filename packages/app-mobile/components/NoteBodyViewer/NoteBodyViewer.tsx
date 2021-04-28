@@ -25,6 +25,7 @@ interface Props {
 	onCheckboxChange?: Function;
 	onMarkForDownload?: Function;
 	onLoadEnd?: Function;
+	customCss?: any;
 }
 
 const webViewStyle = {
@@ -43,7 +44,8 @@ export default function NoteBodyViewer(props: Props) {
 		props.highlightedKeywords,
 		props.noteResources,
 		props.paddingBottom,
-		props.noteHash
+		props.noteHash,
+		props.customCss
 	);
 
 	const onResourceLongPress = useOnResourceLongPress(

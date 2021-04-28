@@ -64,6 +64,7 @@ const { OneDriveLoginScreen } = require('./components/screens/onedrive-login.js'
 const { EncryptionConfigScreen } = require('./components/screens/encryption-config.js');
 const { DropboxLoginScreen } = require('./components/screens/dropbox-login.js');
 const { MenuContext } = require('react-native-popup-menu');
+const RNFS = require('react-native-fs');
 const { SideMenu } = require('./components/side-menu.js');
 const { SideMenuContent } = require('./components/side-menu-content.js');
 const { SideMenuContentNote } = require('./components/side-menu-content-note.js');
@@ -363,6 +364,12 @@ const appReducer = (state = appDefaultState, action: any) => {
 			newState.noteSideMenuOptions = action.options;
 			break;
 
+		case 'LOAD_CUSTOM_CSS':
+
+			newState = Object.assign({}, state);
+			newState.customCss = action.css;
+			break;
+			
 		case 'MOBILE_DATA_WARNING_UPDATE':
 
 			newState = Object.assign({}, state);
@@ -617,6 +624,21 @@ async function initialize(dispatch: Function) {
 	// Collect revisions more frequently on mobile because it doesn't auto-save
 	// and it cannot collect anything when the app is not active.
 	RevisionService.instance().runInBackground(1000 * 30);
+
+	// external CSS
+	const filePath = `${RNFS.ExternalDirectoryPath}/userstyle.css`;
+	let cssString = '';
+	try {
+		cssString = await RNFS.readFile(filePath);
+	} catch (error) {
+		let msg = error.message ? error.message : '';
+		msg = `Could not load custom css from ${filePath}\n${msg}`;
+		console.log(msg);
+	}
+	dispatch({
+		type: 'LOAD_CUSTOM_CSS',
+		css: cssString,
+	});
 
 	reg.logger().info('Application initialized');
 }
