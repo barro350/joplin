@@ -49,6 +49,18 @@ const declarations: CommandDeclaration[] = [
 		iconName: 'icon-code',
 	},
 	{
+		name: 'textKorean',
+		label: () => _('Set text as Korean'),
+	},
+	{
+		name: 'textJapanese',
+		label: () => _('Set text as Japanese'),
+	},
+	{
+		name: 'textEnglishUS',
+		label: () => _('Set text as US English'),
+	},
+	{
 		name: 'attachFile',
 		label: () => _('Attach file'),
 		iconName: 'icon-attachment',

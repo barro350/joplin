@@ -205,6 +205,9 @@ function CodeMirror(props: NoteBodyEditorProps, ref: any) {
 								}
 							}
 						},
+						textKorean: () => wrapSelectionWithStrings('<span lang="ko">', '</span>', _('Korean text')),
+						textJapanese: () => wrapSelectionWithStrings('<span lang="ja">', '</span>', _('Japanese text')),
+						textEnglishUS: () => wrapSelectionWithStrings('<span lang="en-US">', '</span>', _('English text')),
 						insertText: (value: any) => editorRef.current.insertAtCursor(value),
 						attachFile: async () => {
 							const cursor = editorRef.current.getCursor();
