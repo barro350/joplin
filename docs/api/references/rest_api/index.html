@@ -9,7 +9,7 @@ This file was auto-generated from readme/api/references/rest_api.md and any manu
 made to it will be overwritten. To make a change to this file please modify
 the source Markdown file:
 
-https://github.com/laurent22/joplin/blob/master/readme/api/references/rest_api.md
+https://github.com/laurent22/joplin/blob/dev/readme/api/references/rest_api.md
 
 -->
 
@@ -28,6 +28,15 @@ https://github.com/laurent22/joplin/blob/master/readme/api/references/rest_api.m
 		background-color: #F1F1F1;
 		color: #333333;
 	}
+
+	.root {
+		overflow: hidden;
+	}
+
+	a[href^="mailto:"] {
+		word-break: break-all;
+	}
+
 	table {
 		margin-bottom: 1em;
 	}
@@ -72,6 +81,7 @@ https://github.com/laurent22/joplin/blob/master/readme/api/references/rest_api.m
 		background-color: #eee;
 		border: 1px solid #ccc;
 		font-size: .85em;
+	/*	word-break: break-all; */
 	}
 	pre code {
 		border: none;
@@ -184,8 +194,9 @@ https://github.com/laurent22/joplin/blob/master/readme/api/references/rest_api.m
 	}
 	.nav {
 		background-color: black;
-		display: table;
-		width: inherit;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 	}
 	.nav.sticky {
 		position:fixed;
@@ -202,7 +213,8 @@ https://github.com/laurent22/joplin/blob/master/readme/api/references/rest_api.m
 		padding-left: 2em;
 		margin-bottom: 0;
 		display: table-cell;
-		/* min-width: 250px; */
+		display: flex;
+		width: 100%;
 		/* For GSoC: */
 		min-width: 470px;
 	}
@@ -215,11 +227,11 @@ https://github.com/laurent22/joplin/blob/master/readme/api/references/rest_api.m
 		font-weight: bold;
 	}
 	.nav-right {
-		display: table-cell;
-		width: 100%;
+		display: flex;
 		text-align: right;
 		vertical-align: middle;
 		line-height: 0;
+		margin-right: 10px;
 	}
 	.nav-right .share-btn {
 		display: none;
@@ -228,7 +240,7 @@ https://github.com/laurent22/joplin/blob/master/readme/api/references/rest_api.m
 		display: none;
 	}
 	.footer {
-		padding-top: 1em;
+		padding: 2em;
 		border-top: 1px solid #d4d4d4;
 		margin-top: 2em;
 		color: gray;
@@ -254,6 +266,23 @@ https://github.com/laurent22/joplin/blob/master/readme/api/references/rest_api.m
 		opacity: 1;
 	}
 
+	@media (min-width: 992px) {
+		.content{
+			display: flex;
+		}
+
+		#toc{
+			display: block!important;
+			align-self: flex-start;
+			width: 300px;
+			position: sticky; top: 20px; left: 0;            
+		}
+
+		.main{
+			width: calc(100% - 300px);
+		}
+	}
+
 	.bottom-links {
 		display: flex;
 		justify-content: center;
@@ -275,7 +304,7 @@ https://github.com/laurent22/joplin/blob/master/readme/api/references/rest_api.m
 
 <body>
 
-<div class="container page-rest_api">
+<div class="container root page-rest_api">
 
 <div class="header">
 	<a class="forkme" href="https://github.com/laurent22/joplin"><img src="https://joplinapp.org/images/ForkMe.png"/></a>
@@ -288,15 +317,10 @@ https://github.com/laurent22/joplin/blob/master/readme/api/references/rest_api.m
 		<ul>
 			<li class=""><a href="https:&#x2F;&#x2F;joplinapp.org/" title="Home"><i class="fa fa-home"></i></a></li>
 			<li><a href="https://discourse.joplinapp.org" title="Forum">Forum</a></li>
-			<li><a class="help" href="#" title="Menu">Menu</a></li>
-			<!-- <li><a class="gsod" href="https://joplinapp.org/gsod2020/" title="Google Season of Docs 2020">GSoD 2020</a></li> -->
+			<li><a class="gsoc" href="https://joplinapp.org/gsoc2021/index/" title="Google Summer of Code 2021">GSoC 2021</a></li>
 		</ul>
 		<div class="nav-right">
-			<!--
-				<iframe class="share-btn" src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fjoplinapp.org&layout=button&size=small&mobile_iframe=true&width=60&height=20&appId" width="60" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-				<iframe class="share-btn" src="https://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fjoplinapp.org" width="62" height="20" title="Tweet" style="border: 0; overflow: hidden;"></iframe>
-			-->
-			<iframe class="share-btn share-btn-github" src="https://ghbtns.com/github-btn.html?user=laurent22&repo=joplin&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+			<iframe class="share-btn share-btn-github" src="https://ghbtns.com/github-btn.html?user=laurent22&repo=joplin&type=star&count=true" frameborder="0" scrolling="0" width="115px" height="20px"></iframe>
 		</div>
 	</div>
 </div>
@@ -320,17 +344,25 @@ https://github.com/laurent22/joplin/blob/master/readme/api/references/rest_api.m
 <li><a href="https://joplinapp.org/e2ee/">How to enable end-to-end encryption</a></li>
 <li><a href="https://joplinapp.org/conflict/">What is a conflict?</a></li>
 <li><a href="https://joplinapp.org/debugging/">How to enable debug mode</a></li>
+<li><a href="https://joplinapp.org/rich_text_editor/">About the Rich Text editor limitations</a></li>
 <li><a href="https://joplinapp.org/faq/">FAQ</a></li>
 </ul>
 </li>
 <li>
-<p>Joplin API</p>
+<p>Joplin API - Get Started</p>
 <ul>
 <li><a href="https://joplinapp.org/api/overview/">Joplin API Overview</a></li>
 <li><a href="https://joplinapp.org/api/get_started/plugins/">Plugin development</a></li>
 <li><a href="https://joplinapp.org/api/tutorials/toc_plugin/">Plugin tutorial</a></li>
+</ul>
+</li>
+<li>
+<p>Joplin API - References</p>
+<ul>
 <li><a href="https://joplinapp.org/api/references/plugin_api/classes/joplin.html">Plugin API</a></li>
-<li><a href="https://joplinapp.org/api/references/rest_api/">Data API documentation</a></li>
+<li><a href="https://joplinapp.org/api/references/rest_api/">Data API</a></li>
+<li><a href="https://joplinapp.org/api/references/plugin_manifest/">Plugin manifest</a></li>
+<li><a href="https://joplinapp.org/api/references/plugin_loading_rules/">Plugin loading rules</a></li>
 </ul>
 </li>
 <li>
@@ -341,14 +373,18 @@ https://github.com/laurent22/joplin/blob/master/readme/api/references/rest_api.m
 <li><a href="https://joplinapp.org/spec/history/">Note History spec</a></li>
 <li><a href="https://joplinapp.org/spec/sync_lock/">Sync Lock spec</a></li>
 <li><a href="https://joplinapp.org/spec/plugins/">Plugin Architecture spec</a></li>
-<li><a href="https://github.com/laurent22/joplin/blob/master/readme/spec/search_sorting.md">Search Sorting spec</a></li>
+<li><a href="https://joplinapp.org/spec/search_sorting/">Search Sorting spec</a></li>
+<li><a href="https://joplinapp.org/spec/server_file_url_format/">Server: File URL Format</a></li>
+<li><a href="https://joplinapp.org/spec/server_delta_sync/">Server: Delta Sync</a></li>
+<li><a href="https://joplinapp.org/spec/server_sharing/">Server: Sharing</a></li>
 </ul>
 </li>
 <li>
-<p>Google Summer of Code 2020</p>
+<p>Google Summer of Code 2021</p>
 <ul>
-<li><a href="https://joplinapp.org/gsoc2020/index/">Google Summer of Code 2020</a></li>
-<li><a href="https://joplinapp.org/gsoc2020/ideas/">Project Ideas</a></li>
+<li><a href="https://joplinapp.org/gsoc2021/index/">Google Summer of Code 2021</a></li>
+<li><a href="https://joplinapp.org/gsoc2021/pull_request_guidelines/">How to submit a GSoC pull request</a></li>
+<li><a href="https://joplinapp.org/gsoc2021/ideas/">Project Ideas</a></li>
 </ul>
 </li>
 <li>
@@ -356,12 +392,17 @@ https://github.com/laurent22/joplin/blob/master/readme/api/references/rest_api.m
 <ul>
 <li><a href="https://joplinapp.org/changelog/">Changelog (Desktop App)</a></li>
 <li><a href="https://joplinapp.org/changelog_cli/">Changelog (CLI App)</a></li>
+<li><a href="https://joplinapp.org/changelog_server/">Changelog (Server)</a></li>
 <li><a href="https://joplinapp.org/stats/">Stats</a></li>
 <li><a href="https://joplinapp.org/donate/">Donate</a></li>
 </ul>
 </li>
 </ul>
 </div>
+
+	<div class="main">
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=E8JMYD2LQ8MMA&amp;lc=GB&amp;item_name=Joplin+Development&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://joplinapp.org/images/badges/Donate-PayPal-green.svg" alt="Donate using PayPal"></a> <a href="https://github.com/sponsors/laurent22/"><img src="https://joplinapp.org/images/badges/GitHub-Badge.svg" alt="Sponsor on GitHub"></a> <a href="https://www.patreon.com/joplin"><img src="https://joplinapp.org/images/badges/Patreon-Badge.svg" alt="Become a patron"></a> <a href="https://joplinapp.org/donate/#donations"><img src="https://joplinapp.org/images/badges/Donate-IBAN.svg" alt="Donate using IBAN"></a></p>
+<hr>
 <h1>Joplin Data API<a name="joplin-data-api" href="#joplin-data-api" class="heading-anchor">🔗</a></h1>
 <p>This API is available when the clipper server is running. It provides access to the notes, notebooks, tags and other Joplin object via a REST API. Plugins can also access this API even when the clipper server is not running.</p>
 <p>In order to use it, you'll first need to find on which port the service is running. To do so, open the Web Clipper Options in Joplin and if the service is running it should tell you on which port. Normally it runs on port <strong>41184</strong>. If you want to find it programmatically, you may follow this kind of algorithm:</p>
@@ -401,6 +442,55 @@ for (let portToTest = 41184; portToTest &lt;= 41194; portToTest++) {
 </code></pre>
 <p>To get the IDs only of all the tags:</p>
 <pre><code>curl http://localhost:41184/tags?fields=id
+</code></pre>
+<p>By default API results will contain the following fields: <strong>id</strong>, <strong>parent_id</strong>, <strong>title</strong></p>
+<h1>Pagination<a name="pagination" href="#pagination" class="heading-anchor">🔗</a></h1>
+<p>All API calls that return multiple results will be paginated and will return the following structure:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Always present?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>items</code></td>
+<td>Yes</td>
+<td>The array of items you have requested.</td>
+</tr>
+<tr>
+<td><code>has_more</code></td>
+<td>Yes</td>
+<td>If <code>true</code>, there are more items after this page. If <code>false</code>, it means you have reached the end of the data set.</td>
+</tr>
+</tbody>
+</table>
+<p>You can specify how the results should be sorted using the <code>order_by</code> and <code>order_dir</code> query parameters, and which page to retrieve using the <code>page</code> parameter (starts at and defaults to 1). You can specify the number of items to be returned using the <code>limit</code> parameter (the maximum being 100 items).</p>
+<p>The following call for example will initiate a request to fetch all the notes, 10 at a time, and sorted by &quot;updated_time&quot; ascending:</p>
+<pre><code>curl http://localhost:41184/notes?order_by=updated_time&amp;order_dir=ASC&amp;limit=10
+</code></pre>
+<p>This will return a result like this</p>
+<pre><code>{ &quot;items&quot;: [ /* 10 notes */ ], &quot;has_more&quot;: true }
+</code></pre>
+<p>Then you will resume fetching the results using this query:</p>
+<pre><code>curl http://localhost:41184/notes?order_by=updated_time&amp;order_dir=ASC&amp;limit=10&amp;page=2
+</code></pre>
+<p>Eventually you will get some results that do not contain an &quot;has_more&quot; paramater, at which point you will have retrieved all the results</p>
+<p>As an example the pseudo-code below could be used to fetch all the notes:</p>
+<pre><code class="language-javascript">
+async function fetchJson(url) {
+	return (await fetch(url)).json();
+}
+
+async function fetchAllNotes() {
+	let pageNum = 1;
+	do {
+		const response = await fetchJson((http://localhost:41184/notes?page=' + pageNum++);
+		console.info('Printing notes:', response.items);
+	} while (response.has_more)
+}
 </code></pre>
 <h1>Error handling<a name="error-handling" href="#error-handling" class="heading-anchor">🔗</a></h1>
 <p>In case of an error, an HTTP status code &gt;= 400 will be returned along with a JSON object that provides more info about the error. The JSON object is in the format <code>{ &quot;error&quot;: &quot;description of error&quot; }</code>.</p>
@@ -486,6 +576,10 @@ for (let portToTest = 41184; portToTest &lt;= 41194; portToTest++) {
 <tr>
 <td>smart_filter</td>
 <td>15</td>
+</tr>
+<tr>
+<td>command</td>
+<td>16</td>
 </tr>
 </tbody>
 </table>
@@ -850,12 +944,26 @@ for (let portToTest = 41184; portToTest &lt;= 41194; portToTest++) {
 <p>Gets resource with ID :id</p>
 <h2>GET /resources/:id/file<a name="get-resources-id-file" href="#get-resources-id-file" class="heading-anchor">🔗</a></h2>
 <p>Gets the actual file associated with this resource.</p>
+<h2>GET /resources/:id/notes<a name="get-resources-id-notes" href="#get-resources-id-notes" class="heading-anchor">🔗</a></h2>
+<p>Gets the notes (IDs) associated with a resource.</p>
 <h2>POST /resources<a name="post-resources" href="#post-resources" class="heading-anchor">🔗</a></h2>
 <p>Creates a new resource</p>
 <p>Creating a new resource is special because you also need to upload the file. Unlike other API calls, this one must have the &quot;multipart/form-data&quot; Content-Type. The file data must be passed to the &quot;data&quot; form field, and the other properties to the &quot;props&quot; form field. An example of a valid call with cURL would be:</p>
 <pre><code>curl -F 'data=@/path/to/file.jpg' -F 'props={&quot;title&quot;:&quot;my resource title&quot;}' http://localhost:41184/resources
 </code></pre>
 <p>The &quot;data&quot; field is required, while the &quot;props&quot; one is not. If not specified, default values will be used.</p>
+<p><strong>From a plugin</strong> the syntax to create a resource is also a bit special:</p>
+<pre><code class="language-javascript">	await joplin.data.post(
+		[&quot;resources&quot;],
+		null,
+		{ title: &quot;test.jpg&quot; }, // Resource metadata
+		[
+			{
+				path: &quot;/path/to/test.jpg&quot;, // Actual file
+			},
+		]
+	);
+</code></pre>
 <h2>PUT /resources/:id<a name="put-resources-id" href="#put-resources-id" class="heading-anchor">🔗</a></h2>
 <p>Sets the properties of the resource with ID :id</p>
 <h2>DELETE /resources/:id<a name="delete-resources-id" href="#delete-resources-id" class="heading-anchor">🔗</a></h2>
@@ -941,7 +1049,7 @@ for (let portToTest = 41184; portToTest &lt;= 41194; portToTest++) {
 <p>Remove the tag from the note.</p>
 
 		<div class="bottom-links">
-			<a href="https://github.com/laurent22/joplin/blob/master/readme/api/references/rest_api.md">
+			<a href="https://github.com/laurent22/joplin/blob/dev/readme/api/references/rest_api.md">
 				<i class="fa fa-github"></i> Improve this doc
 			</a>
 		</div>
@@ -956,13 +1064,6 @@ for (let portToTest = 41184; portToTest &lt;= 41194; portToTest++) {
 		}
 	}
 
-	$('#toc').hide();
-
-	$('.help').click(function(event) {
-		event.preventDefault();
-		$('#toc').show();
-	});
-
 	$(window).scroll(function() {
 		stickyHeader();
 	});
@@ -975,8 +1076,10 @@ for (let portToTest = 41184; portToTest &lt;= 41194; portToTest++) {
 	ga('send', 'pageview');
 </script>
 
+</div></div>
+
 <div class="footer">
-Copyright (c) 2016-2020 Laurent Cozic
+Copyright (C) 2016-2021 Laurent Cozic
 </div>
 </body>
 </html>
