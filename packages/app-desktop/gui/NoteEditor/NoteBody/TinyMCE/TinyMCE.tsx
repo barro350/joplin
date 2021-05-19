@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState, useEffect, useCallback, useRef, forwardRef, useImperativeHandle } from 'react';
 import { ScrollOptions, ScrollOptionTypes, EditorCommand, NoteBodyEditorProps } from '../../utils/types';
-import { resourcesStatus, commandAttachFileToBody, handlePasteEvent } from '../../utils/resourceHandling';
+import { resourcesStatus, commandAttachFileToBody, handlePasteEvent, processPastedHtml } from '../../utils/resourceHandling';
 import useScroll from './utils/useScroll';
 import styles_ from './styles';
 import CommandService from '@joplin/lib/services/CommandService';
@@ -64,6 +64,26 @@ function newBlockSource(language: string = '', content: string = ''): any {
 		node: null,
 		language: language,
 	};
+}
+
+// In TinyMCE 5.2, when setting the body to '<div id="rendered-md"></div>',
+// it would end up as '<div id="rendered-md"><br/></div>' once rendered
+// (an additional <br/> was inserted).
+//
+// This behaviour was "fixed" later on, possibly in 5.6, which has this change:
+//
+// - Fixed getContent with text format returning a new line when the editor is empty #TINY-6281
+//
+// The problem is that the list plugin was, unknown to me, relying on this <br/>
+// being present. Without it, trying to add a bullet point or checkbox on an
+// empty document, does nothing. The exact reason for this is unclear
+// so as a workaround we manually add this <br> for empty documents,
+// which fixes the issue.
+//
+// Perhaps upgrading the list plugin (which is a fork of TinyMCE own list plugin)
+// would help?
+function awfulBrHack(html: string): string {
+	return html === '<div id="rendered-md"></div>' ? '<div id="rendered-md"><br/></div>' : html;
 }
 
 function findEditableContainer(node: any): any {
@@ -163,7 +183,7 @@ const TinyMCE = (props: NoteBodyEditorProps, ref: any) => {
 	const { scrollToPercent } = useScroll({ editor, onScroll: props.onScroll });
 
 	usePluginServiceRegistration(ref);
-	useContextMenu(editor, props.plugins);
+	useContextMenu(editor, props.plugins, props.dispatch);
 
 	const dispatchDidUpdate = (editor: any) => {
 		if (dispatchDidUpdateIID_) shim.clearTimeout(dispatchDidUpdateIID_);
@@ -338,7 +358,7 @@ const TinyMCE = (props: NoteBodyEditorProps, ref: any) => {
 			element.id = script.id;
 
 			element.onload = () => {
-				resolve();
+				resolve(null);
 			};
 
 			document.getElementsByTagName('head')[0].appendChild(element);
@@ -822,7 +842,7 @@ const TinyMCE = (props: NoteBodyEditorProps, ref: any) => {
 				const result = await props.markupToHtml(props.contentMarkupLanguage, props.content, markupRenderOptions({ resourceInfos: props.resourceInfos }));
 				if (cancelled) return;
 
-				editor.setContent(result.html);
+				editor.setContent(awfulBrHack(result.html));
 
 				if (lastOnChangeEventInfo.current.contentKey !== props.contentKey) {
 					// Need to clear UndoManager to avoid this problem:
@@ -1032,6 +1052,14 @@ const TinyMCE = (props: NoteBodyEditorProps, ref: any) => {
 					// HACK: TinyMCE doesn't add an undo step when pasting, for unclear reasons
 					// so we manually add it here. We also can't do it immediately it seems, or
 					// else nothing is added to the stack, so do it on the next frame.
+
+					const pastedHtml = clipboard.readHTML();
+					if (pastedHtml) {
+						event.preventDefault();
+						const modifiedHtml = await processPastedHtml(pastedHtml);
+						editor.insertContent(modifiedHtml);
+					}
+
 					window.requestAnimationFrame(() => editor.undoManager.add());
 					onChangeHandler();
 				}

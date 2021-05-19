@@ -48,5 +48,7 @@ export default function() {
 		'editor.swapLineUp',
 		'editor.swapLineDown',
 		'toggleSafeMode',
+		'showShareNoteDialog',
+		'showShareFolderDialog',
 	];
 }

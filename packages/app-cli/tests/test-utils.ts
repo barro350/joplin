@@ -1,7 +1,7 @@
 /* eslint-disable require-atomic-updates */
 import BaseApplication from '@joplin/lib/BaseApplication';
 import BaseModel from '@joplin/lib/BaseModel';
-import Logger, { TargetType, LoggerWrapper } from '@joplin/lib/Logger';
+import Logger, { TargetType, LoggerWrapper, LogLevel } from '@joplin/lib/Logger';
 import Setting from '@joplin/lib/models/Setting';
 import BaseService from '@joplin/lib/services/BaseService';
 import FsDriverNode from '@joplin/lib/fs-driver-node';
@@ -53,6 +53,7 @@ import ResourceFetcher from '@joplin/lib/services/ResourceFetcher';
 const WebDavApi = require('@joplin/lib/WebDavApi');
 const DropboxApi = require('@joplin/lib/DropboxApi');
 import JoplinServerApi from '@joplin/lib/JoplinServerApi';
+import { FolderEntity } from '@joplin/lib/services/database/types';
 const { loadKeychainServiceAndSettings } = require('@joplin/lib/services/SettingUtils');
 const md5 = require('md5');
 const S3 = require('aws-sdk/clients/s3');
@@ -69,7 +70,6 @@ const suiteName_ = uuid.createNano();
 
 const databases_: any[] = [];
 let synchronizers_: any[] = [];
-const synchronizerContexts_: any = {};
 const fileApis_: any = {};
 const encryptionServices_: any[] = [];
 const revisionServices_: any[] = [];
@@ -168,7 +168,7 @@ dbLogger.setLevel(Logger.LEVEL_WARN);
 
 const logger = new Logger();
 logger.addTarget(TargetType.Console);
-logger.setLevel(Logger.LEVEL_WARN); // Set to DEBUG to display sync process in console
+logger.setLevel(LogLevel.Warn); // Set to DEBUG to display sync process in console
 
 Logger.initializeGlobalLogger(logger);
 
@@ -347,6 +347,29 @@ async function setupDatabase(id: number = null, options: any = null) {
 	await loadKeychainServiceAndSettings(options.keychainEnabled ? KeychainServiceDriver : KeychainServiceDriverDummy);
 }
 
+export async function createFolderTree(parentId: string, tree: any[], num: number = 0): Promise<FolderEntity> {
+	let rootFolder: FolderEntity = null;
+
+	for (const item of tree) {
+		const isFolder = !!item.children;
+
+		num++;
+
+		const data = { ...item };
+		delete data.children;
+
+		if (isFolder) {
+			const folder = await Folder.save({ title: `Folder ${num}`, parent_id: parentId, ...data });
+			if (!rootFolder) rootFolder = folder;
+			if (item.children.length) await createFolderTree(folder.id, item.children, num);
+		} else {
+			await Note.save({ title: `Note ${num}`, parent_id: parentId, ...data });
+		}
+	}
+
+	return rootFolder;
+}
+
 function exportDir(id: number = null) {
 	if (id === null) id = currentClient_;
 	return `${dataDir}/export`;
@@ -386,11 +409,10 @@ async function setupDatabaseAndSynchronizer(id: number, options: any = null) {
 	if (!synchronizers_[id]) {
 		const SyncTargetClass = SyncTargetRegistry.classById(syncTargetId_);
 		const syncTarget = new SyncTargetClass(db(id));
-		await initFileApi(suiteName_);
+		await initFileApi();
 		syncTarget.setFileApi(fileApi());
 		syncTarget.setLogger(logger);
 		synchronizers_[id] = await syncTarget.synchronizer();
-		synchronizerContexts_[id] = null;
 	}
 
 	encryptionServices_[id] = new EncryptionService();
@@ -420,11 +442,16 @@ function synchronizer(id: number = null) {
 // the client.
 async function synchronizerStart(id: number = null, extraOptions: any = null) {
 	if (id === null) id = currentClient_;
-	const context = synchronizerContexts_[id];
+
+	const contextKey = `sync.${syncTargetId()}.context`;
+	const context = Setting.value(contextKey);
+
 	const options = Object.assign({}, extraOptions);
 	if (context) options.context = context;
 	const newContext = await synchronizer(id).start(options);
-	synchronizerContexts_[id] = newContext;
+
+	Setting.setValue(contextKey, JSON.stringify(newContext));
+
 	return newContext;
 }
 
@@ -481,7 +508,13 @@ async function loadEncryptionMasterKey(id: number = null, useExisting = false) {
 	return masterKey;
 }
 
-async function initFileApi(suiteName: string) {
+function mustRunInBand() {
+	if (!process.argv.includes('--runInBand')) {
+		throw new Error('Tests must be run sequentially for this sync target, with the --runInBand arg. eg `npm test -- --runInBand`');
+	}
+}
+
+async function initFileApi() {
 	if (fileApis_[syncTargetId_]) return;
 
 	let fileApi = null;
@@ -521,9 +554,7 @@ async function initFileApi(suiteName: string) {
 		// OneDrive app directory, and it's not clear how to get that
 		// working.
 
-		if (!process.argv.includes('--runInBand')) {
-			throw new Error('OneDrive tests must be run sequentially, with the --runInBand arg. eg `npm test -- --runInBand`');
-		}
+		mustRunInBand();
 
 		const { parameters, setEnvOverride } = require('@joplin/lib/parameters.js');
 		Setting.setConstant('env', 'dev');
@@ -547,6 +578,8 @@ async function initFileApi(suiteName: string) {
 		const api = new S3({ accessKeyId: amazonS3Creds.accessKeyId, secretAccessKey: amazonS3Creds.secretAccessKey, s3UseArnRegion: true });
 		fileApi = new FileApi('', new FileApiDriverAmazonS3(api, amazonS3Creds.bucket));
 	} else if (syncTargetId_ == SyncTargetRegistry.nameToId('joplinServer')) {
+		mustRunInBand();
+
 		// Note that to test the API in parallel mode, you need to use Postgres
 		// as database, as the SQLite database is not reliable when being
 		// read/write from multiple processes at the same time.
@@ -555,7 +588,8 @@ async function initFileApi(suiteName: string) {
 			username: () => 'admin@localhost',
 			password: () => 'admin',
 		});
-		fileApi = new FileApi(`Apps/Joplin-${suiteName}`, new FileApiDriverJoplinServer(api));
+
+		fileApi = new FileApi('', new FileApiDriverJoplinServer(api));
 	}
 
 	fileApi.setLogger(logger);
