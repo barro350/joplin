@@ -2,7 +2,7 @@ const React = require('react');
 import shim from '@joplin/lib/shim';
 shim.setReact(React);
 
-import setUpQuickActions from './setUpQuickActions';
+import setupQuickActions from './setupQuickActions';
 import PluginAssetsLoader from './PluginAssetsLoader';
 import AlarmService from '@joplin/lib/services/AlarmService';
 import Alarm from '@joplin/lib/models/Alarm';
@@ -99,6 +99,7 @@ import MigrationService from '@joplin/lib/services/MigrationService';
 import { clearSharedFilesCache } from './utils/ShareUtils';
 import setIgnoreTlsErrors from './utils/TlsUtils';
 import ShareService from '@joplin/lib/services/share/ShareService';
+import setupNotifications from './utils/setupNotifications';
 
 let storeDispatch = function(_action: any) {};
 
@@ -737,7 +738,9 @@ class AppComponent extends React.Component {
 
 		await this.handleShareData();
 
-		setUpQuickActions(this.props.dispatch, this.props.selectedFolderId);
+		setupQuickActions(this.props.dispatch, this.props.selectedFolderId);
+
+		await setupNotifications(this.props.dispatch);
 	}
 
 	componentWillUnmount() {
