@@ -25,7 +25,7 @@ interface Props {
 	onCheckboxChange?: Function;
 	onMarkForDownload?: Function;
 	onLoadEnd?: Function;
-	customCss?: any;
+	customCss?: string;
 }
 
 const webViewStyle = {

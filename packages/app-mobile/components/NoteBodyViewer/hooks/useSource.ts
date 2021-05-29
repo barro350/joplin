@@ -23,7 +23,7 @@ function usePrevious(value: any, initialValue: any = null): any {
 	return ref.current;
 }
 
-export default function useSource(noteBody: string, noteMarkupLanguage: number, themeId: number, highlightedKeywords: string[], noteResources: any, paddingBottom: number, noteHash: string, customCss: any): UseSourceResult {
+export default function useSource(noteBody: string, noteMarkupLanguage: number, themeId: number, highlightedKeywords: string[], noteResources: any, paddingBottom: number, noteHash: string, customCss: string): UseSourceResult {
 	const [source, setSource] = useState<Source>(undefined);
 	const [injectedJs, setInjectedJs] = useState<string[]>([]);
 	const [resourceLoadedTime, setResourceLoadedTime] = useState(0);
@@ -38,8 +38,8 @@ export default function useSource(noteBody: string, noteMarkupLanguage: number, 
 	}, [themeId, paddingBottom]);
 
 	const markupToHtml = useMemo(() => {
-		return markupLanguageUtils.newMarkupToHtml();
-	}, [isFirstRender]);
+		return markupLanguageUtils.newMarkupToHtml({}, { customCss: customCss ? customCss : '' });
+	}, [isFirstRender, customCss]);
 
 	// To address https://github.com/laurent22/joplin/issues/433
 	//
@@ -82,7 +82,6 @@ export default function useSource(noteBody: string, noteMarkupLanguage: number, 
 				resources: noteResources,
 				codeTheme: theme.codeThemeCss,
 				postMessageSyntax: 'window.joplinPostMessage_',
-				userCss: customCss,
 				enableLongPress: shim.mobilePlatform() === 'android', // On iOS, there's already a built-on open/share menu
 			};
 
